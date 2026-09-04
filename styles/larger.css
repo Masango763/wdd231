@@ -1,37 +1,26 @@
-@media screen and (min-width: 768px) {
-    #nav-button {
+@media (min-width: 640px) {
+    #menu {
         display: none;
     }
 
-    /* Force display on wide viewports without relying on .show */
-    .navigation {
-        display: block !important;
-    }
-
-    .navigation ul {
-        display: flex;
+    nav ul {
+        display: flex !important;
         flex-direction: row;
+        justify-content: flex-start;
     }
 
-    .navigation li {
-        flex: 1;
-        text-align: center;
+    nav li a {
+        padding: 0.75rem 1.5rem;
     }
 
-    .navigation a {
-        border-bottom: none;
-        border-right: 1px solid #4a5568;
-    }
-
-    .top-row {
+    .top-container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1.5rem;
+        grid-template-columns: 2fr 1fr;
+        gap: 1.25rem;
     }
 
     .course-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
     }
 }

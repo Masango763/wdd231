@@ -1,9 +1,11 @@
-const navButton = document.querySelector('#nav-button');
-const navBar = document.querySelector('#nav-bar');
+document.addEventListener("DOMContentLoaded", () => {
+    const mainNav = document.querySelector("#animatenav");
+    const hamburgerBtn = document.querySelector("#menu");
 
-if (navButton && navBar) {
-    navButton.addEventListener('click', () => {
-        navButton.classList.toggle('show');
-        navBar.classList.toggle('show');
-    });
-}
+    if (hamburgerBtn && mainNav) {
+        hamburgerBtn.addEventListener("click", () => {
+            mainNav.classList.toggle("open");
+            hamburgerBtn.classList.toggle("open");
+        });
+    }
+});
