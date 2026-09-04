@@ -1,21 +1,26 @@
 @media screen and (min-width: 768px) {
-    #menu-button {
+    #nav-button {
         display: none;
     }
 
-    #primary-nav {
+    /* Force display on wide viewports without relying on .show */
+    .navigation {
         display: block !important;
     }
 
-    #primary-nav ul {
+    .navigation ul {
         display: flex;
-        justify-content: flex-start;
+        flex-direction: row;
     }
 
-    #primary-nav a {
-        padding: 0.75rem 2.5rem;
+    .navigation li {
+        flex: 1;
+        text-align: center;
+    }
+
+    .navigation a {
         border-bottom: none;
-        border-right: 1px solid #4b5563;
+        border-right: 1px solid #4a5568;
     }
 
     .top-row {

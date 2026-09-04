@@ -1,14 +1,14 @@
 :root {
-    --header-bg: #ffffff;
+    --header-bg: #1a202c;
+    --nav-bg: #2d3748;
+    --active-link: #3182ce;
     --dark-banner: #333333;
     --card-bg: #d1d5db;
     --card-inner: #e5e7eb;
     --body-bg: #ffffff;
     --text-color: #111827;
-    
     --completed-bg: #9ca3af;
     --incomplete-bg: #d1d5db;
-    
     --font: 'Roboto', sans-serif;
 }
 
@@ -27,11 +27,12 @@ body {
 
 header {
     background-color: var(--header-bg);
-    padding: 0.75rem 1rem;
-    display: flex;
-    justify-content: space-between;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    display: grid;
+    grid-template-columns: 24px auto 44px;
     align-items: center;
-    border-bottom: 1px solid #d1d5db;
+    gap: 0.75rem;
 }
 
 .header-brand {
@@ -39,44 +40,60 @@ header {
     align-items: center;
     gap: 0.75rem;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    grid-column: 1 / 3;
 }
 
-#menu-button {
-    background: #e5e7eb;
-    border: 1px solid #333;
-    padding: 0.25rem 0.75rem;
-    font-size: 1.25rem;
-    font-weight: bold;
+#nav-button {
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5rem;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#primary-nav {
+.hamburger::before {
+    content: "\2630";
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+/* Small screen navigation (hidden by default) */
+.navigation {
     display: none;
-    background-color: var(--dark-banner);
+    background-color: var(--nav-bg);
 }
 
-#primary-nav.open {
+.navigation.show {
     display: block;
 }
 
-#primary-nav ul {
+.navigation ul {
     list-style: none;
 }
 
-#primary-nav a {
+.navigation a {
     display: block;
     color: #ffffff;
     text-decoration: none;
     padding: 0.85rem 1rem;
+    min-height: 44px;
     font-weight: 700;
     font-size: 1rem;
-    border-bottom: 1px solid #4b5563;
+    border-bottom: 1px solid #4a5568;
 }
 
-#primary-nav a.active,
-#primary-nav a:hover {
-    background-color: #111827;
+/* Wayfinding styling */
+.navigation li.current a,
+.navigation a:hover {
+    background-color: var(--active-link);
 }
 
 main {
@@ -203,4 +220,39 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+}
+
+/* Footer Styling & Flexbox Social Layout */
+footer {
+    background-color: var(--card-bg, #d1d5db);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-top: 1px solid #9ca3af;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-links a {
+    color: var(--text-color, #111827);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+    color: var(--active-link, #3182ce);
+    transform: translateY(-2px);
 }

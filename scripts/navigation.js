@@ -1,13 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const menuButton = document.querySelector('#menu-button');
-    const primaryNav = document.querySelector('#primary-nav');
-    const menuIcon = document.querySelector('.menu-icon');
+const navButton = document.querySelector('#nav-button');
+const navBar = document.querySelector('#nav-bar');
 
-    if (menuButton && primaryNav) {
-        menuButton.addEventListener('click', () => {
-            const isOpen = primaryNav.classList.toggle('open');
-            menuButton.setAttribute('aria-expanded', isOpen.toString());
-            menuIcon.textContent = isOpen ? '☰' : 'X';
-        });
-    }
-});
+if (navButton && navBar) {
+    navButton.addEventListener('click', () => {
+        navButton.classList.toggle('show');
+        navBar.classList.toggle('show');
+    });
+}

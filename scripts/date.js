@@ -1,12 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const yearSpan = document.getElementById('currentyear');
-    const lastModifiedP = document.getElementById('lastModified');
+document.addEventListener("DOMContentLoaded", () => {
+    const yearSpan = document.querySelector("#currentyear");
+    const lastModifiedPara = document.querySelector("#lastModified");
 
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
 
-    if (lastModifiedP) {
-        lastModifiedP.textContent = `Last Modification: ${document.lastModified}`;
+    if (lastModifiedPara) {
+        lastModifiedPara.textContent = `Last Modification: ${document.lastModified}`;
     }
 });
