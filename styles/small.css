@@ -1,23 +1,30 @@
 :root {
-    --primary-bg: #e2e8f0;
-    --header-bg: #2d2d2d;
-    --card-header: #262626;
-    --text-color: #1a1a1a;
-    --card-bg: #d9d9d9;
-    --completed-bg: #b0c4de;
+    --primary-color: #1b4332;
+    --secondary-color: #2d3748;
+    --accent-color: #d4af37;
+    --text-color: #1a202c;
+    --bg-light: #f7fafc;
+    --card-bg: #ffffff;
+    --completed-bg: #2b6cb0;
+    --completed-text: #ffffff;
+    --uncompleted-bg: #edf2f7;
     --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #eaf5ea;
+    background-color: var(--bg-light);
     color: var(--text-color);
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: var(--header-bg);
+    background-color: var(--primary-color);
     color: var(--white);
     display: flex;
     justify-content: space-between;
@@ -40,6 +47,7 @@ header {
     color: var(--white);
     cursor: pointer;
     padding: 0.2rem 0.6rem;
+    border-radius: 4px;
 }
 
 #menu::before {
@@ -47,11 +55,11 @@ header {
 }
 
 #menu.open::before {
-    content: "X";
+    content: "✕";
 }
 
 nav {
-    background-color: #383838;
+    background-color: var(--secondary-color);
 }
 
 nav ul {
@@ -77,42 +85,45 @@ nav li a {
 
 nav li a:hover,
 nav li.active a {
-    background-color: #555555;
+    background-color: #4a5568;
+    color: var(--accent-color);
 }
 
 main {
-    max-width: 800px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 1rem;
 }
 
 h1 {
-    margin-top: 0;
+    margin-top: 0.5rem;
     font-size: 1.75rem;
+    color: var(--primary-color);
 }
 
 .card {
     background-color: var(--card-bg);
-    border: 1px solid #b5b5b5;
+    border: 1px solid #e2e8f0;
     margin-bottom: 1.25rem;
-    border-radius: 4px;
+    border-radius: 8px;
     overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .card h2 {
-    background-color: var(--card-header);
+    background-color: var(--secondary-color);
     color: var(--white);
     margin: 0;
-    padding: 0.6rem;
+    padding: 0.65rem;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 600;
 }
 
 .card p {
     padding: 1rem;
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .photo-placeholder {
@@ -120,34 +131,34 @@ h1 {
     justify-content: center;
     align-items: center;
     padding: 1.25rem;
-    background-color: #d1d1d1;
 }
 
 .photo-placeholder img {
     max-width: 100%;
     height: auto;
-    background-color: #a3a3a3;
     border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .filter-buttons {
     display: flex;
     justify-content: center;
     gap: 0.75rem;
-    padding: 1rem;
+    padding: 1rem 1rem 0.5rem 1rem;
 }
 
 .btn {
-    background-color: #bfbfbf;
-    border: 1px solid #7a7a7a;
+    background-color: #e2e8f0;
+    border: 1px solid #cbd5e0;
     padding: 0.5rem 1.75rem;
     font-weight: 700;
     border-radius: 6px;
     cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 .btn.active, .btn:hover {
-    background-color: #8c8c8c;
+    background-color: var(--primary-color);
     color: var(--white);
 }
 
@@ -155,36 +166,39 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    padding: 0 1rem;
+    padding: 1rem;
 }
 
 .course-card {
-    background-color: #c2c2c2;
-    border: 1px solid #808080;
-    padding: 0.75rem;
+    background-color: var(--uncompleted-bg);
+    border: 1px solid #cbd5e0;
+    padding: 1rem;
     text-align: center;
     font-weight: 700;
-    border-radius: 4px;
+    border-radius: 6px;
+    color: var(--text-color);
 }
 
 .course-card.completed {
-    background-color: #92a4b8;
-    color: #000;
+    background-color: var(--completed-bg);
+    color: var(--completed-text);
+    border-color: #2b6cb0;
 }
 
 .credits-info {
     text-align: center;
     font-weight: 700;
-    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
 }
 
 footer {
-    background-color: #e2e2e2;
+    background-color: #edf2f7;
     text-align: center;
-    padding: 1.25rem 1rem;
-    font-size: 0.85rem;
-    font-weight: 600;
-    border-top: 1px solid #ccc;
+    padding: 1.5rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-top: 1px solid #e2e8f0;
 }
 
 .social-links {
@@ -195,5 +209,9 @@ footer {
 }
 
 .social-links a {
-    color: #000;
+    color: var(--primary-color);
+}
+
+.social-links a:hover {
+    color: var(--completed-bg);
 }

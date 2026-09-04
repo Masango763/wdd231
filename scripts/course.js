@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function displayCourses(filteredCourses) {
         courseContainer.innerHTML = "";
+
         filteredCourses.forEach(course => {
             const card = document.createElement("div");
             card.className = `course-card ${course.completed ? 'completed' : ''}`;
@@ -78,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         const totalCredits = filteredCourses.reduce((acc, course) => acc + course.credits, 0);
-        totalCreditsEl.textContent = `The total number of credits required for courses listed above is ${totalCredits}`;
+        totalCreditsEl.textContent = `Total Credits Required: ${totalCredits}`;
     }
 
     function setActiveBtn(activeBtn) {
