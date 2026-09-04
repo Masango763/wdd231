@@ -1,6 +1,10 @@
 @media (min-width: 640px) {
     #menu {
-        display: none;
+        display: none !important;
+    }
+
+    nav {
+        display: block !important;
     }
 
     nav ul {
