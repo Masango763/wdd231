@@ -1,0 +1,164 @@
+
+/* Additional General & UI Component Styles */
+.hero {
+  background: linear-gradient(rgba(27,67,50,0.85), rgba(45,106,79,0.85)), url('../images/techhub.webp') center/cover;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent);
+  color: var(--primary);
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background-color: white;
+}
+
+.home-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.spotlight-badge {
+  background-color: var(--primary);
+  color: var(--accent);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  float: right;
+}
+
+.visit-banner {
+  background-color: var(--accent);
+  color: var(--primary);
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+figcaption {
+  font-size: 0.85rem;
+  text-align: center;
+  color: #555;
+  margin-top: 0.25rem;
+}
+
+/* Forms & Modals */
+.join-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.join-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.join-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.join-form input[type="text"],
+.join-form input[type="email"],
+.join-form input[type="tel"],
+.join-form textarea {
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.join-form fieldset {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.join-form fieldset label {
+  font-weight: normal;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.submit-btn {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+dialog {
+  padding: 2rem;
+  border-radius: 8px;
+  border: 2px solid var(--primary);
+  max-width: 400px;
+  margin: auto;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.close-modal {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.thankyou-card {
+  max-width: 600px;
+  margin: 3rem auto;
+  text-align: center;
+}

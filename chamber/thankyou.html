@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Received | Harare Chamber</title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+</head>
+<body>
+  <header>
+    <h1>Harare Regional Chamber</h1>
+  </header>
+  <main class="thankyou-main">
+    <div class="card thankyou-card">
+      <h2>Application Submitted Successfully!</h2>
+      <p>Thank you for applying to join the Harare Regional Chamber of Commerce. We have recorded your application details:</p>
+      <div id="formDataDisplay"></div>
+      <a href="index.html" class="cta-button">Return to Home</a>
+    </div>
+  </main>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const display = document.querySelector('#formDataDisplay');
+    display.innerHTML = `
+      <p><strong>Applicant Name:</strong> ${params.get('fname') || ''} ${params.get('lname') || ''}</p>
+      <p><strong>Email:</strong> ${params.get('email') || ''}</p>
+      <p><strong>Mobile:</strong> ${params.get('mobile') || ''}</p>
+      <p><strong>Organization:</strong> ${params.get('business') || ''}</p>
+      <p><strong>Tier Selected:</strong> ${params.get('membership') || ''}</p>
+      <p><strong>Timestamp:</strong> ${params.get('timestamp') || ''}</p>
+    `;
+  </script>
+</body>
+</html>

@@ -1,3 +1,4 @@
+// LocalStorage Visit Counter Logic
 const banner = document.querySelector('#visit-message');
 const lastVisit = localStorage.getItem('lastVisitTimestamp');
 const now = Date.now();

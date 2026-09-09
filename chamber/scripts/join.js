@@ -1,3 +1,4 @@
+// Join Form Timestamp & Modal Popups Logic
 document.querySelector('#timestamp').value = new Date().toISOString();
 
 function setupModal(btnId, modalId) {
