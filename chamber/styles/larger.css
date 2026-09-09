@@ -23,4 +23,10 @@
   .spotlights-container {
     grid-column: span 2;
   }
+
+  .spotlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
 }
