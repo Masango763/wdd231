@@ -1,7 +1,100 @@
+:root {
+  --primary: #1b4332;
+  --secondary: #2d6a4f;
+  --accent: #d8f3dc;
+  --bg-light: #f8f9fa;
+  --text-dark: #212529;
+}
 
-/* Additional General & UI Component Styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-container img {
+  width: 50px;
+  height: 50px;
+  background-color: var(--accent);
+  border-radius: 4px;
+}
+
+.logo-container h1 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.tagline {
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin: 0;
+}
+
+#ham-button {
+  background: none;
+  border: 1px solid var(--accent);
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+nav {
+  background-color: var(--secondary);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  flex-direction: column;
+}
+
+nav ul.open {
+  display: flex;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+nav a:hover, nav a.active {
+  background-color: var(--primary);
+  color: var(--accent);
+  font-weight: bold;
+}
+
+main {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .hero {
-  background: linear-gradient(rgba(27,67,50,0.85), rgba(45,106,79,0.85)), url('../images/techhub.webp') center/cover;
+  background-color: var(--primary);
   color: white;
   text-align: center;
   padding: 3rem 1rem;
@@ -20,145 +113,27 @@
   border-radius: 5px;
 }
 
-.cta-button:hover {
-  background-color: white;
-}
-
-.home-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
 .card {
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 1.25rem;
+  margin-bottom: 1rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.spotlight-badge {
+footer {
   background-color: var(--primary);
-  color: var(--accent);
-  font-size: 0.75rem;
-  padding: 0.2rem 0.5rem;
-  border-radius: 3px;
-  float: right;
-}
-
-.visit-banner {
-  background-color: var(--accent);
-  color: var(--primary);
-  padding: 1rem;
-  border-radius: 6px;
+  color: white;
   text-align: center;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.gallery-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.gallery-grid img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-
-figcaption {
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
   font-size: 0.85rem;
-  text-align: center;
-  color: #555;
-  margin-top: 0.25rem;
 }
 
-/* Forms & Modals */
-.join-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.join-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  background: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-.join-form label {
-  display: flex;
-  flex-direction: column;
-  font-weight: bold;
-  font-size: 0.9rem;
-}
-
-.join-form input[type="text"],
-.join-form input[type="email"],
-.join-form input[type="tel"],
-.join-form textarea {
-  padding: 0.6rem;
-  margin-top: 0.3rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-.join-form fieldset {
-  padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-.join-form fieldset label {
-  font-weight: normal;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.submit-btn {
-  background-color: var(--primary);
-  color: white;
-  padding: 0.8rem;
-  border: none;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-dialog {
-  padding: 2rem;
-  border-radius: 8px;
-  border: 2px solid var(--primary);
-  max-width: 400px;
-  margin: auto;
-}
-
-dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.close-modal {
+.footer-dev {
   margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: var(--primary);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.thankyou-card {
-  max-width: 600px;
-  margin: 3rem auto;
-  text-align: center;
+  border-top: 1px solid var(--secondary);
+  padding-top: 0.75rem;
+  color: var(--accent);
 }

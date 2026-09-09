@@ -1,33 +1,26 @@
-
 @media (min-width: 640px) {
+  #ham-button {
+    display: none;
+  }
+
+  nav ul {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav a {
+    padding: 1rem 2rem;
+    border-bottom: none;
+  }
+
   .home-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
   }
 
   .spotlights-container {
     grid-column: span 2;
-  }
-
-  .spotlight-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-  }
-
-  .discover-layout {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 1.5rem;
-  }
-
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .join-container {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
   }
 }
