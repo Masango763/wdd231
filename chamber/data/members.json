@@ -4,7 +4,7 @@
     "address": "123 Samora Machel Ave, Harare",
     "phone": "+263 242 123456",
     "website": "https://hararetechhub.co.zw",
-    "image": "images/techhub.webp",
+    "image": "images/techhub.svg",
     "membershipLevel": 3,
     "description": "Leading software development and tech incubator in Zimbabwe."
   },
@@ -13,7 +13,7 @@
     "address": "45 Enterprise Rd, Harare",
     "phone": "+263 242 654321",
     "website": "https://zambezilogistics.co.zw",
-    "image": "images/logistics.webp",
+    "image": "images/logistics.svg",
     "membershipLevel": 2,
     "description": "Cross-border freight transport and supply chain management."
   },
@@ -22,7 +22,7 @@
     "address": "88 Borrowdale Rd, Harare",
     "phone": "+263 242 987654",
     "website": "https://sunshinesolar.co.zw",
-    "image": "images/renewables.webp",
+    "image": "images/renewables.svg",
     "membershipLevel": 3,
     "description": "Commercial and residential solar power solutions."
   },
@@ -31,7 +31,7 @@
     "address": "10 Nelson Mandela Ave, Harare",
     "phone": "+263 242 333444",
     "website": "https://gzfinancial.co.zw",
-    "image": "images/financial.webp",
+    "image": "images/financial.svg",
     "membershipLevel": 1,
     "description": "Micro-finance services and SME business loans."
   },
@@ -40,7 +40,7 @@
     "address": "14 Industrial Rd, Msasa, Harare",
     "phone": "+263 242 555666",
     "website": "https://highveldexports.co.zw",
-    "image": "images/agro.webp",
+    "image": "images/agro.svg",
     "membershipLevel": 2,
     "description": "Exporting horticultural produce across Southern Africa."
   },
@@ -49,7 +49,7 @@
     "address": "77 Simon Mazorodze Rd, Harare",
     "phone": "+263 242 777888",
     "website": "https://crestasecurity.co.zw",
-    "image": "images/security.webp",
+    "image": "images/security.svg",
     "membershipLevel": 1,
     "description": "Integrated security and smart monitoring for businesses."
   }
