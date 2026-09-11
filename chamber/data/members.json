@@ -9,15 +9,6 @@
     "description": "Leading software development and tech incubator in Zimbabwe."
   },
   {
-    "name": "Zambezi Logistics",
-    "address": "45 Enterprise Rd, Harare",
-    "phone": "+263 242 654321",
-    "website": "https://zambezilogistics.co.zw",
-    "image": "images/logistics.svg",
-    "membershipLevel": 2,
-    "description": "Cross-border freight transport and supply chain management."
-  },
-  {
     "name": "Sunshine Solar Energy",
     "address": "88 Borrowdale Rd, Harare",
     "phone": "+263 242 987654",
@@ -27,15 +18,6 @@
     "description": "Commercial and residential solar power solutions."
   },
   {
-    "name": "Great Zimbabwe Financial",
-    "address": "10 Nelson Mandela Ave, Harare",
-    "phone": "+263 242 333444",
-    "website": "https://gzfinancial.co.zw",
-    "image": "images/financial.svg",
-    "membershipLevel": 1,
-    "description": "Micro-finance services and SME business loans."
-  },
-  {
     "name": "Highveld Agricultural Exports",
     "address": "14 Industrial Rd, Msasa, Harare",
     "phone": "+263 242 555666",
@@ -43,14 +25,5 @@
     "image": "images/agro.svg",
     "membershipLevel": 2,
     "description": "Exporting horticultural produce across Southern Africa."
-  },
-  {
-    "name": "Cresta Security Solutions",
-    "address": "77 Simon Mazorodze Rd, Harare",
-    "phone": "+263 242 777888",
-    "website": "https://crestasecurity.co.zw",
-    "image": "images/security.svg",
-    "membershipLevel": 1,
-    "description": "Integrated security and smart monitoring for businesses."
   }
 ]
