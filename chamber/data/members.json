@@ -3,7 +3,7 @@
     "name": "Harare Tech Hub",
     "address": "123 Samora Machel Ave, Harare",
     "phone": "+263 242 123456",
-    "website": "https://hararetechhub.co.zw",
+    "website": "https://github.com",
     "image": "images/techhub.svg",
     "membershipLevel": 3,
     "description": "Leading software development and tech incubator in Zimbabwe."
@@ -12,7 +12,7 @@
     "name": "Sunshine Solar Energy",
     "address": "88 Borrowdale Rd, Harare",
     "phone": "+263 242 987654",
-    "website": "https://sunshinesolar.co.zw",
+    "website": "https://wikipedia.org",
     "image": "images/renewables.svg",
     "membershipLevel": 3,
     "description": "Commercial and residential solar power solutions."
@@ -21,7 +21,7 @@
     "name": "Highveld Agricultural Exports",
     "address": "14 Industrial Rd, Msasa, Harare",
     "phone": "+263 242 555666",
-    "website": "https://highveldexports.co.zw",
+    "website": "https://google.com",
     "image": "images/agro.svg",
     "membershipLevel": 2,
     "description": "Exporting horticultural produce across Southern Africa."
