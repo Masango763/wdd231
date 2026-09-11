@@ -1,39 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Discover | Harare Regional Chamber of Commerce</title>
-  <meta name="description" content="Discover Harare's rich history, economic metrics, culture, and key business landmarks.">
+  <title>Discover Harare | Harare Regional Chamber of Commerce</title>
+  <meta name="description" content="Discover key regional commercial landmarks, demographics, and economic history of Harare.">
   <meta name="author" content="Masango Dewheretsoko">
 
-  <link rel="icon" href="images/favicon.ico">
-  <meta property="og:title" content="Discover Harare - Regional Chamber">
-  <meta property="og:type" content="website">
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts API Links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Discover Harare Commercial Region">
+  <meta property="og:description" content="Explore key landmarks, market statistics, and regional trade corridors in the Harare Chamber area.">
   <meta property="og:image" content="https://masango763.github.io/wdd231/chamber/images/logo.svg">
   <meta property="og:url" content="https://masango763.github.io/wdd231/chamber/discover.html">
 
+  <!-- External CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
 
+  <!-- Deferred Scripts -->
   <script src="scripts/navigation.js" defer></script>
-  <script src="scripts/discover.js" defer></script>
 </head>
 <body>
   <header>
     <div class="logo-container">
       <img src="images/logo.svg" alt="Harare Chamber Logo" width="60" height="60">
-      <div>
-        <h1>Harare Regional Chamber</h1>
-        <p class="tagline">Empowering Regional Commerce</p>
-      </div>
+      <span class="site-title">Harare Regional Chamber</span>
     </div>
-    <button id="ham-button" aria-label="Toggle Navigation Menu">☰</button>
+    <button id="ham-button" aria-label="Toggle Menu">☰</button>
   </header>
 
-  <nav id="nav-menu">
-    <ul>
+  <nav>
+    <ul id="primary-nav">
       <li><a href="index.html">Home</a></li>
       <li><a href="discover.html" class="active">Discover</a></li>
       <li><a href="directory.html">Directory</a></li>
@@ -42,66 +48,35 @@
   </nav>
 
   <main>
-    <h2>Discover Greater Harare</h2>
-    <div id="visit-message" class="visit-banner"></div>
+    <h1>Discover Harare</h1>
 
-    <div class="discover-layout">
-      <aside class="sidebar">
-        <section class="card">
-          <h3>Regional Demographics</h3>
-          <p><strong>Population:</strong> ~2.1 Million (Metropolitan)</p>
-          <p><strong>Key Sectors:</strong> Technology, Financial Services, Freight Logistics, Agriculture, Solar Energy</p>
-          <p><strong>Currency:</strong> USD / ZiG Dual Monetary Framework</p>
-        </section>
+    <section class="card">
+      <h2>Historical Context</h2>
+      <p>Founded in 1890, Harare serves as Zimbabwe's primary administrative, commercial, and financial center, connecting regional trade corridors to southern Africa.</p>
+    </section>
 
-        <section class="card">
-          <h3>Historical Context</h3>
-          <p>Founded in 1890, Harare serves as Zimbabwe's primary administrative, commercial, and financial center, connecting regional trade corridors to southern Africa.</p>
-        </section>
-      </aside>
-
-      <section class="gallery">
-        <h3>Regional Commercial Landmarks</h3>
-        <div class="gallery-grid">
-          <figure>
-            <img src="images/techhub.webp" alt="Harare Central Business District" loading="lazy" width="300" height="200">
-            <figcaption>Harare Financial District & Central Business Hub</figcaption>
-          </figure>
-          <figure>
-            <img src="images/logistics.webp" alt="Msasa Freight & Logistics Hub" loading="lazy" width="300" height="200">
-            <figcaption>Msasa Industrial & Supply Chain Center</figcaption>
-          </figure>
-          <figure>
-            <img src="images/renewables.webp" alt="Avondale Solar Installation" loading="lazy" width="300" height="200">
-            <figcaption>Avondale Commercial Clean Energy Grid</figcaption>
-          </figure>
-          <figure>
-            <img src="images/financial.webp" alt="Samora Machel Commercial Avenue" loading="lazy" width="300" height="200">
-            <figcaption>Samora Machel Banking Sector</figcaption>
-          </figure>
-          <figure>
-            <img src="images/exports.webp" alt="Borrowdale Business Park" loading="lazy" width="300" height="200">
-            <figcaption>Borrowdale Technology & Innovation Corridor</figcaption>
-          </figure>
-          <figure>
-            <img src="images/agro.webp" alt="Chitungwiza Agro Logistics Park" loading="lazy" width="300" height="200">
-            <figcaption>Chitungwiza Regional Agricultural Terminal</figcaption>
-          </figure>
-        </div>
-      </section>
-    </div>
+    <section class="card">
+      <h2>Regional Commercial Landmarks</h2>
+      <div class="gallery">
+        <figure>
+          <img src="images/cbd.svg" alt="Harare Financial District & Central Business Hub" loading="lazy" width="400" height="300">
+          <figcaption>Harare Financial District & Central Business Hub</figcaption>
+        </figure>
+        <figure>
+          <img src="images/industrial.svg" alt="Msasa Industrial Zone" loading="lazy" width="400" height="300">
+          <figcaption>Msasa Industrial & Manufacturing Corridor</figcaption>
+        </figure>
+        <figure>
+          <img src="images/agriculture.svg" alt="Tobacco & Agricultural Trade Hub" loading="lazy" width="400" height="300">
+          <figcaption>Agricultural Trade & Export Center</figcaption>
+        </figure>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <div class="footer-info">
-      <p><strong>Harare Regional Chamber of Commerce</strong></p>
-      <p>10 Samora Machel Avenue, Harare, Zimbabwe</p>
-      <p>info@hararechamber.co.zw | +263 242 700 000</p>
-    </div>
-    <div class="footer-dev">
-      <p>&copy; <span id="current-year"></span> Harare Chamber | Masango Dewheretsoko | WDD 231</p>
-      <p>Last Modified: <span id="last-modified"></span></p>
-    </div>
+    <p>&copy; <span id="currentyear"></span> Harare Regional Chamber | Masango Dewheretsoko | WDD 231</p>
+    <p id="lastModified"></p>
   </footer>
 </body>
 </html>
