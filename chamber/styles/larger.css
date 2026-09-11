@@ -1,65 +1,20 @@
-@media (min-width: 640px) {
+@media only screen and (min-width: 37.5rem) {
   #ham-button {
     display: none;
   }
 
   nav ul {
-    display: flex !important;
     flex-direction: row;
     justify-content: center;
   }
 
-  nav a {
-    padding: 1rem 2rem;
-    border-bottom: none;
-  }
-
-  .home-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-  }
-
-  .spotlights-container {
-    grid-column: span 2;
-  }
-
-  .spotlight-grid {
-    display: grid;
+  #members-container.grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-  }
-}
-
-@media (min-width: 64rem) {
-  .join-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-    gap: 2rem;
-  }
-}
-
-@media (min-width: 64rem) {
-  .join-layout {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    align-items: start;
-    gap: 2rem;
-  }
-}
-
-@media (min-width: 50rem) {
-  .join-grid {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    align-items: start;
-    gap: 2rem;
   }
 
-  .submit-button {
-    width: auto;
-    align-self: start;
-    padding: 0.85rem 2rem;
+  #members-container.list .member-card {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }

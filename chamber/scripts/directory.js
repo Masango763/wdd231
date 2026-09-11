@@ -29,13 +29,19 @@ document.addEventListener("DOMContentLoaded", () => {
       card.classList.add("member-card");
 
       card.innerHTML = `
-        <img src="${member.image}" alt="${member.name} logo" loading="lazy" width="80" height="80">
-        <h3>${member.name}</h3>
-        <p class="membership-badge">${getLevelName(member.membershipLevel)}</p>
-        <p class="tagline">${member.description || ''}</p>
-        <p class="address">${member.address}</p>
-        <p class="phone">${member.phone}</p>
-        <a href="${member.website}" target="_blank" rel="noopener noreferrer">Visit Website</a>
+        <div class="card-header">
+          <h3>${member.name}</h3>
+          <p class="tagline">${member.description || ''}</p>
+        </div>
+        <div class="card-body">
+          <img src="${member.image}" alt="${member.name} logo" loading="lazy" width="80" height="80">
+          <div class="card-details">
+            <p class="membership-badge">${getLevelName(member.membershipLevel)}</p>
+            <p class="address">${member.address}</p>
+            <p class="phone">${member.phone}</p>
+            <a href="${member.website}" target="_blank" rel="noopener noreferrer">Website</a>
+          </div>
+        </div>
       `;
 
       container.appendChild(card);
@@ -43,15 +49,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   gridBtn.addEventListener("click", () => {
-    container.classList.add("grid-view");
-    container.classList.remove("list-view");
+    container.classList.add("grid");
+    container.classList.remove("list");
     gridBtn.classList.add("active");
     listBtn.classList.remove("active");
   });
 
   listBtn.addEventListener("click", () => {
-    container.classList.add("list-view");
-    container.classList.remove("grid-view");
+    container.classList.add("list");
+    container.classList.remove("grid");
     listBtn.classList.add("active");
     gridBtn.classList.remove("active");
   });
