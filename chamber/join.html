@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join Us | Harare Regional Chamber of Commerce</title>
+  <title>Membership Application | Harare Regional Chamber of Commerce</title>
   <meta name="description" content="Apply for membership with the Harare Regional Chamber of Commerce to access business networks and resources.">
   <meta name="author" content="Masango Dewheretsoko">
 
@@ -33,10 +33,7 @@
   <header>
     <div class="logo-container">
       <img src="images/logo.svg" alt="Harare Chamber Logo" width="60" height="60">
-      <div class="header-text">
-        <span class="site-title">Harare Regional Chamber</span>
-        <span class="tagline">Empowering Regional Commerce</span>
-      </div>
+      <span class="site-title">Harare Regional Chamber</span>
     </div>
     <button id="ham-button" aria-label="Toggle Menu">☰</button>
   </header>
@@ -53,76 +50,89 @@
   <main>
     <h1>Membership Application</h1>
 
-    <div class="join-container">
-      <section class="card form-card">
-        <h2>Apply For Membership</h2>
+    <div class="join-layout">
+      <!-- Form Container -->
+      <section class="card form-container">
+        <h2>Applicant Information</h2>
         <form method="get" action="thanks.html" class="membership-form">
-          <label>First Name *
-            <input type="text" name="fname" required autocomplete="given-name">
-          </label>
+          <div class="form-group">
+            <label for="fname">First Name *</label>
+            <input type="text" id="fname" name="fname" required autocomplete="given-name">
+          </div>
 
-          <label>Last Name *
-            <input type="text" name="lname" required autocomplete="family-name">
-          </label>
+          <div class="form-group">
+            <label for="lname">Last Name *</label>
+            <input type="text" id="lname" name="lname" required autocomplete="family-name">
+          </div>
 
-          <label>Organizational Title
-            <input type="text" name="title" autocomplete="organization-title">
-          </label>
+          <div class="form-group">
+            <label for="title">Organizational Title</label>
+            <input type="text" id="title" name="title" autocomplete="organization-title">
+          </div>
 
-          <label>Email Address *
-            <input type="email" name="email" required placeholder="example@domain.co.zw" autocomplete="email">
-          </label>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required placeholder="example@domain.co.zw" autocomplete="email">
+          </div>
 
-          <label>Mobile Phone *
-            <input type="tel" name="phone" required autocomplete="tel">
-          </label>
+          <div class="form-group">
+            <label for="phone">Mobile Phone *</label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel">
+          </div>
 
-          <label>Organization / Business Name *
-            <input type="text" name="organization" required autocomplete="organization">
-          </label>
+          <div class="form-group">
+            <label for="organization">Organization / Business Name *</label>
+            <input type="text" id="organization" name="organization" required autocomplete="organization">
+          </div>
 
           <fieldset class="membership-levels">
             <legend>Membership Level *</legend>
-            <label class="radio-label">
-              <input type="radio" name="level" value="np" required> Non-Profit Membership (NP)
-            </label>
-            <label class="radio-label">
-              <input type="radio" name="level" value="bronze"> Bronze Membership
-            </label>
-            <label class="radio-label">
-              <input type="radio" name="level" value="silver"> Silver Membership
-            </label>
-            <label class="radio-label">
-              <input type="radio" name="level" value="gold"> Gold Membership
-            </label>
+            <div class="radio-option">
+              <input type="radio" id="np" name="level" value="np" required>
+              <label for="np">Non-Profit Membership (NP)</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="bronze" name="level" value="bronze">
+              <label for="bronze">Bronze Membership</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="silver" name="level" value="silver">
+              <label for="silver">Silver Membership</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="gold" name="level" value="gold">
+              <label for="gold">Gold Membership</label>
+            </div>
           </fieldset>
 
-          <label>Business / Organization Description
-            <textarea name="description" rows="4"></textarea>
-          </label>
+          <div class="form-group">
+            <label for="description">Business / Organization Description</label>
+            <textarea id="description" name="description" rows="4"></textarea>
+          </div>
 
           <input type="hidden" name="timestamp" id="timestamp">
-          <input type="submit" value="Submit Application" class="cta-button">
+          <button type="submit" class="submit-btn">Submit Application</button>
         </form>
       </section>
 
-      <section class="card benefits-card">
+      <!-- Benefits Container -->
+      <section class="card benefits-container">
         <h2>Membership Levels & Benefits</h2>
-        <div class="level-info">
+        <div class="level-card">
           <h3>Non-Profit Membership (NP)</h3>
-          <p>Designed for registered non-profits and community organizations. Complimentary access to chamber events and directory listing.</p>
+          <p>Designed for registered non-profits and community organizations with complimentary event access.</p>
         </div>
-        <div class="level-info">
+        <div class="level-card">
           <h3>Bronze Membership</h3>
-          <p>Ideal for small businesses and startups. Basic directory listing and networking access.</p>
+          <p>Ideal for small businesses and startups looking for directory exposure and networking.</p>
         </div>
-        <div class="level-info">
+        <div class="level-card">
           <h3>Silver Membership</h3>
-          <p>Includes expanded directory features, training discounts, and spotlight consideration on the homepage.</p>
+          <p>Includes expanded directory listing options, event discounts, and spotlight consideration.</p>
         </div>
-        <div class="level-info">
+        <div class="level-card">
           <h3>Gold Membership</h3>
-          <p>Premium placement across all chamber platforms, homepage business spotlight, and priority event sponsorship.</p>
+          <p>Premium placement across chamber channels, home page spotlighting, and event sponsorship.</p>
         </div>
       </section>
     </div>
