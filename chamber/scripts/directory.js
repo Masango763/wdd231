@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function getMembers() {
     try {
-      const response = await fetch("data/members.json");
+      const response = await fetch("data/members.json?v=" + new Date().getTime());
       if (!response.ok) throw new Error("Failed to fetch members data");
       const members = await response.json();
       displayMembers(members);
@@ -30,17 +30,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
       card.innerHTML = `
         <div class="card-header">
-          <h3>${member.name}</h3>
+          <h3 class="member-name">${member.name}</h3>
           <p class="tagline">${member.description || ''}</p>
         </div>
         <div class="card-body">
           <img src="${member.image}" alt="${member.name} logo" loading="lazy" width="80" height="80">
-          <div class="card-details">
-            <p class="membership-badge">${getLevelName(member.membershipLevel)}</p>
-            <p class="address">${member.address}</p>
-            <p class="phone">${member.phone}</p>
-            <a href="${member.website}" target="_blank" rel="noopener noreferrer">Website</a>
-          </div>
+          <p class="membership-badge">${getLevelName(member.membershipLevel)}</p>
+          <p class="address">${member.address}</p>
+          <p class="phone">${member.phone}</p>
+          <a href="${member.website}" target="_blank" rel="noopener noreferrer" class="website-link">Website</a>
         </div>
       `;
 

@@ -104,22 +104,40 @@ h1 {
 #members-container.grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 #members-container.grid .member-card {
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #d1d5db;
   border-radius: 8px;
-  padding: 1rem;
+  padding: 1.25rem;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 #members-container.grid .card-header {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.75rem;
   margin-bottom: 0.75rem;
+}
+
+#members-container.grid .member-name {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.15rem;
+  color: var(--primary);
+}
+
+#members-container.grid .tagline {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #4b5563;
+  font-style: italic;
 }
 
 #members-container.grid .card-body {
@@ -127,12 +145,28 @@ h1 {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  flex-grow: 1;
+  justify-content: space-between;
 }
 
 #members-container.grid img {
-  max-width: 100px;
-  height: auto;
+  max-width: 80px;
+  height: 80px;
   object-fit: contain;
+  margin: 0.5rem 0;
+}
+
+#members-container.grid p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+}
+
+.website-link {
+  color: var(--secondary);
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: 0.5rem;
+  display: inline-block;
 }
 
 /* List View Layout */
@@ -144,7 +178,7 @@ h1 {
 #members-container.list .member-card {
   display: flex;
   flex-direction: column;
-  padding: 0.75rem;
+  padding: 0.75rem 1rem;
   border-bottom: 1px solid #ddd;
   background-color: #fff;
 }
@@ -171,8 +205,7 @@ footer {
   font-weight: 700;
   color: #1b4332;
   background-color: #d8f3dc;
-  padding: 0.2rem 0.6rem;
+  padding: 0.25rem 0.6rem;
   border-radius: 12px;
   display: inline-block;
-  margin: 0.2rem 0;
 }
