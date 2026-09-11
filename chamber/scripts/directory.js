@@ -6,11 +6,19 @@ document.addEventListener("DOMContentLoaded", () => {
   async function getMembers() {
     try {
       const response = await fetch("data/members.json");
-      if (!response.ok) throw new Error("Failed to load JSON");
+      if (!response.ok) throw new Error("Failed to fetch members data");
       const members = await response.json();
       displayMembers(members);
     } catch (error) {
-      console.error("Error fetching directory members:", error);
+      console.error("Error loading chamber directory:", error);
+    }
+  }
+
+  function getLevelName(level) {
+    switch(level) {
+      case 3: return "Gold Member";
+      case 2: return "Silver Member";
+      default: return "Member";
     }
   }
 
@@ -21,8 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
       card.classList.add("member-card");
 
       card.innerHTML = `
-        <img src="${member.image}" alt="${member.name} logo" loading="lazy" width="100" height="100">
+        <img src="${member.image}" alt="${member.name} logo" loading="lazy" width="80" height="80">
         <h3>${member.name}</h3>
+        <p class="membership-badge">${getLevelName(member.membershipLevel)}</p>
         <p class="tagline">${member.description || ''}</p>
         <p class="address">${member.address}</p>
         <p class="phone">${member.phone}</p>

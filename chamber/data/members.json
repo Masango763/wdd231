@@ -4,7 +4,7 @@
     "address": "123 Samora Machel Ave, Harare",
     "phone": "+263 242 123456",
     "website": "https://github.com",
-    "image": "images/techhub.svg",
+    "image": "images/logo.svg",
     "membershipLevel": 3,
     "description": "Leading software development and tech incubator in Zimbabwe."
   },
@@ -13,7 +13,7 @@
     "address": "88 Borrowdale Rd, Harare",
     "phone": "+263 242 987654",
     "website": "https://wikipedia.org",
-    "image": "images/renewables.svg",
+    "image": "images/logo.svg",
     "membershipLevel": 3,
     "description": "Commercial and residential solar power solutions."
   },
@@ -22,8 +22,44 @@
     "address": "14 Industrial Rd, Msasa, Harare",
     "phone": "+263 242 555666",
     "website": "https://google.com",
-    "image": "images/agro.svg",
+    "image": "images/logo.svg",
     "membershipLevel": 2,
     "description": "Exporting horticultural produce across Southern Africa."
+  },
+  {
+    "name": "Zambezi Logistics & Freight",
+    "address": "45 Coventry Rd, Workington, Harare",
+    "phone": "+263 242 778899",
+    "website": "https://github.com",
+    "image": "images/logo.svg",
+    "membershipLevel": 2,
+    "description": "Regional freight forwarding and supply chain solutions."
+  },
+  {
+    "name": "Batanai Financial Services",
+    "address": "101 Jason Moyo Ave, Harare",
+    "phone": "+263 242 334455",
+    "website": "https://wikipedia.org",
+    "image": "images/logo.svg",
+    "membershipLevel": 1,
+    "description": "Corporate financial advisory and micro-finance services."
+  },
+  {
+    "name": "Jacaranda Creative Studio",
+    "address": "12 Enterprise Rd, Highlands, Harare",
+    "phone": "+263 242 667788",
+    "website": "https://google.com",
+    "image": "images/logo.svg",
+    "membershipLevel": 1,
+    "description": "Digital marketing, brand identity design, and web development."
+  },
+  {
+    "name": "Great Zimbabwe Eco-Tours",
+    "address": "77 Nelson Mandela Ave, Harare",
+    "phone": "+263 242 112233",
+    "website": "https://github.com",
+    "image": "images/logo.svg",
+    "membershipLevel": 3,
+    "description": "Sustainable tourism and guided heritage expeditions."
   }
 ]
