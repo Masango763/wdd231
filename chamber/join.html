@@ -50,89 +50,89 @@
   <main>
     <h1>Membership Application</h1>
 
-    <div class="join-layout">
-      <!-- Form Container -->
-      <section class="card form-container">
+    <div class="join-grid">
+      <!-- Membership Form Card -->
+      <section class="card form-section">
         <h2>Applicant Information</h2>
         <form method="get" action="thanks.html" class="membership-form">
-          <div class="form-group">
+          <div class="form-item">
             <label for="fname">First Name *</label>
             <input type="text" id="fname" name="fname" required autocomplete="given-name">
           </div>
 
-          <div class="form-group">
+          <div class="form-item">
             <label for="lname">Last Name *</label>
             <input type="text" id="lname" name="lname" required autocomplete="family-name">
           </div>
 
-          <div class="form-group">
+          <div class="form-item">
             <label for="title">Organizational Title</label>
             <input type="text" id="title" name="title" autocomplete="organization-title">
           </div>
 
-          <div class="form-group">
+          <div class="form-item">
             <label for="email">Email Address *</label>
             <input type="email" id="email" name="email" required placeholder="example@domain.co.zw" autocomplete="email">
           </div>
 
-          <div class="form-group">
+          <div class="form-item">
             <label for="phone">Mobile Phone *</label>
             <input type="tel" id="phone" name="phone" required autocomplete="tel">
           </div>
 
-          <div class="form-group">
+          <div class="form-item">
             <label for="organization">Organization / Business Name *</label>
             <input type="text" id="organization" name="organization" required autocomplete="organization">
           </div>
 
-          <fieldset class="membership-levels">
+          <fieldset class="radio-fieldset">
             <legend>Membership Level *</legend>
-            <div class="radio-option">
-              <input type="radio" id="np" name="level" value="np" required>
-              <label for="np">Non-Profit Membership (NP)</label>
-            </div>
-            <div class="radio-option">
-              <input type="radio" id="bronze" name="level" value="bronze">
-              <label for="bronze">Bronze Membership</label>
-            </div>
-            <div class="radio-option">
-              <input type="radio" id="silver" name="level" value="silver">
-              <label for="silver">Silver Membership</label>
-            </div>
-            <div class="radio-option">
-              <input type="radio" id="gold" name="level" value="gold">
-              <label for="gold">Gold Membership</label>
-            </div>
+            <label class="radio-row">
+              <input type="radio" name="level" value="np" required>
+              <span>Non-Profit Membership (NP)</span>
+            </label>
+            <label class="radio-row">
+              <input type="radio" name="level" value="bronze">
+              <span>Bronze Membership</span>
+            </label>
+            <label class="radio-row">
+              <input type="radio" name="level" value="silver">
+              <span>Silver Membership</span>
+            </label>
+            <label class="radio-row">
+              <input type="radio" name="level" value="gold">
+              <span>Gold Membership</span>
+            </label>
           </fieldset>
 
-          <div class="form-group">
+          <div class="form-item">
             <label for="description">Business / Organization Description</label>
             <textarea id="description" name="description" rows="4"></textarea>
           </div>
 
           <input type="hidden" name="timestamp" id="timestamp">
-          <button type="submit" class="submit-btn">Submit Application</button>
+          <input type="submit" value="Submit Application" class="submit-button">
         </form>
       </section>
 
-      <!-- Benefits Container -->
-      <section class="card benefits-container">
+      <!-- Benefits Side Column -->
+      <section class="card benefits-section">
         <h2>Membership Levels & Benefits</h2>
-        <div class="level-card">
+        <div class="benefit-box">
           <h3>Non-Profit Membership (NP)</h3>
-          <p>Designed for registered non-profits and community organizations with complimentary event access.</p>
+          <p>Designed for registered non-profits and community organizations with complimentary event access and directory listing.</p>
         </div>
-        <div class="level-card">
+        <div class="benefit-box">
           <h3>Bronze Membership</h3>
-          <p>Ideal for small businesses and startups looking for directory exposure and networking.</p>
+          <p>Ideal for small businesses and startups looking for standard directory exposure and networking.</p>
         </div>
-        <div class="level-card">
+        <div class="benefit-box">
           <h3>Silver Membership</h3>
-          <p>Includes expanded directory listing options, event discounts, and spotlight consideration.</p>
+          <p>Includes expanded directory features, training event discounts, and home page spotlight consideration.</p>
         </div>
-        <div class="level-card">
+        <div class="benefit-box">
           <h3>Gold Membership</h3>
-          <p>Premium placement across chamber channels, home page spotlighting, and event sponsorship.</p>
+          <p>Premium placement across chamber platforms, home page business spotlighting, and priority sponsorship access.</p>
         </div>
       </section>
     </div>

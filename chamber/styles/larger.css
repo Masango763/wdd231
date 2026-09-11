@@ -48,3 +48,18 @@
     gap: 2rem;
   }
 }
+
+@media (min-width: 50rem) {
+  .join-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: start;
+    gap: 2rem;
+  }
+
+  .submit-button {
+    width: auto;
+    align-self: start;
+    padding: 0.85rem 2rem;
+  }
+}
