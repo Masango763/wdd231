@@ -30,3 +30,12 @@
     gap: 1rem;
   }
 }
+
+@media (min-width: 64rem) {
+  .join-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 2rem;
+  }
+}

@@ -1,39 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join | Harare Regional Chamber of Commerce</title>
-  <meta name="description" content="Apply for Harare Regional Chamber of Commerce membership. Compare tier benefits and submit your enterprise application.">
+  <title>Join Us | Harare Regional Chamber of Commerce</title>
+  <meta name="description" content="Apply for membership with the Harare Regional Chamber of Commerce to access business networks and resources.">
   <meta name="author" content="Masango Dewheretsoko">
 
-  <link rel="icon" href="images/favicon.ico">
-  <meta property="og:title" content="Join the Harare Regional Chamber">
-  <meta property="og:type" content="website">
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts API Links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Join Harare Regional Chamber">
+  <meta property="og:description" content="Become a member of the Harare Regional Chamber of Commerce to grow your regional business presence.">
   <meta property="og:image" content="https://masango763.github.io/wdd231/chamber/images/logo.svg">
   <meta property="og:url" content="https://masango763.github.io/wdd231/chamber/join.html">
 
+  <!-- External CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
 
+  <!-- Deferred Scripts -->
   <script src="scripts/navigation.js" defer></script>
-  <script src="scripts/join.js" defer></script>
 </head>
 <body>
   <header>
     <div class="logo-container">
       <img src="images/logo.svg" alt="Harare Chamber Logo" width="60" height="60">
-      <div>
-        <h1>Harare Regional Chamber</h1>
-        <p class="tagline">Empowering Regional Commerce</p>
+      <div class="header-text">
+        <span class="site-title">Harare Regional Chamber</span>
+        <span class="tagline">Empowering Regional Commerce</span>
       </div>
     </div>
-    <button id="ham-button" aria-label="Toggle Navigation Menu">☰</button>
+    <button id="ham-button" aria-label="Toggle Menu">☰</button>
   </header>
 
-  <nav id="nav-menu">
-    <ul>
+  <nav>
+    <ul id="primary-nav">
       <li><a href="index.html">Home</a></li>
       <li><a href="discover.html">Discover</a></li>
       <li><a href="directory.html">Directory</a></li>
@@ -42,116 +51,93 @@
   </nav>
 
   <main>
-    <h2>Membership Application</h2>
+    <h1>Membership Application</h1>
 
     <div class="join-container">
-      <form method="get" action="thankyou.html" class="join-form">
-        <label for="fname">First Name *
-          <input type="text" id="fname" name="fname" required autocomplete="given-name" title="Enter first name">
-        </label>
+      <section class="card form-card">
+        <h2>Apply For Membership</h2>
+        <form method="get" action="thanks.html" class="membership-form">
+          <label>First Name *
+            <input type="text" name="fname" required autocomplete="given-name">
+          </label>
 
-        <label for="lname">Last Name *
-          <input type="text" id="lname" name="lname" required autocomplete="family-name" title="Enter last name">
-        </label>
+          <label>Last Name *
+            <input type="text" name="lname" required autocomplete="family-name">
+          </label>
 
-        <label for="orgtitle">Organizational Title
-          <input type="text" id="orgtitle" name="orgtitle" autocomplete="organization-title" pattern="[A-Za-z\s\-]{2,}" title="Alpha characters, hyphens, and spaces (min 2 characters)">
-        </label>
+          <label>Organizational Title
+            <input type="text" name="title" autocomplete="organization-title">
+          </label>
 
-        <label for="email">Email Address *
-          <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@domain.co.zw" title="Enter valid email">
-        </label>
+          <label>Email Address *
+            <input type="email" name="email" required placeholder="example@domain.co.zw" autocomplete="email">
+          </label>
 
-        <label for="mobile">Mobile Phone *
-          <input type="tel" id="mobile" name="mobile" required autocomplete="tel" title="Enter mobile contact number">
-        </label>
+          <label>Mobile Phone *
+            <input type="tel" name="phone" required autocomplete="tel">
+          </label>
 
-        <label for="business">Organization / Business Name *
-          <input type="text" id="business" name="business" required autocomplete="organization" title="Enter business name">
-        </label>
+          <label>Organization / Business Name *
+            <input type="text" name="organization" required autocomplete="organization">
+          </label>
 
-        <fieldset>
-          <legend>Membership Level *</legend>
-          <label><input type="radio" name="membership" value="Non-Profit Membership" required> Non-Profit Membership (NP)</label>
-          <label><input type="radio" name="membership" value="Bronze Membership"> Bronze Membership</label>
-          <label><input type="radio" name="membership" value="Silver Membership"> Silver Membership</label>
-          <label><input type="radio" name="membership" value="Gold Membership"> Gold Membership</label>
-        </fieldset>
+          <fieldset class="membership-levels">
+            <legend>Membership Level *</legend>
+            <label class="radio-label">
+              <input type="radio" name="level" value="np" required> Non-Profit Membership (NP)
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="level" value="bronze"> Bronze Membership
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="level" value="silver"> Silver Membership
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="level" value="gold"> Gold Membership
+            </label>
+          </fieldset>
 
-        <label for="description">Business / Organization Description
-          <textarea id="description" name="description" rows="4"></textarea>
-        </label>
+          <label>Business / Organization Description
+            <textarea name="description" rows="4"></textarea>
+          </label>
 
-        <!-- Hidden Timestamp -->
-        <input type="hidden" id="timestamp" name="timestamp">
+          <input type="hidden" name="timestamp" id="timestamp">
+          <input type="submit" value="Submit Application" class="cta-button">
+        </form>
+      </section>
 
-        <input type="submit" value="Submit Application" class="submit-btn">
-      </form>
-
-      <section class="tier-cards">
-        <h3>Membership Levels & Benefits</h3>
-        <div class="card tier-card">
-          <h4>NP Membership</h4>
-          <p>For registered non-profit and community organizations.</p>
-          <button type="button" id="np-btn">View NP Benefits</button>
+      <section class="card benefits-card">
+        <h2>Membership Levels & Benefits</h2>
+        <div class="level-info">
+          <h3>Non-Profit Membership (NP)</h3>
+          <p>Designed for registered non-profits and community organizations. Complimentary access to chamber events and directory listing.</p>
         </div>
-
-        <div class="card tier-card">
-          <h4>Bronze Membership</h4>
-          <p>Basic directory exposure and networking event access.</p>
-          <button type="button" id="bronze-btn">View Bronze Benefits</button>
+        <div class="level-info">
+          <h3>Bronze Membership</h3>
+          <p>Ideal for small businesses and startups. Basic directory listing and networking access.</p>
         </div>
-
-        <div class="card tier-card">
-          <h4>Silver Membership</h4>
-          <p>Includes homepage business spotlights and workshop discounts.</p>
-          <button type="button" id="silver-btn">View Silver Benefits</button>
+        <div class="level-info">
+          <h3>Silver Membership</h3>
+          <p>Includes expanded directory features, training discounts, and spotlight consideration on the homepage.</p>
         </div>
-
-        <div class="card tier-card">
-          <h4>Gold Membership</h4>
-          <p>Full tier advertising, trade summit tickets, and policy advocacy.</p>
-          <button type="button" id="gold-btn">View Gold Benefits</button>
+        <div class="level-info">
+          <h3>Gold Membership</h3>
+          <p>Premium placement across all chamber platforms, homepage business spotlight, and priority event sponsorship.</p>
         </div>
       </section>
     </div>
-
-    <!-- Modal Popups -->
-    <dialog id="modal-np">
-      <h3>NP Membership Perks</h3>
-      <p>Includes free directory listing, community event access, and quarterly non-profit roundtable invitations.</p>
-      <button class="close-modal">Close</button>
-    </dialog>
-
-    <dialog id="modal-bronze">
-      <h3>Bronze Membership Perks</h3>
-      <p>Standard business directory listing, monthly newsletter inclusion, and general networking access.</p>
-      <button class="close-modal">Close</button>
-    </dialog>
-
-    <dialog id="modal-silver">
-      <h3>Silver Membership Perks</h3>
-      <p>Enhanced directory card placement, 2x annual homepage spotlight features, and 15% trade event ticket discounts.</p>
-      <button class="close-modal">Close</button>
-    </dialog>
-
-    <dialog id="modal-gold">
-      <h3>Gold Membership Perks</h3>
-      <p>Priority directory banner placement, continuous randomized home page spotlight rotation, VIP trade summit access, and direct regional policy council representation.</p>
-      <button class="close-modal">Close</button>
-    </dialog>
   </main>
 
   <footer>
-    <div class="footer-info">
-      <p><strong>Harare Regional Chamber of Commerce</strong></p>
-      <p>10 Samora Machel Avenue, Harare, Zimbabwe</p>
-      <p>info@hararechamber.co.zw | +263 242 700 000</p>
-    </div>
-    <div class="footer-dev">
-      <p>&copy; <span id="current-year"></span> Harare Chamber | Masango Dewheretsoko | WDD 231</p>
-      <p>Last Modified: <span id="last-modified"></span></p>
-    </div>
+    <p>&copy; <span id="currentyear"></span> Harare Regional Chamber | Masango Dewheretsoko | WDD 231</p>
+    <p id="lastModified"></p>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const ts = document.getElementById("timestamp");
+      if (ts) ts.value = new Date().toISOString();
+    });
+  </script>
 </body>
 </html>
