@@ -51,7 +51,7 @@
     <h1>Membership Application</h1>
 
     <div class="join-grid">
-      <!-- Membership Form Card -->
+      <!-- Membership Application Form -->
       <section class="card form-section">
         <h2>Applicant Information</h2>
         <form method="get" action="thanks.html" class="membership-form">
@@ -115,27 +115,88 @@
         </form>
       </section>
 
-      <!-- Benefits Side Column -->
+      <!-- Membership Level Cards with Modal Popups -->
       <section class="card benefits-section">
         <h2>Membership Levels & Benefits</h2>
-        <div class="benefit-box">
+
+        <div class="level-card">
           <h3>Non-Profit Membership (NP)</h3>
-          <p>Designed for registered non-profits and community organizations with complimentary event access and directory listing.</p>
+          <p>No fee for registered non-profit entities.</p>
+          <button type="button" class="modal-trigger" data-modal="modal-np">Learn More</button>
         </div>
-        <div class="benefit-box">
+
+        <div class="level-card">
           <h3>Bronze Membership</h3>
-          <p>Ideal for small businesses and startups looking for standard directory exposure and networking.</p>
+          <p>Standard level for small growing enterprises.</p>
+          <button type="button" class="modal-trigger" data-modal="modal-bronze">Learn More</button>
         </div>
-        <div class="benefit-box">
+
+        <div class="level-card">
           <h3>Silver Membership</h3>
-          <p>Includes expanded directory features, training event discounts, and home page spotlight consideration.</p>
+          <p>Enhanced exposure and event discount privileges.</p>
+          <button type="button" class="modal-trigger" data-modal="modal-silver">Learn More</button>
         </div>
-        <div class="benefit-box">
+
+        <div class="level-card">
           <h3>Gold Membership</h3>
-          <p>Premium placement across chamber platforms, home page business spotlighting, and priority sponsorship access.</p>
+          <p>Premium tier with home page spotlight feature.</p>
+          <button type="button" class="modal-trigger" data-modal="modal-gold">Learn More</button>
         </div>
       </section>
     </div>
+
+    <!-- Modal Dialog Popups -->
+    <dialog id="modal-np" class="benefit-modal">
+      <div class="modal-content">
+        <button type="button" class="close-modal">&times;</button>
+        <h3>Non-Profit Membership Details</h3>
+        <ul>
+          <li><strong>Fee:</strong> Complimentary</li>
+          <li>Directory listing in non-profit category</li>
+          <li>Access to general chamber networking events</li>
+          <li>Community partner branding opportunities</li>
+        </ul>
+      </div>
+    </dialog>
+
+    <dialog id="modal-bronze" class="benefit-modal">
+      <div class="modal-content">
+        <button type="button" class="close-modal">&times;</button>
+        <h3>Bronze Membership Details</h3>
+        <ul>
+          <li><strong>Fee:</strong> $150 / year</li>
+          <li>Standard directory listing</li>
+          <li>10% discount on chamber workshops & seminars</li>
+          <li>Access to chamber member network directory</li>
+        </ul>
+      </div>
+    </dialog>
+
+    <dialog id="modal-silver" class="benefit-modal">
+      <div class="modal-content">
+        <button type="button" class="close-modal">&times;</button>
+        <h3>Silver Membership Details</h3>
+        <ul>
+          <li><strong>Fee:</strong> $350 / year</li>
+          <li>Enhanced directory listing with logo highlight</li>
+          <li>20% discount on chamber events & advertising</li>
+          <li>Consideration for home page business spotlights</li>
+        </ul>
+      </div>
+    </dialog>
+
+    <dialog id="modal-gold" class="benefit-modal">
+      <div class="modal-content">
+        <button type="button" class="close-modal">&times;</button>
+        <h3>Gold Membership Details</h3>
+        <ul>
+          <li><strong>Fee:</strong> $750 / year</li>
+          <li>Guaranteed rotating Home Page Business Spotlight</li>
+          <li>VIP seating and priority sponsorship at annual gala</li>
+          <li>Full access to executive networking forums</li>
+        </ul>
+      </div>
+    </dialog>
   </main>
 
   <footer>
@@ -145,8 +206,44 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      // Set timestamp
       const ts = document.getElementById("timestamp");
       if (ts) ts.value = new Date().toISOString();
+
+      // Modal dialog trigger functionality
+      const triggers = document.querySelectorAll(".modal-trigger");
+      triggers.forEach(button => {
+        button.addEventListener("click", () => {
+          const modalId = button.getAttribute("data-modal");
+          const modal = document.getElementById(modalId);
+          if (modal) modal.showModal();
+        });
+      });
+
+      // Close modal buttons
+      const closeButtons = document.querySelectorAll(".close-modal");
+      closeButtons.forEach(button => {
+        button.addEventListener("click", () => {
+          const modal = button.closest("dialog");
+          if (modal) modal.close();
+        });
+      });
+
+      // Close modal when clicking backdrop
+      const modals = document.querySelectorAll("dialog");
+      modals.forEach(modal => {
+        modal.addEventListener("click", (e) => {
+          const rect = modal.getBoundingClientRect();
+          if (
+            e.clientX < rect.left ||
+            e.clientX > rect.right ||
+            e.clientY < rect.top ||
+            e.clientY > rect.bottom
+          ) {
+            modal.close();
+          }
+        });
+      });
     });
   </script>
 </body>
