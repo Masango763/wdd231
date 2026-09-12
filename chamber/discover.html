@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Discover Harare | Harare Regional Chamber of Commerce</title>
-  <meta name="description" content="Explore regional commercial landmarks, demographics, and key economic features of Harare.">
+  <meta name="description" content="Explore regional commercial landmarks, demographics, and economic insights across Harare.">
   <meta name="author" content="Masango Dewheretsoko">
 
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <meta property="og:title" content="Discover Harare | Harare Regional Chamber">
-  <meta property="og:description" content="Explore regional commercial landmarks, demographics, and key economic features of Harare.">
+  <meta property="og:description" content="Explore commercial landmarks, demographics, and economic insights across Harare.">
   <meta property="og:image" content="https://masango763.github.io/wdd231/chamber/images/logo.svg">
   <meta property="og:url" content="https://masango763.github.io/wdd231/chamber/discover.html">
 
@@ -43,71 +43,120 @@
   </nav>
 
   <main class="discover-main">
-    <h1>Discover Harare</h1>
+    <section class="discover-hero">
+      <h1>Discover Harare</h1>
+      <p class="hero-subtitle">The commercial engine and innovation capital of Zimbabwe</p>
+    </section>
 
-    <div class="discover-grid">
-      <!-- Sidebar / Info Section -->
+    <div class="discover-layout">
+      <!-- Left Sidebar Information -->
       <aside class="discover-sidebar">
-        <section class="discover-card">
-          <h2>Visitor Status</h2>
-          <p id="visit-message">Welcome! Let us know if you have any questions.</p>
+        <section class="discover-card visit-card">
+          <div class="card-badge">Visitor Status</div>
+          <p id="visit-message" class="visit-status-text">Welcome! Loading your latest visit status...</p>
         </section>
 
         <section class="discover-card">
           <h2>Historical Context</h2>
-          <p>Founded in 1890, Harare serves as Zimbabwe's primary administrative, commercial, and financial center, connecting regional trade corridors to southern Africa.</p>
+          <p>Founded in 1890, Harare serves as Zimbabwe's administrative, financial, and commercial heart. It anchors primary trade corridors across the Southern African Development Community (SADC) region.</p>
         </section>
 
-        <section class="discover-card">
-          <h2>Regional Demographics</h2>
-          <ul>
-            <li><strong>Metropolitan Population:</strong> ~2.1 Million</li>
-            <li><strong>Key Industries:</strong> Financial Services, Tech Hubs, Agriculture Export, Manufacturing</li>
-            <li><strong>Currency Context:</strong> USD / ZiG Dual Economy</li>
+        <section class="discover-card stats-card">
+          <h2>Key Demographics</h2>
+          <ul class="stats-list">
+            <li><span>Metropolitan Pop.</span><strong>~2.1 Million</strong></li>
+            <li><span>Primary Sectors</span><strong>FinTech, Agritech, SRE</strong></li>
+            <li><span>Currency System</span><strong>USD / ZiG Dual-Currency</strong></li>
+            <li><span>Time Zone</span><strong>CAT (UTC+2)</strong></li>
           </ul>
         </section>
       </aside>
 
-      <!-- Main Gallery / Landmarks Section -->
+      <!-- Main Content Gallery -->
       <section class="discover-gallery">
-        <div class="gallery-card">
-          <h2>Harare Central Business District</h2>
+        <article class="gallery-card">
           <figure>
-            <img src="images/logo.svg" alt="Harare CBD Skyline" loading="lazy" width="300" height="200" class="landmark-img">
-            <figcaption>The commercial and financial nerve center of Harare.</figcaption>
+            <img src="images/logo.svg" alt="Harare Central Business District" loading="lazy" width="400" height="250" class="landmark-img">
+            <figcaption>Central Business District</figcaption>
           </figure>
-          <p>Home to the Zimbabwe Stock Exchange, national banking institutions, and corporate headquarters.</p>
-        </div>
+          <div class="card-content">
+            <h3>Harare CBD Commercial Hub</h3>
+            <p>The financial nerve center hosting the Zimbabwe Stock Exchange, headquarters of major banking institutions, and diplomatic missions.</p>
+            <button class="learn-more-btn" data-modal="modal-cbd">Explore Details</button>
+          </div>
+        </article>
 
-        <div class="gallery-card">
-          <h2>Eastgate Centre</h2>
+        <article class="gallery-card">
           <figure>
-            <img src="images/logo.svg" alt="Eastgate Centre Architecture" loading="lazy" width="300" height="200" class="landmark-img">
-            <figcaption>Pioneering eco-friendly biomimicry architecture.</figcaption>
+            <img src="images/logo.svg" alt="Eastgate Centre Biomimicry Architecture" loading="lazy" width="400" height="250" class="landmark-img">
+            <figcaption>Eastgate Centre</figcaption>
           </figure>
-          <p>Designed by Mick Pearce, using natural convection cooling inspired by local termite mounds.</p>
-        </div>
+          <div class="card-content">
+            <h3>Eastgate Architectural Landmark</h3>
+            <p>Designed by architect Mick Pearce, this world-renowned biomimicry structure uses passive termite-mound cooling to cut energy consumption by 90%.</p>
+            <button class="learn-more-btn" data-modal="modal-eastgate">Explore Details</button>
+          </div>
+        </article>
 
-        <div class="gallery-card">
-          <h2>National Gallery of Zimbabwe</h2>
+        <article class="gallery-card">
           <figure>
-            <img src="images/logo.svg" alt="National Gallery Harare" loading="lazy" width="300" height="200" class="landmark-img">
-            <figcaption>Preserving and showcasing contemporary African art.</figcaption>
+            <img src="images/logo.svg" alt="National Gallery of Zimbabwe" loading="lazy" width="400" height="250" class="landmark-img">
+            <figcaption>National Gallery of Zimbabwe</figcaption>
           </figure>
-          <p>A vital cultural landmark fostering regional creative expression and historical research.</p>
-        </div>
+          <div class="card-content">
+            <h3>National Cultural Gallery</h3>
+            <p>Preserves and showcases Shona sculpture, contemporary visual art, and cultural heritage exhibits from across Sub-Saharan Africa.</p>
+            <button class="learn-more-btn" data-modal="modal-gallery">Explore Details</button>
+          </div>
+        </article>
 
-        <div class="gallery-card">
-          <h2>Harare Innovation Hubs</h2>
+        <article class="gallery-card">
           <figure>
-            <img src="images/logo.svg" alt="Harare Tech Ecosystem" loading="lazy" width="300" height="200" class="landmark-img">
-            <figcaption>Emerging regional technology and startup ecosystem.</figcaption>
+            <img src="images/logo.svg" alt="Harare Technology Innovation Hubs" loading="lazy" width="400" height="250" class="landmark-img">
+            <figcaption>Innovation & Tech Parks</figcaption>
           </figure>
-          <p>Supporting local software developers, SRE teams, and digital innovators across Southern Africa.</p>
-        </div>
+          <div class="card-content">
+            <h3>Regional Innovation Ecosystem</h3>
+            <p>Accelerating local tech talent in software engineering, Cloud SRE infrastructure, and multi-agent AI development pipelines.</p>
+            <button class="learn-more-btn" data-modal="modal-tech">Explore Details</button>
+          </div>
+        </article>
       </section>
     </div>
   </main>
+
+  <!-- Modals for Interactive Details -->
+  <dialog id="modal-cbd" class="detail-modal">
+    <div class="modal-content">
+      <h2>Harare Central Business District</h2>
+      <p>The Harare CBD connects major transit arteries including Samora Machel Avenue and Julius Nyerere Way. It houses over 5,000 corporate offices and retail establishments.</p>
+      <button class="close-modal-btn">Close</button>
+    </div>
+  </dialog>
+
+  <dialog id="modal-eastgate" class="detail-modal">
+    <div class="modal-content">
+      <h2>Eastgate Centre Engineering</h2>
+      <p>Opened in 1996, the Eastgate Centre was built without conventional air conditioning. It continuously draws air through massive open chimneys, utilizing natural temperature differential cooling cycles.</p>
+      <button class="close-modal-btn">Close</button>
+    </div>
+  </dialog>
+
+  <dialog id="modal-gallery" class="detail-modal">
+    <div class="modal-content">
+      <h2>National Gallery Heritage</h2>
+      <p>Established in 1957, the gallery has curated permanent collections of stone sculptures, regional textile work, and historical artifacts essential to African art history.</p>
+      <button class="close-modal-btn">Close</button>
+    </div>
+  </dialog>
+
+  <dialog id="modal-tech" class="detail-modal">
+    <div class="modal-content">
+      <h2>Harare Tech Ecosystem</h2>
+      <p>Fostering developer talent, local incubators, tech meetups, and open-source systems that drive commercial software expansion throughout Zimbabwe.</p>
+      <button class="close-modal-btn">Close</button>
+    </div>
+  </dialog>
 
   <footer>
     <div class="footer-content">
