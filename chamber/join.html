@@ -3,30 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Membership Application | Harare Regional Chamber of Commerce</title>
-  <meta name="description" content="Apply for membership with the Harare Regional Chamber of Commerce to access business networks and resources.">
+  <title>Join the Chamber | Harare Regional Chamber of Commerce</title>
+  <meta name="description" content="Apply for membership with the Harare Regional Chamber of Commerce and connect with local enterprises.">
   <meta name="author" content="Masango Dewheretsoko">
 
-  <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
-  <!-- Google Fonts API Links -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Join Harare Regional Chamber">
-  <meta property="og:description" content="Become a member of the Harare Regional Chamber of Commerce to grow your regional business presence.">
+  <meta property="og:title" content="Join the Chamber | Harare Regional Chamber">
+  <meta property="og:description" content="Apply for membership with the Harare Regional Chamber of Commerce and connect with local enterprises.">
   <meta property="og:image" content="https://masango763.github.io/wdd231/chamber/images/logo.svg">
   <meta property="og:url" content="https://masango763.github.io/wdd231/chamber/join.html">
 
-  <!-- External CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
 
-  <!-- Deferred Scripts -->
   <script src="scripts/navigation.js" defer></script>
 </head>
 <body>
@@ -48,203 +42,34 @@
   </nav>
 
   <main>
-    <h1>Membership Application</h1>
-
-    <div class="join-grid">
-      <!-- Membership Application Form -->
-      <section class="card form-section">
-        <h2>Applicant Information</h2>
-        <form method="get" action="thanks.html" class="membership-form">
-          <div class="form-item">
-            <label for="fname">First Name *</label>
-            <input type="text" id="fname" name="fname" required autocomplete="given-name">
-          </div>
-
-          <div class="form-item">
-            <label for="lname">Last Name *</label>
-            <input type="text" id="lname" name="lname" required autocomplete="family-name">
-          </div>
-
-          <div class="form-item">
-            <label for="title">Organizational Title</label>
-            <input type="text" id="title" name="title" autocomplete="organization-title">
-          </div>
-
-          <div class="form-item">
-            <label for="email">Email Address *</label>
-            <input type="email" id="email" name="email" required placeholder="example@domain.co.zw" autocomplete="email">
-          </div>
-
-          <div class="form-item">
-            <label for="phone">Mobile Phone *</label>
-            <input type="tel" id="phone" name="phone" required autocomplete="tel">
-          </div>
-
-          <div class="form-item">
-            <label for="organization">Organization / Business Name *</label>
-            <input type="text" id="organization" name="organization" required autocomplete="organization">
-          </div>
-
-          <fieldset class="radio-fieldset">
-            <legend>Membership Level *</legend>
-            <label class="radio-row">
-              <input type="radio" name="level" value="np" required>
-              <span>Non-Profit Membership (NP)</span>
-            </label>
-            <label class="radio-row">
-              <input type="radio" name="level" value="bronze">
-              <span>Bronze Membership</span>
-            </label>
-            <label class="radio-row">
-              <input type="radio" name="level" value="silver">
-              <span>Silver Membership</span>
-            </label>
-            <label class="radio-row">
-              <input type="radio" name="level" value="gold">
-              <span>Gold Membership</span>
-            </label>
-          </fieldset>
-
-          <div class="form-item">
-            <label for="description">Business / Organization Description</label>
-            <textarea id="description" name="description" rows="4"></textarea>
-          </div>
-
-          <input type="hidden" name="timestamp" id="timestamp">
-          <input type="submit" value="Submit Application" class="submit-button">
-        </form>
-      </section>
-
-      <!-- Membership Level Cards with Modal Popups -->
-      <section class="card benefits-section">
-        <h2>Membership Levels & Benefits</h2>
-
-        <div class="level-card">
-          <h3>Non-Profit Membership (NP)</h3>
-          <p>No fee for registered non-profit entities.</p>
-          <button type="button" class="modal-trigger" data-modal="modal-np">Learn More</button>
-        </div>
-
-        <div class="level-card">
-          <h3>Bronze Membership</h3>
-          <p>Standard level for small growing enterprises.</p>
-          <button type="button" class="modal-trigger" data-modal="modal-bronze">Learn More</button>
-        </div>
-
-        <div class="level-card">
-          <h3>Silver Membership</h3>
-          <p>Enhanced exposure and event discount privileges.</p>
-          <button type="button" class="modal-trigger" data-modal="modal-silver">Learn More</button>
-        </div>
-
-        <div class="level-card">
-          <h3>Gold Membership</h3>
-          <p>Premium tier with home page spotlight feature.</p>
-          <button type="button" class="modal-trigger" data-modal="modal-gold">Learn More</button>
-        </div>
-      </section>
-    </div>
-
-    <!-- Modal Dialog Popups -->
-    <dialog id="modal-np" class="benefit-modal">
-      <div class="modal-content">
-        <button type="button" class="close-modal">&times;</button>
-        <h3>Non-Profit Membership Details</h3>
-        <ul>
-          <li><strong>Fee:</strong> Complimentary</li>
-          <li>Directory listing in non-profit category</li>
-          <li>Access to general chamber networking events</li>
-          <li>Community partner branding opportunities</li>
-        </ul>
-      </div>
-    </dialog>
-
-    <dialog id="modal-bronze" class="benefit-modal">
-      <div class="modal-content">
-        <button type="button" class="close-modal">&times;</button>
-        <h3>Bronze Membership Details</h3>
-        <ul>
-          <li><strong>Fee:</strong> $150 / year</li>
-          <li>Standard directory listing</li>
-          <li>10% discount on chamber workshops & seminars</li>
-          <li>Access to chamber member network directory</li>
-        </ul>
-      </div>
-    </dialog>
-
-    <dialog id="modal-silver" class="benefit-modal">
-      <div class="modal-content">
-        <button type="button" class="close-modal">&times;</button>
-        <h3>Silver Membership Details</h3>
-        <ul>
-          <li><strong>Fee:</strong> $350 / year</li>
-          <li>Enhanced directory listing with logo highlight</li>
-          <li>20% discount on chamber events & advertising</li>
-          <li>Consideration for home page business spotlights</li>
-        </ul>
-      </div>
-    </dialog>
-
-    <dialog id="modal-gold" class="benefit-modal">
-      <div class="modal-content">
-        <button type="button" class="close-modal">&times;</button>
-        <h3>Gold Membership Details</h3>
-        <ul>
-          <li><strong>Fee:</strong> $750 / year</li>
-          <li>Guaranteed rotating Home Page Business Spotlight</li>
-          <li>VIP seating and priority sponsorship at annual gala</li>
-          <li>Full access to executive networking forums</li>
-        </ul>
-      </div>
-    </dialog>
+    <h1>Join the Chamber</h1>
+    <p>Become a partner to access regional commercial networks, tech hubs, and business events across Harare.</p>
   </main>
 
   <footer>
-    <p>&copy; <span id="currentyear"></span> Harare Regional Chamber | Masango Dewheretsoko | WDD 231</p>
-    <p id="lastModified"></p>
+    <div class="footer-info">
+      <img src="images/logo.svg" alt="Harare Chamber Footer Logo" class="footer-logo" width="50" height="50">
+      <p><strong>Harare Regional Chamber of Commerce</strong></p>
+      <p>10 Samora Machel Ave, Harare, Zimbabwe</p>
+      <p>info@hararechamber.co.zw | +263 242 123456</p>
+    </div>
+
+    <div class="footer-socials">
+      <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg class="social-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </a>
+      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X Twitter">
+        <svg class="social-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg class="social-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+      </a>
+    </div>
+
+    <div class="footer-meta">
+      <p>&copy; <span id="currentyear"></span> Harare Regional Chamber | Masango Dewheretsoko | WDD 231</p>
+      <p id="lastModified"></p>
+    </div>
   </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // Set timestamp
-      const ts = document.getElementById("timestamp");
-      if (ts) ts.value = new Date().toISOString();
-
-      // Modal dialog trigger functionality
-      const triggers = document.querySelectorAll(".modal-trigger");
-      triggers.forEach(button => {
-        button.addEventListener("click", () => {
-          const modalId = button.getAttribute("data-modal");
-          const modal = document.getElementById(modalId);
-          if (modal) modal.showModal();
-        });
-      });
-
-      // Close modal buttons
-      const closeButtons = document.querySelectorAll(".close-modal");
-      closeButtons.forEach(button => {
-        button.addEventListener("click", () => {
-          const modal = button.closest("dialog");
-          if (modal) modal.close();
-        });
-      });
-
-      // Close modal when clicking backdrop
-      const modals = document.querySelectorAll("dialog");
-      modals.forEach(modal => {
-        modal.addEventListener("click", (e) => {
-          const rect = modal.getBoundingClientRect();
-          if (
-            e.clientX < rect.left ||
-            e.clientX > rect.right ||
-            e.clientY < rect.top ||
-            e.clientY > rect.bottom
-          ) {
-            modal.close();
-          }
-        });
-      });
-    });
-  </script>
 </body>
 </html>
