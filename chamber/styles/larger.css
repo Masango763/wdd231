@@ -74,3 +74,17 @@
     gap: 1.5rem;
   }
 }
+
+@media only screen and (min-width: 48rem) {
+  .discover-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+  }
+
+  .discover-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
