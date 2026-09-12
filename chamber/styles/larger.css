@@ -34,3 +34,11 @@
     padding: 1.5rem 2rem;
   }
 }
+
+@media only screen and (min-width: 48rem) {
+  .join-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 2rem;
+  }
+}

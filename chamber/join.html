@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Join the Chamber | Harare Regional Chamber of Commerce</title>
-  <meta name="description" content="Apply for membership with the Harare Regional Chamber of Commerce and connect with local enterprises.">
+  <meta name="description" content="Apply for membership with the Harare Regional Chamber of Commerce to connect with local enterprises and tech hubs.">
   <meta name="author" content="Masango Dewheretsoko">
 
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <meta property="og:title" content="Join the Chamber | Harare Regional Chamber">
-  <meta property="og:description" content="Apply for membership with the Harare Regional Chamber of Commerce and connect with local enterprises.">
+  <meta property="og:description" content="Apply for membership with the Harare Regional Chamber of Commerce.">
   <meta property="og:image" content="https://masango763.github.io/wdd231/chamber/images/logo.svg">
   <meta property="og:url" content="https://masango763.github.io/wdd231/chamber/join.html">
 
@@ -41,9 +41,97 @@
     </ul>
   </nav>
 
-  <main>
+  <main class="join-container">
     <h1>Join the Chamber</h1>
-    <p>Become a partner to access regional commercial networks, tech hubs, and business events across Harare.</p>
+    <p class="join-intro">Become a partner to access regional commercial networks, tech hubs, and business events across Harare.</p>
+
+    <div class="join-grid">
+      <!-- Membership Form -->
+      <section class="form-section">
+        <h2>Membership Application Form</h2>
+        <form action="thankyou.html" method="get" class="chamber-form">
+          <label>
+            First Name*
+            <input type="text" name="fname" required title="Enter your first name" autocomplete="given-name">
+          </label>
+
+          <label>
+            Last Name*
+            <input type="text" name="lname" required title="Enter your last name" autocomplete="family-name">
+          </label>
+
+          <label>
+            Organizational Title
+            <input type="text" name="title" title="Enter your job title or position" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+          </label>
+
+          <label>
+            Email Address*
+            <input type="email" name="email" required title="Enter a valid email address" autocomplete="email" placeholder="example@domain.com">
+          </label>
+
+          <label>
+            Mobile Phone*
+            <input type="tel" name="phone" required title="Enter a valid phone number" autocomplete="tel">
+          </label>
+
+          <label>
+            Organization / Business Name*
+            <input type="text" name="organization" required title="Enter your company or organization name" autocomplete="organization">
+          </label>
+
+          <label>
+            Membership Level
+            <select name="membership">
+              <option value="NP Membership">NP Membership (Non-Profit - Free)</option>
+              <option value="Bronze Membership">Bronze Membership ($200/yr)</option>
+              <option value="Silver Membership">Silver Membership ($500/yr)</option>
+              <option value="Gold Membership">Gold Membership ($1,000/yr)</option>
+            </select>
+          </label>
+
+          <label>
+            Organization Description
+            <textarea name="description" rows="4" placeholder="Briefly describe your business or services..."></textarea>
+          </label>
+
+          <input type="hidden" name="timestamp" id="timestamp">
+
+          <input type="submit" value="Submit Application" class="submit-btn">
+        </form>
+      </section>
+
+      <!-- Membership Levels -->
+      <section class="benefits-section">
+        <h2>Membership Tiers</h2>
+        
+        <div class="membership-cards">
+          <div class="card np-card">
+            <h3>NP Membership</h3>
+            <p class="price">Free</p>
+            <p>Designed for non-profit organizations and community groups.</p>
+          </div>
+
+          <div class="card bronze-card">
+            <h3>Bronze Level</h3>
+            <p class="price">$200 / year</p>
+            <p>Access to chamber networking events and directory listing.</p>
+          </div>
+
+          <div class="card silver-card">
+            <h3>Silver Level</h3>
+            <p class="price">$500 / year</p>
+            <p>Includes event discounts, directory listing, and spotlight opportunities.</p>
+          </div>
+
+          <div class="card gold-card">
+            <h3>Gold Level</h3>
+            <p class="price">$1,000 / year</p>
+            <p>Full VIP access, homepage spotlight features, and event sponsorships.</p>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer>
@@ -71,5 +159,9 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    document.getElementById('timestamp').value = new Date().toISOString();
+  </script>
 </body>
 </html>
