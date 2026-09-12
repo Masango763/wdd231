@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="styles/larger.css">
 
   <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/discover.js" defer></script>
 </head>
 <body>
   <header>
@@ -41,18 +42,71 @@
     </ul>
   </nav>
 
-  <main>
+  <main class="discover-main">
     <h1>Discover Harare</h1>
 
-    <section>
-      <h2>Historical Context</h2>
-      <p>Founded in 1890, Harare serves as Zimbabwe's primary administrative, commercial, and financial center, connecting regional trade corridors to southern Africa.</p>
-    </section>
+    <div class="discover-grid">
+      <!-- Sidebar / Info Section -->
+      <aside class="discover-sidebar">
+        <section class="discover-card">
+          <h2>Visitor Status</h2>
+          <p id="visit-message">Welcome! Let us know if you have any questions.</p>
+        </section>
 
-    <section>
-      <h2>Regional Commercial Landmarks</h2>
-      <img src="images/logo.svg" alt="Harare Commercial Landmarks" width="220" height="150" style="background-color: var(--primary); padding: 1rem; border-radius: 8px;">
-    </section>
+        <section class="discover-card">
+          <h2>Historical Context</h2>
+          <p>Founded in 1890, Harare serves as Zimbabwe's primary administrative, commercial, and financial center, connecting regional trade corridors to southern Africa.</p>
+        </section>
+
+        <section class="discover-card">
+          <h2>Regional Demographics</h2>
+          <ul>
+            <li><strong>Metropolitan Population:</strong> ~2.1 Million</li>
+            <li><strong>Key Industries:</strong> Financial Services, Tech Hubs, Agriculture Export, Manufacturing</li>
+            <li><strong>Currency Context:</strong> USD / ZiG Dual Economy</li>
+          </ul>
+        </section>
+      </aside>
+
+      <!-- Main Gallery / Landmarks Section -->
+      <section class="discover-gallery">
+        <div class="gallery-card">
+          <h2>Harare Central Business District</h2>
+          <figure>
+            <img src="images/logo.svg" alt="Harare CBD Skyline" loading="lazy" width="300" height="200" class="landmark-img">
+            <figcaption>The commercial and financial nerve center of Harare.</figcaption>
+          </figure>
+          <p>Home to the Zimbabwe Stock Exchange, national banking institutions, and corporate headquarters.</p>
+        </div>
+
+        <div class="gallery-card">
+          <h2>Eastgate Centre</h2>
+          <figure>
+            <img src="images/logo.svg" alt="Eastgate Centre Architecture" loading="lazy" width="300" height="200" class="landmark-img">
+            <figcaption>Pioneering eco-friendly biomimicry architecture.</figcaption>
+          </figure>
+          <p>Designed by Mick Pearce, using natural convection cooling inspired by local termite mounds.</p>
+        </div>
+
+        <div class="gallery-card">
+          <h2>National Gallery of Zimbabwe</h2>
+          <figure>
+            <img src="images/logo.svg" alt="National Gallery Harare" loading="lazy" width="300" height="200" class="landmark-img">
+            <figcaption>Preserving and showcasing contemporary African art.</figcaption>
+          </figure>
+          <p>A vital cultural landmark fostering regional creative expression and historical research.</p>
+        </div>
+
+        <div class="gallery-card">
+          <h2>Harare Innovation Hubs</h2>
+          <figure>
+            <img src="images/logo.svg" alt="Harare Tech Ecosystem" loading="lazy" width="300" height="200" class="landmark-img">
+            <figcaption>Emerging regional technology and startup ecosystem.</figcaption>
+          </figure>
+          <p>Supporting local software developers, SRE teams, and digital innovators across Southern Africa.</p>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer>

@@ -218,3 +218,77 @@ footer {
   color: var(--secondary);
   margin: 0 0 0.5rem 0;
 }
+
+/* Directory Toggle & Layout Styles */
+.view-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.view-toggle button {
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--primary);
+  background-color: #fff;
+  color: var(--primary);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.view-toggle button.active-view {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+/* Directory Grid View */
+#members-container.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+#members-container.grid .member-card {
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+#members-container.grid .member-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+/* Directory List View */
+#members-container.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#members-container.list .member-card {
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#members-container.list .member-card img {
+  display: none;
+}
+
+/* Discover Gallery Styling */
+.landmark-img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  background-color: var(--primary);
+  padding: 0.5rem;
+}
