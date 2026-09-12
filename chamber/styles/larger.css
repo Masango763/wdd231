@@ -18,3 +18,23 @@
     align-items: center;
   }
 }
+
+@media only screen and (min-width: 37.5rem) {
+  .home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .spotlight-card {
+    grid-column: span 2;
+  }
+
+  .spotlight-container {
+    flex-direction: row;
+  }
+
+  .spotlight {
+    flex: 1;
+  }
+}
