@@ -1,25 +1,17 @@
 @media only screen and (min-width: 37.5rem) {
-  #ham-button {
-    display: none;
-  }
-
   nav ul {
     flex-direction: row;
     justify-content: center;
   }
 
-  #members-container.grid {
-    grid-template-columns: repeat(3, 1fr);
+  nav a {
+    padding: 0.85rem 1.75rem;
   }
 
-  #members-container.list .member-card {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  #ham-button {
+    display: none;
   }
-}
 
-@media only screen and (min-width: 37.5rem) {
   .home-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -36,5 +28,9 @@
 
   .spotlight {
     flex: 1;
+  }
+
+  footer {
+    padding: 1.5rem 2rem;
   }
 }
