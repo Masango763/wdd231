@@ -648,3 +648,51 @@ footer {
   border-radius: 4px;
   cursor: pointer;
 }
+
+/* Directory Page Specific Layout & Badges */
+#members-container {
+  padding: 1rem;
+}
+
+.member-card {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.member-badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+.member-badge.gold {
+  background-color: #fef08a;
+  color: #854d0e;
+}
+
+.member-badge.silver {
+  background-color: #e2e8f0;
+  color: #334155;
+}
+
+.member-badge.bronze {
+  background-color: #ffedd5;
+  color: #9a3412;
+}
+
+.member-card a {
+  color: var(--primary);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.member-card a:hover {
+  text-decoration: underline;
+}

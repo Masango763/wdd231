@@ -1,24 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("members-container");
-  const gridBtn = document.getElementById("grid");
-  const listBtn = document.getElementById("list");
+  const gridBtn = document.getElementById("grid-view");
+  const listBtn = document.getElementById("list-view");
 
-  async function getMembers() {
+  async function fetchMembers() {
     try {
-      const response = await fetch("data/members.json?v=" + new Date().getTime());
-      if (!response.ok) throw new Error("Failed to fetch members data");
+      const response = await fetch("data/members.json");
+      if (!response.ok) throw new Error("Failed to fetch member data");
       const members = await response.json();
       displayMembers(members);
     } catch (error) {
-      console.error("Error loading chamber directory:", error);
-    }
-  }
-
-  function getLevelName(level) {
-    switch(level) {
-      case 3: return "Gold Member";
-      case 2: return "Silver Member";
-      default: return "Member";
+      console.error(error);
+      container.innerHTML = `<p class="error">Unable to load business directory members at this time.</p>`;
     }
   }
 
@@ -26,22 +19,19 @@ document.addEventListener("DOMContentLoaded", () => {
     container.innerHTML = "";
     members.forEach(member => {
       const card = document.createElement("section");
-      card.classList.add("member-card");
+      card.className = "member-card";
 
       card.innerHTML = `
-        <div class="card-header">
-          <h3 class="member-name">${member.name}</h3>
-          <p class="tagline">${member.description || ''}</p>
+        <img src="${member.image}" alt="${member.name} Logo" loading="lazy" width="100" height="100">
+        <div class="member-info">
+          <h3>${member.name}</h3>
+          <p class="member-category"><strong>Category:</strong> ${member.category}</p>
+          <p>${member.address}</p>
+          <p>${member.phone}</p>
+          <a href="${member.website}" target="_blank" rel="noopener noreferrer">Visit Website</a>
         </div>
-        <div class="card-body">
-          <img src="${member.image}" alt="${member.name} logo" loading="lazy" width="80" height="80">
-          <p class="membership-badge">${getLevelName(member.membershipLevel)}</p>
-          <p class="address">${member.address}</p>
-          <p class="phone">${member.phone}</p>
-          <a href="${member.website}" target="_blank" rel="noopener noreferrer" class="website-link">Website</a>
-        </div>
+        <div class="member-badge ${member.membership.toLowerCase()}">${member.membership} Member</div>
       `;
-
       container.appendChild(card);
     });
   }
@@ -49,16 +39,16 @@ document.addEventListener("DOMContentLoaded", () => {
   gridBtn.addEventListener("click", () => {
     container.classList.add("grid");
     container.classList.remove("list");
-    gridBtn.classList.add("active");
-    listBtn.classList.remove("active");
+    gridBtn.classList.add("active-view");
+    listBtn.classList.remove("active-view");
   });
 
   listBtn.addEventListener("click", () => {
     container.classList.add("list");
     container.classList.remove("grid");
-    listBtn.classList.add("active");
-    gridBtn.classList.remove("active");
+    listBtn.classList.add("active-view");
+    gridBtn.classList.remove("active-view");
   });
 
-  getMembers();
+  fetchMembers();
 });
