@@ -1,12 +1,41 @@
-/* Mobile Hamburger Menu & Layout Styles */
+/* --- Core Variables & Reset --- */
+:root {
+    --primary: #1b4332;
+    --secondary: #2d6a4f;
+    --accent: #d8f3dc;
+    --text-dark: #212529;
+    --bg-light: #f8f9fa;
+}
+
+body {
+    font-family: 'Roboto', sans-serif.sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* --- Header & Hamburger Menu --- */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: var(--primary, #1b4332);
+    background-color: var(--primary);
     color: #fff;
     position: relative;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.header-logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
 }
 
 #menu {
@@ -19,11 +48,11 @@ header {
 }
 
 #menu::before {
-    content: "≡"; /* Hamburger icon */
+    content: "≡";
 }
 
 #menu.open::before {
-    content: "X"; /* Close icon */
+    content: "X";
 }
 
 nav {
@@ -31,12 +60,13 @@ nav {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: var(--secondary, #2d6a4f);
-    display: none; /* Hidden by default on mobile */
+    background-color: var(--secondary);
+    display: none;
+    z-index: 1000;
 }
 
 nav.open {
-    display: block; /* Shown when toggled */
+    display: block;
 }
 
 .navigation {
@@ -56,14 +86,159 @@ nav.open {
 
 .navigation li a:hover,
 .navigation li a.active {
-    background-color: var(--accent, #d8f3dc);
-    color: var(--primary, #1b4332);
+    background-color: var(--accent);
+    color: var(--primary);
 }
 
-/* Larger screens (Desktop View) */
+/* --- Professional Footer Styles (Reasonable Sizing & Organized Socials) --- */
+footer {
+    background-color: var(--primary);
+    color: #ffffff;
+    padding: 2rem 1rem 1.5rem;
+    margin-top: 3rem;
+    font-size: 0.95rem;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-info h3 {
+    margin-bottom: 0.4rem;
+    font-size: 1.1rem;
+    color: var(--accent);
+}
+
+.footer-info p {
+    margin: 0.2rem 0;
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+/* Controlled Footer Logo/Banner Size */
+.footer-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+/* Organized Social Media Handles */
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0.8rem 0;
+}
+
+.footer-social a {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.footer-social a:hover {
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 1rem auto 0;
+    text-align: center;
+    opacity: 0.8;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+/* --- Join Page Form Styling --- */
+.chamber-form {
+    max-width: 700px;
+    margin: 2rem auto;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.chamber-form fieldset {
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.chamber-form legend {
+    font-weight: bold;
+    color: var(--primary);
+    padding: 0 0.5rem;
+}
+
+.chamber-form label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.chamber-form input[type="text"],
+.chamber-form input[type="email"],
+.chamber-form input[type="tel"],
+.chamber-form select,
+.chamber-form textarea {
+    width: 100%;
+    padding: 0.7rem;
+    margin-top: 0.3rem;
+    border: 1px solid #94a3b8;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.chamber-form input:focus,
+.chamber-form select:focus,
+.chamber-form textarea:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 5px rgba(45, 106, 79, 0.3);
+}
+
+.submit-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary);
+}
+
+/* --- Desktop View Adjustments --- */
 @media (min-width: 768px) {
     #menu {
-        display: none; /* Hide hamburger on desktop */
+        display: none;
     }
     
     nav {
@@ -82,75 +257,7 @@ nav.open {
         border-bottom: none;
         padding: 0.5rem 1rem;
     }
-}
 
-/* --- Professional Footer Styles --- */
-footer {
-    background-color: var(--primary, #1b4332);
-    color: #ffffff;
-    padding: 2.5rem 1rem 1.5rem;
-    margin-top: 3rem;
-    font-size: 0.95rem;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    text-align: center;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.footer-info h3 {
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-    color: var(--accent, #d8f3dc);
-}
-
-.footer-info p {
-    margin: 0.3rem 0;
-    opacity: 0.9;
-}
-
-.footer-social {
-    display: flex;
-    justify-content: center;
-    gap: 1.2rem;
-    margin-top: 1rem;
-}
-
-.footer-social a {
-    color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.footer-social a:hover {
-    background-color: var(--accent, #d8f3dc);
-    color: var(--primary, #1b4332);
-}
-
-.footer-bottom {
-    max-width: 1200px;
-    margin: 1.5rem auto 0;
-    text-align: center;
-    opacity: 0.8;
-    font-size: 0.85rem;
-    line-height: 1.6;
-}
-
-/* Desktop Footer Layout */
-@media (min-width: 768px) {
     .footer-content {
         grid-template-columns: repeat(3, 1fr);
         text-align: left;
