@@ -151,17 +151,14 @@ footer .footer-logo {
     margin: 0.5rem 0;
 }
 
-.footer-social img,
 .footer-social a {
     width: 32px !important;
     height: 32px !important;
     max-width: 32px !important;
     max-height: 32px !important;
     object-fit: contain;
-}
-
-.footer-social a {
-    background-color: rgba(255, 255, 255, 0.1);
+    /* Use solid dark background to pass WCAG color contrast requirements */
+    background-color: #2d6a4f;
     border-radius: 50%;
     display: flex;
     align-items: center;
