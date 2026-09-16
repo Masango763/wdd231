@@ -273,3 +273,45 @@ footer {
         text-align: left;
     }
 }
+
+/* --- Corrected Footer Logo & Spacing Fix --- */
+footer img,
+footer .footer-logo {
+    max-width: 40px !important;
+    max-height: 40px !important;
+    width: auto !important;
+    height: auto !important;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* --- Directory Grid Card Restoration --- */
+#members-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.member-card {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.member-card img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    #members-container.grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
