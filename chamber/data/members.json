@@ -1,56 +1,34 @@
 [
   {
-    "name": "Econet Wireless Zimbabwe",
-    "address": "188 Sam Nujoma St, Harare",
-    "phone": "+263 24 2486120",
-    "website": "https://www.econet.co.zw",
-    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=300&q=80",
-    "membership": "Gold",
-    "category": "Telecommunications"
+    "name": "Harare Tech Hub",
+    "address": "12 Jason Moyo Ave, Harare",
+    "phone": "+263 24 2701234",
+    "website": "https://hararetechhub.co.zw",
+    "image": "images/logo.svg",
+    "membershipLevel": "Gold"
   },
   {
     "name": "CBZ Holdings",
     "address": "Union House, 60 Kwame Nkrumah Ave, Harare",
     "phone": "+263 24 2748050",
-    "website": "https://www.cbz.co.zw",
-    "image": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=300&q=80",
-    "membership": "Gold",
-    "category": "Financial Services"
+    "website": "https://cbz.co.zw",
+    "image": "images/logo.svg",
+    "membershipLevel": "Gold"
   },
   {
     "name": "Delta Corporation",
     "address": "Sable House, Northridge Park, Harare",
-    "phone": "+263 24 2883865",
-    "website": "https://www.deltacorp.co.zw",
-    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=300&q=80",
-    "membership": "Silver",
-    "category": "Manufacturing"
+    "phone": "+263 24 2486120",
+    "website": "https://delta.co.zw",
+    "image": "images/logo.svg",
+    "membershipLevel": "Silver"
   },
   {
-    "name": "Harare Tech Hub",
-    "address": "10 Samora Machel Ave, Harare",
-    "phone": "+263 24 2700100",
-    "website": "https://www.hararetech.co.zw",
-    "image": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=300&q=80",
-    "membership": "Bronze",
-    "category": "Information Technology"
-  },
-  {
-    "name": "ZimNat Insurance",
-    "address": "Zimnat House, Nelson Mandela Ave, Harare",
-    "phone": "+263 24 2707581",
-    "website": "https://www.zimnat.co.zw",
-    "image": "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=300&q=80",
-    "membership": "Silver",
-    "category": "Insurance"
-  },
-  {
-    "name": "Seed Co Limited",
-    "address": "Shamrock House, Coventry Rd, Harare",
-    "phone": "+263 24 2701101",
-    "website": "https://www.seedcogroup.com",
-    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=300&q=80",
-    "membership": "Gold",
-    "category": "Agriculture"
+    "name": "Econet Wireless Zimbabwe",
+    "address": "2 Old Mutare Road, Msasa, Harare",
+    "phone": "+263 24 2486000",
+    "website": "https://econet.co.zw",
+    "image": "images/logo.svg",
+    "membershipLevel": "Gold"
   }
 ]

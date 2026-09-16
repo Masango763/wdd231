@@ -1,54 +1,74 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const container = document.getElementById("members-container");
-  const gridBtn = document.getElementById("grid-view");
-  const listBtn = document.getElementById("list-view");
+const url = 'data/members.json';
+const cards = document.querySelector('#members-container');
 
-  async function fetchMembers() {
+async function getMembersData() {
     try {
-      const response = await fetch("data/members.json");
-      if (!response.ok) throw new Error("Failed to fetch member data");
-      const members = await response.json();
-      displayMembers(members);
+        const response = await fetch(url);
+        const data = await response.json();
+        displayMembers(data);
     } catch (error) {
-      console.error(error);
-      container.innerHTML = `<p class="error">Unable to load business directory members at this time.</p>`;
+        console.error('Error fetching members data:', error);
     }
-  }
+}
 
-  function displayMembers(members) {
-    container.innerHTML = "";
-    members.forEach(member => {
-      const card = document.createElement("section");
-      card.className = "member-card";
+getMembersData();
 
-      card.innerHTML = `
-        <img src="${member.image}" alt="${member.name} Logo" loading="lazy" width="100" height="100">
-        <div class="member-info">
-          <h3>${member.name}</h3>
-          <p class="member-category"><strong>Category:</strong> ${member.category}</p>
-          <p>${member.address}</p>
-          <p>${member.phone}</p>
-          <a href="${member.website}" target="_blank" rel="noopener noreferrer">Visit Website</a>
-        </div>
-        <div class="member-badge ${member.membership.toLowerCase()}">${member.membership} Member</div>
-      `;
-      container.appendChild(card);
+const displayMembers = (members) => {
+    cards.innerHTML = '';
+    members.forEach((member) => {
+        let card = document.createElement('section');
+        card.classList.add('member-card');
+
+        let portrait = document.createElement('img');
+        portrait.setAttribute('src', member.image);
+        portrait.setAttribute('alt', `Logo of ${member.name}`);
+        portrait.setAttribute('loading', 'lazy');
+
+        let name = document.createElement('h3');
+        name.textContent = member.name;
+
+        let address = document.createElement('p');
+        address.textContent = member.address;
+
+        let phone = document.createElement('p');
+        phone.textContent = member.phone;
+
+        let website = document.createElement('a');
+        website.setAttribute('href', member.website);
+        website.setAttribute('target', '_blank');
+        website.textContent = 'Visit Website';
+
+        let level = document.createElement('p');
+        level.textContent = `Level: ${member.membershipLevel}`;
+        level.classList.add('membership-level');
+
+        card.appendChild(portrait);
+        card.appendChild(name);
+        card.appendChild(address);
+        card.appendChild(phone);
+        card.appendChild(website);
+        card.appendChild(level);
+
+        cards.appendChild(card);
     });
-  }
+};
 
-  gridBtn.addEventListener("click", () => {
-    container.classList.add("grid");
-    container.classList.remove("list");
-    gridBtn.classList.add("active-view");
-    listBtn.classList.remove("active-view");
-  });
+// View Switcher Functionality
+const gridButton = document.querySelector('#grid');
+const listButton = document.querySelector('#list');
 
-  listBtn.addEventListener("click", () => {
-    container.classList.add("list");
-    container.classList.remove("grid");
-    listBtn.classList.add("active-view");
-    gridBtn.classList.remove("active-view");
-  });
+if (gridButton && listButton && cards) {
+    gridButton.addEventListener('click', () => {
+        cards.classList.add('grid');
+        cards.classList.remove('list');
+        gridButton.classList.add('active-view');
+        listButton.classList.remove('active-view');
+    });
 
-  fetchMembers();
-});
+    listButton.addEventListener('click', () => {
+        cards.classList.add('list');
+        cards.classList.remove('grid');
+        listButton.classList.add('active-view');
+        gridButton.classList.remove('active-view');
+    });
+}

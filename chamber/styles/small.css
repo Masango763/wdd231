@@ -1,4 +1,3 @@
-/* --- Core Variables & Reset --- */
 :root {
     --primary: #1b4332;
     --secondary: #2d6a4f;
@@ -8,14 +7,14 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif.sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--bg-light);
     color: var(--text-dark);
 }
 
-/* --- Header & Hamburger Menu --- */
+/* Header & Hamburger Menu */
 header {
     display: flex;
     justify-content: space-between;
@@ -33,8 +32,8 @@ header {
 }
 
 .header-logo img {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
 }
 
@@ -90,7 +89,136 @@ nav.open {
     color: var(--primary);
 }
 
-/* --- Professional Footer Styles (Reasonable Sizing & Organized Socials) --- */
+/* Main Content & View Toggle */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+h1 {
+    color: var(--primary);
+    text-align: center;
+}
+
+.view-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.view-toggle button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 1px solid var(--primary);
+    background-color: #ffffff;
+    color: var(--primary);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.view-toggle button.active-view,
+.view-toggle button:hover {
+    background-color: var(--primary);
+    color: #ffffff;
+}
+
+/* Members Container & Cards (Grid View) */
+#members-container.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+#members-container.grid .member-card {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#members-container.grid .member-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+#members-container.grid .member-card h3 {
+    color: var(--primary);
+    margin: 0.5rem 0;
+}
+
+#members-container.grid .member-card p {
+    margin: 0.4rem 0;
+    font-size: 0.95rem;
+}
+
+#members-container.grid .member-card a {
+    display: inline-block;
+    margin-top: 0.8rem;
+    color: var(--primary);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#members-container.grid .member-card a:hover {
+    text-decoration: underline;
+}
+
+/* Members Container & Cards (List View) */
+#members-container.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+#members-container.list .member-card {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+#members-container.list .member-card img {
+    display: none;
+}
+
+#members-container.list .member-card h3 {
+    margin: 0;
+    color: var(--primary);
+    font-size: 1.1rem;
+    flex: 2;
+}
+
+#members-container.list .member-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    flex: 2;
+}
+
+#members-container.list .member-card a {
+    color: var(--primary);
+    font-weight: bold;
+    text-decoration: none;
+    flex: 1;
+}
+
+#members-container.list .member-card .membership-level {
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Professional Footer Styles */
 footer {
     background-color: var(--primary);
     color: #ffffff;
@@ -122,15 +250,15 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Controlled Footer Logo/Banner Size */
-.footer-logo {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
+footer img.footer-logo {
+    max-width: 45px !important;
+    max-height: 45px !important;
+    width: auto !important;
+    height: auto !important;
+    display: inline-block;
     margin-bottom: 0.5rem;
 }
 
-/* Organized Social Media Handles */
 .footer-social {
     display: flex;
     justify-content: center;
@@ -149,12 +277,6 @@ footer {
     justify-content: center;
     text-decoration: none;
     font-size: 0.9rem;
-    transition: background-color 0.3s ease;
-}
-
-.footer-social a:hover {
-    background-color: var(--accent);
-    color: var(--primary);
 }
 
 .footer-bottom {
@@ -163,79 +285,9 @@ footer {
     text-align: center;
     opacity: 0.8;
     font-size: 0.85rem;
-    line-height: 1.5;
 }
 
-/* --- Join Page Form Styling --- */
-.chamber-form {
-    max-width: 700px;
-    margin: 2rem auto;
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.chamber-form fieldset {
-    border: 1px solid #cbd5e1;
-    border-radius: 6px;
-    padding: 1.2rem;
-    margin-bottom: 1.5rem;
-}
-
-.chamber-form legend {
-    font-weight: bold;
-    color: var(--primary);
-    padding: 0 0.5rem;
-}
-
-.chamber-form label {
-    display: block;
-    margin-bottom: 1rem;
-    font-weight: 500;
-    color: var(--text-dark);
-}
-
-.chamber-form input[type="text"],
-.chamber-form input[type="email"],
-.chamber-form input[type="tel"],
-.chamber-form select,
-.chamber-form textarea {
-    width: 100%;
-    padding: 0.7rem;
-    margin-top: 0.3rem;
-    border: 1px solid #94a3b8;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-family: inherit;
-}
-
-.chamber-form input:focus,
-.chamber-form select:focus,
-.chamber-form textarea:focus {
-    outline: none;
-    border-color: var(--secondary);
-    box-shadow: 0 0 5px rgba(45, 106, 79, 0.3);
-}
-
-.submit-btn {
-    background-color: var(--primary);
-    color: white;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-    font-weight: bold;
-    transition: background-color 0.2s;
-}
-
-.submit-btn:hover {
-    background-color: var(--secondary);
-}
-
-/* --- Desktop View Adjustments --- */
+/* Desktop Media Query */
 @media (min-width: 768px) {
     #menu {
         display: none;
@@ -272,163 +324,4 @@ footer {
         justify-content: space-between;
         text-align: left;
     }
-}
-
-/* --- Corrected Footer Logo & Spacing Fix --- */
-footer img,
-footer .footer-logo {
-    max-width: 40px !important;
-    max-height: 40px !important;
-    width: auto !important;
-    height: auto !important;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-/* --- Directory Grid Card Restoration --- */
-#members-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.member-card {
-    background: #ffffff;
-    border: 1px solid #cbd5e1;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    text-align: center;
-}
-
-.member-card img {
-    max-width: 100px;
-    height: auto;
-    margin-bottom: 1rem;
-}
-
-@media (min-width: 768px) {
-    #members-container.grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* --- Directory Page Layout & Views --- */
-.view-toggle {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin: 1.5rem 0;
-}
-
-.view-toggle button {
-    padding: 0.5rem 1.2rem;
-    font-size: 1rem;
-    font-weight: bold;
-    border: 1px solid var(--primary);
-    background-color: #ffffff;
-    color: var(--primary);
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.view-toggle button.active-view,
-.view-toggle button:hover {
-    background-color: var(--primary);
-    color: #ffffff;
-}
-
-/* Members Grid Container */
-#members-container {
-    max-width: 1200px;
-    margin: 0 auto 3rem;
-    padding: 0 1rem;
-}
-
-/* Grid View Styles */
-#members-container.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-}
-
-#members-container.grid .member-card {
-    background: #ffffff;
-    border: 1px solid #cbd5e1;
-    border-radius: 8px;
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.04);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#members-container.grid .member-card img {
-    width: 120px;
-    height: 90px;
-    object-fit: contain;
-    margin-bottom: 1rem;
-    border-radius: 4px;
-    background: #f1f5f9;
-    padding: 0.5rem;
-}
-
-#members-container.grid .member-card h3 {
-    margin: 0.5rem 0;
-    color: var(--primary);
-    font-size: 1.2rem;
-}
-
-#members-container.grid .member-card p {
-    margin: 0.3rem 0;
-    font-size: 0.95rem;
-    color: var(--text-dark);
-}
-
-/* List View Styles */
-#members-container.list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-}
-
-#members-container.list .member-card {
-    background: #ffffff;
-    border: 1px solid #cbd5e1;
-    border-radius: 6px;
-    padding: 1rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
-}
-
-#members-container.list .member-card img {
-    display: none; /* Hide images in list view per standard requirements */
-}
-
-#members-container.list .member-card h3 {
-    margin: 0;
-    color: var(--primary);
-    font-size: 1.1rem;
-    flex: 2;
-}
-
-#members-container.list .member-card p {
-    margin: 0;
-    font-size: 0.9rem;
-    flex: 2;
-}
-
-#members-container.list .member-card p.membership-level {
-    flex: 1;
-    text-align: right;
-    font-weight: bold;
 }
