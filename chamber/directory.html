@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harare Regional Chamber of Commerce | Directory</title>
-    <meta name="description" content="Browse the Harare Regional Chamber of Commerce business directory. Find local companies, tech hubs, and commercial partners.">
+    <meta name="description" content="Chamber member directory listing businesses in Harare.">
     <meta name="author" content="Masango Dewheretsoko">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,6 @@
     
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/directory.js" defer></script>
-    
     <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
@@ -38,14 +37,16 @@
     </header>
 
     <main>
-        <h1>Company Directory</h1>
+        <h1>Member Directory</h1>
         
         <div class="view-toggle">
-            <button id="grid" class="active-view" aria-label="Grid View">Grid</button>
-            <button id="list" aria-label="List View">List</button>
+            <button id="grid" class="active-view">Grid View</button>
+            <button id="list">List View</button>
         </div>
 
-        <div id="members-container" class="grid"></div>
+        <div id="members-container" class="grid">
+            <!-- Dynamic member cards will load here -->
+        </div>
     </main>
 
     <footer>
