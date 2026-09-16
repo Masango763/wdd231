@@ -83,3 +83,86 @@ nav.open {
         padding: 0.5rem 1rem;
     }
 }
+
+/* --- Professional Footer Styles --- */
+footer {
+    background-color: var(--primary, #1b4332);
+    color: #ffffff;
+    padding: 2.5rem 1rem 1.5rem;
+    margin-top: 3rem;
+    font-size: 0.95rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-info h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--accent, #d8f3dc);
+}
+
+.footer-info p {
+    margin: 0.3rem 0;
+    opacity: 0.9;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+.footer-social a {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.footer-social a:hover {
+    background-color: var(--accent, #d8f3dc);
+    color: var(--primary, #1b4332);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 1.5rem auto 0;
+    text-align: center;
+    opacity: 0.8;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+/* Desktop Footer Layout */
+@media (min-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+    }
+    
+    .footer-social {
+        justify-content: flex-start;
+    }
+    
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
