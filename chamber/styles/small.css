@@ -315,3 +315,120 @@ footer .footer-logo {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+/* --- Directory Page Layout & Views --- */
+.view-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.view-toggle button {
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 1px solid var(--primary);
+    background-color: #ffffff;
+    color: var(--primary);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.view-toggle button.active-view,
+.view-toggle button:hover {
+    background-color: var(--primary);
+    color: #ffffff;
+}
+
+/* Members Grid Container */
+#members-container {
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+}
+
+/* Grid View Styles */
+#members-container.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+#members-container.grid .member-card {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#members-container.grid .member-card img {
+    width: 120px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    background: #f1f5f9;
+    padding: 0.5rem;
+}
+
+#members-container.grid .member-card h3 {
+    margin: 0.5rem 0;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+#members-container.grid .member-card p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+/* List View Styles */
+#members-container.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+#members-container.list .member-card {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+#members-container.list .member-card img {
+    display: none; /* Hide images in list view per standard requirements */
+}
+
+#members-container.list .member-card h3 {
+    margin: 0;
+    color: var(--primary);
+    font-size: 1.1rem;
+    flex: 2;
+}
+
+#members-container.list .member-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    flex: 2;
+}
+
+#members-container.list .member-card p.membership-level {
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+}
