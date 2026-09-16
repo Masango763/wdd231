@@ -7,21 +7,17 @@
     <meta name="description" content="Browse the Harare Regional Chamber of Commerce business directory. Find local companies, tech hubs, and commercial partners.">
     <meta name="author" content="Masango Dewheretsoko">
     
-    <!-- Google Fonts & Preconnects -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
-    <!-- External Stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css" media="(min-width: 768px)">
     
-    <!-- External JavaScript -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/directory.js" defer></script>
     
-    <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
@@ -44,16 +40,12 @@
     <main>
         <h1>Company Directory</h1>
         
-        <!-- View Switcher Controls -->
         <div class="view-toggle">
-            <button id="grid" class="active-view" aria-label="Grid View">Grid View</button>
-            <button id="list" aria-label="List View">List View</button>
+            <button id="grid" class="active-view" aria-label="Grid View">Grid</button>
+            <button id="list" aria-label="List View">List</button>
         </div>
 
-        <!-- Dynamic Members Container -->
-        <div id="members-container" class="grid">
-            <!-- Member cards will load dynamically via directory.js -->
-        </div>
+        <div id="members-container" class="grid"></div>
     </main>
 
     <footer>
@@ -69,6 +61,7 @@
                 <a href="https://facebook.com" target="_blank" aria-label="Facebook">f</a>
                 <a href="https://twitter.com" target="_blank" aria-label="Twitter">t</a>
                 <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">in</a>
+                <a href="https://youtube.com" target="_blank" aria-label="YouTube">yt</a>
             </div>
             <div class="footer-info">
                 <h3>WDD 231 Class Project</h3>

@@ -14,7 +14,7 @@ body {
     color: var(--text-dark);
 }
 
-/* Header & Hamburger Menu */
+/* --- Universal Header & Hamburger Menu --- */
 header {
     display: flex;
     justify-content: space-between;
@@ -89,7 +89,7 @@ nav.open {
     color: var(--primary);
 }
 
-/* Main Content & View Toggle */
+/* --- Main Content & Directory View Toggles --- */
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -117,6 +117,7 @@ h1 {
     color: var(--primary);
     border-radius: 4px;
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .view-toggle button.active-view,
@@ -125,7 +126,7 @@ h1 {
     color: #ffffff;
 }
 
-/* Members Container & Cards (Grid View) */
+/* --- Directory Members Grid & List Views --- */
 #members-container.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -170,7 +171,6 @@ h1 {
     text-decoration: underline;
 }
 
-/* Members Container & Cards (List View) */
 #members-container.list {
     display: flex;
     flex-direction: column;
@@ -218,7 +218,7 @@ h1 {
     font-weight: bold;
 }
 
-/* Professional Footer Styles */
+/* --- Universal Professional Footer (with YouTube) --- */
 footer {
     background-color: var(--primary);
     color: #ffffff;
@@ -277,6 +277,12 @@ footer img.footer-logo {
     justify-content: center;
     text-decoration: none;
     font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.footer-social a:hover {
+    background-color: var(--accent);
+    color: var(--primary);
 }
 
 .footer-bottom {
@@ -287,7 +293,7 @@ footer img.footer-logo {
     font-size: 0.85rem;
 }
 
-/* Desktop Media Query */
+/* --- Desktop Media Query --- */
 @media (min-width: 768px) {
     #menu {
         display: none;
