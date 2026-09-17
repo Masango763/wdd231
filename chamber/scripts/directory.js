@@ -19,8 +19,11 @@ function displayMembers(members) {
         const card = document.createElement('section');
         card.classList.add('member-card');
 
+        // Handle both absolute URLs and local image paths
+        const imageSrc = member.image.startsWith('http') ? member.image : `images/${member.image}`;
+
         card.innerHTML = `
-            <img src="images/${member.image}" alt="${member.name} Logo" loading="lazy">
+            <img src="${imageSrc}" alt="${member.name} Logo" loading="lazy">
             <h3>${member.name}</h3>
             <p>${member.address}</p>
             <p>${member.phone}</p>
@@ -31,7 +34,6 @@ function displayMembers(members) {
     });
 }
 
-// Event Listeners for Grid and List View Toggles
 if (gridButton && listButton && membersContainer) {
     gridButton.addEventListener('click', () => {
         membersContainer.classList.add('grid');
