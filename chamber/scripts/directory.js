@@ -31,6 +31,7 @@ function displayMembers(members) {
     });
 }
 
+// Event Listeners for Grid and List View Toggles
 if (gridButton && listButton && membersContainer) {
     gridButton.addEventListener('click', () => {
         membersContainer.classList.add('grid');
