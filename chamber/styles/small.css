@@ -596,3 +596,50 @@ footer .footer-logo {
         margin: 0;
     }
 }
+
+/* --- Vibrant Blue Weather Widget Styling --- */
+.weather-card {
+    background: linear-gradient(135deg, #0077b6, #00b4d8);
+    color: #ffffff;
+    border-left: 6px solid #03045e !important;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 119, 182, 0.25);
+}
+
+.weather-card h2 {
+    color: #ffffff !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.5rem;
+}
+
+.weather-content {
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+.weather-date {
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    opacity: 0.95;
+}
+
+.weather-card .temperature {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.weather-card .condition {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0.2rem 0;
+    text-transform: capitalize;
+}
+
+.weather-card .location {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    margin-top: 0.5rem;
+}
