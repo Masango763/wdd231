@@ -683,3 +683,63 @@ nav.open {
         display: block !important;
     }
 }
+
+/* --- Ultimate Hamburger Menu & Navigation Override --- */
+@media screen and (max-width: 767px) {
+    header {
+        position: relative;
+    }
+    #menu {
+        display: block !important;
+        position: absolute;
+        top: 1.25rem;
+        right: 1.25rem;
+        font-size: 1.8rem;
+        background: none;
+        border: none;
+        color: #ffffff;
+        cursor: pointer;
+        z-index: 100;
+    }
+    #menu::before {
+        content: "≡";
+    }
+    #menu.open::before {
+        content: "X";
+    }
+    nav {
+        display: none !important;
+        width: 100%;
+        background-color: #1b4332;
+        margin-top: 1rem;
+    }
+    nav.open {
+        display: block !important;
+    }
+    .navigation {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        list-style: none;
+    }
+    .navigation li {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .navigation li a {
+        display: block;
+        padding: 0.85rem;
+        color: #ffffff;
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #menu {
+        display: none !important;
+    }
+    nav {
+        display: block !important;
+    }
+}
