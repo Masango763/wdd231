@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/larger.css" media="(min-width: 768px)">
     
     <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
     <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
@@ -51,14 +52,16 @@
                 <ul>
                     <li><strong>Annual Business Expo:</strong> Coming up next month at the Harare International Conference Centre. Register your company today!</li>
                     <li><strong>SME Networking Breakfast:</strong> Join us this Friday at 08:00 AM for keynote presentations on digital transformation.</li>
+                    <li><strong>Trade Mission to Bulawayo:</strong> Applications are now open for local manufacturers looking to expand regional distribution.</li>
                 </ul>
             </section>
 
             <section class="card weather-card">
-                <h2>Weather Forecast</h2>
-                <div class="weather-content">
-                    <p class="temperature">24°C</p>
-                    <p class="condition">Sunny and Pleasant</p>
+                <h2>Live Weather Forecast</h2>
+                <div class="weather-content" id="weather-container">
+                    <p id="weather-date" class="weather-date">Loading date...</p>
+                    <p id="weather-temp" class="temperature">--°C</p>
+                    <p id="weather-desc" class="condition">Loading weather...</p>
                     <p class="location">Harare, Zimbabwe</p>
                 </div>
             </section>
