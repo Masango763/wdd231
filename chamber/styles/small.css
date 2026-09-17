@@ -743,3 +743,18 @@ nav.open {
         display: block !important;
     }
 }
+
+/* --- Vibrant Green Weather Widget Styling --- */
+.weather-card {
+    background: linear-gradient(135deg, #2d6a4f, #52b788) !important;
+    color: #ffffff !important;
+    border-left: 6px solid #1b4332 !important;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(45, 106, 79, 0.25);
+}
+
+.weather-card h2 {
+    color: #ffffff !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.5rem;
+}
