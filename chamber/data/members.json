@@ -3,32 +3,24 @@
     "name": "Harare Tech Hub",
     "address": "12 Jason Moyo Ave, Harare",
     "phone": "+263 24 2701234",
-    "website": "https://hararetechhub.co.zw",
-    "image": "images/logo.svg",
-    "membershipLevel": "Gold"
+    "membershipLevel": "Gold",
+    "website": "https://example.com",
+    "image": "placeholder.png"
   },
   {
     "name": "CBZ Holdings",
     "address": "Union House, 60 Kwame Nkrumah Ave, Harare",
     "phone": "+263 24 2748050",
-    "website": "https://cbz.co.zw",
-    "image": "images/logo.svg",
-    "membershipLevel": "Gold"
+    "membershipLevel": "Gold",
+    "website": "https://example.com",
+    "image": "placeholder.png"
   },
   {
     "name": "Delta Corporation",
     "address": "Sable House, Northridge Park, Harare",
     "phone": "+263 24 2486120",
-    "website": "https://delta.co.zw",
-    "image": "images/logo.svg",
-    "membershipLevel": "Silver"
-  },
-  {
-    "name": "Econet Wireless Zimbabwe",
-    "address": "2 Old Mutare Road, Msasa, Harare",
-    "phone": "+263 24 2486000",
-    "website": "https://econet.co.zw",
-    "image": "images/logo.svg",
-    "membershipLevel": "Gold"
+    "membershipLevel": "Silver",
+    "website": "https://example.com",
+    "image": "placeholder.png"
   }
 ]
