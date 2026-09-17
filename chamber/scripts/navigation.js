@@ -1,9 +1,11 @@
-const hamburger = document.querySelector('#menu');
-const navigation = document.querySelector('nav');
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerButton = document.querySelector('#menu');
+    const navigation = document.querySelector('nav');
 
-if (hamburger && navigation) {
-    hamburger.addEventListener('click', () => {
-        navigation.classList.toggle('open');
-        hamburger.classList.toggle('open');
-    });
-}
+    if (hamburgerButton && navigation) {
+        hamburgerButton.addEventListener('click', () => {
+            navigation.classList.toggle('open');
+            hamburgerButton.classList.toggle('open');
+        });
+    }
+});

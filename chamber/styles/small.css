@@ -643,3 +643,43 @@ footer .footer-logo {
     opacity: 0.85;
     margin-top: 0.5rem;
 }
+
+/* --- Guaranteed Mobile Hamburger Menu Styling --- */
+#menu {
+    display: block;
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #ffffff;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+#menu.open::before {
+    content: "X";
+}
+
+/* Hide navigation by default on mobile unless toggled */
+nav {
+    display: none;
+}
+
+nav.open {
+    display: block;
+}
+
+/* Show navigation normally on desktop screens */
+@media (min-width: 768px) {
+    #menu {
+        display: none;
+    }
+    nav {
+        display: block !important;
+    }
+}
