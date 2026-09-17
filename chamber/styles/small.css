@@ -509,3 +509,23 @@ footer .footer-logo {
         gap: 2.5rem;
     }
 }
+
+/* --- Two-Column Form Field Layout on Desktop --- */
+@media (min-width: 768px) {
+    .join-form fieldset:nth-of-type(1) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.25rem;
+    }
+
+    /* Make legend span across both columns */
+    .join-form fieldset:nth-of-type(1) legend {
+        grid-column: 1 / -1;
+    }
+
+    /* Make Email and Phone span or align nicely */
+    .join-form fieldset:nth-of-type(1) label:nth-of-type(4),
+    .join-form fieldset:nth-of-type(1) label:nth-of-type(5) {
+        grid-column: span 1;
+    }
+}
