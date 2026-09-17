@@ -13,6 +13,7 @@ async function getMembers() {
 }
 
 function displayMembers(members) {
+    if (!membersContainer) return;
     membersContainer.innerHTML = '';
     members.forEach(member => {
         const card = document.createElement('section');
@@ -30,7 +31,7 @@ function displayMembers(members) {
     });
 }
 
-if (gridButton && listButton) {
+if (gridButton && listButton && membersContainer) {
     gridButton.addEventListener('click', () => {
         membersContainer.classList.add('grid');
         membersContainer.classList.remove('list');
