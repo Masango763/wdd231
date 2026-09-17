@@ -571,3 +571,28 @@ footer .footer-logo {
         grid-template-columns: 1fr;
     }
 }
+
+/* --- Refined Form Sizing & Proportions --- */
+.join-main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.join-form {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* On larger desktop screens, let the grid container balance the form and side cards */
+@media (min-width: 768px) {
+    .join-main {
+        max-width: 1200px;
+    }
+
+    .join-form {
+        max-width: none;
+        margin: 0;
+    }
+}
