@@ -758,3 +758,100 @@ nav.open {
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     padding-bottom: 0.5rem;
 }
+
+/* ===== Membership Tier Modals (W04: Modals + CSS Animations/Transitions) ===== */
+
+.tier-label {
+    margin: 1rem 0 0.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.membership-tiers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.tier-btn {
+    background-color: #ffffff;
+    border: 2px solid var(--secondary);
+    color: var(--primary);
+    padding: 0.6rem 0.75rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.tier-btn:hover,
+.tier-btn:focus-visible {
+    transform: translateY(-3px) scale(1.04);
+    background-color: var(--accent);
+}
+
+.tier-btn:active {
+    transform: translateY(0) scale(0.98);
+}
+
+@keyframes modalFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-16px) scale(0.96);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes backdropFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.tier-modal {
+    border: none;
+    border-radius: 12px;
+    padding: 1.75rem 2rem;
+    max-width: 420px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.tier-modal[open] {
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+.tier-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.45);
+    animation: backdropFadeIn 0.3s ease-out;
+}
+
+.tier-modal h3 {
+    color: var(--primary);
+    margin-top: 0;
+}
+
+.tier-modal p {
+    color: #444;
+    line-height: 1.5;
+}
+
+.close-modal {
+    float: right;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--primary);
+    cursor: pointer;
+    transition: transform 0.25s ease, color 0.2s ease;
+}
+
+.close-modal:hover {
+    transform: rotate(90deg);
+    color: var(--secondary);
+}
