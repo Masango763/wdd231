@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const data = modalData[modalKey];
             if (data && modalContent) {
                 modalContent.innerHTML = `
-                    <h3>${data.title}</h3>
+                    <h2>${data.title}</h2>
                     <p>${data.description}</p>
                 `;
             }
