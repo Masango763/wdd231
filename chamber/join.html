@@ -41,78 +41,88 @@
     </header>
 
     <main class="join-main">
-        <h1>Join the Harare Regional Chamber of Commerce</h1>
-        
-        <form method="get" action="thankyou.html" class="join-form">
-            <fieldset>
-                <legend>Applicant Personal Information</legend>
-                
-                <label for="first">First Name*</label>
-                <input type="text" id="first" name="first" required autocomplete="given-name" title="Please enter your first name">
-                
-                <label for="last">Last Name*</label>
-                <input type="text" id="last" name="last" required autocomplete="family-name" title="Please enter your last name">
-                
-                <label for="title">Organizational Title</label>
-                <input type="text" id="title" name="title" pattern="[A-Za-z\s\-]{7,}" autocomplete="organization-title" title="Enter your organizational title (minimum 7 characters)">
-                
-                <label for="email">Email Address*</label>
-                <input type="email" id="email" name="email" required placeholder="example@domain.com" autocomplete="email" title="Please enter a valid email address">
-                
-                <label for="phone">Mobile Phone*</label>
-                <input type="tel" id="phone" name="phone" required autocomplete="tel" title="Please enter a valid mobile phone number">
-            </fieldset>
+  <h1>Join the Harare Regional Chamber of Commerce</h1>
 
-            <fieldset>
-                <legend>Organization & Membership Information</legend>
-                
-                <label for="orgname">Organization Name*</label>
-                <input type="text" id="orgname" name="orgname" required autocomplete="organization" title="Please enter your business or organization name">
-                
-                <p>Membership Level*</p>
-                <label><input type="radio" name="membership" value="np" required title="Select NP Membership"> NP Membership (Non-Profit - No Fee)</label>
-                <label><input type="radio" name="membership" value="bronze" title="Select Bronze Membership"> Bronze Membership</label>
-                <label><input type="radio" name="membership" value="silver" title="Select Silver Membership"> Silver Membership</label>
-                <label><input type="radio" name="membership" value="gold" title="Select Gold Membership"> Gold Membership</label>
-                
-                <label for="description">Organization Description</label>
-                <textarea id="description" name="description" title="Provide a brief description of your organization"></textarea>
-            </fieldset>
+  <form action="thankyou.html" method="get" class="join-form">
+    <fieldset>
+      <legend>Applicant Personal Information</legend>
 
-            <!-- Required Hidden Timestamp Input -->
-            <input type="hidden" id="timestamp" name="timestamp">
+      <label for="first-name">First Name</label>
+      <input type="text" id="first-name" name="first-name" required autocomplete="given-name">
 
-            <button type="submit" class="submit-btn">Join the Chamber</button>
-        </form>
+      <label for="last-name">Last Name</label>
+      <input type="text" id="last-name" name="last-name" required autocomplete="family-name">
 
-        <section class="membership-levels-info">
-            <div class="card">
-                <h2>NP Membership</h2>
-                <button type="button" class="modal-btn" data-modal="np-modal">Learn More</button>
-            </div>
-            <div class="card">
-                <h2>Bronze Membership</h2>
-                <button type="button" class="modal-btn" data-modal="bronze-modal">Learn More</button>
-            </div>
-            <div class="card">
-                <h2>Silver Membership</h2>
-                <button type="button" class="modal-btn" data-modal="silver-modal">Learn More</button>
-            </div>
-            <div class="card">
-                <h2>Gold Membership</h2>
-                <button type="button" class="modal-btn" data-modal="gold-modal">Learn More</button>
-            </div>
-        </section>
+      <label for="org-title">Organizational Title</label>
+      <input type="text" id="org-title" name="org-title">
 
-        <!-- HTML Dialog Modal Element -->
-        <dialog id="membership-modal">
-            <button id="closeModal">❌</button>
-            <div id="modal-content">
-                <h2>Membership Details</h2>
-                <p>Review the benefits associated with this level.</p>
-            </div>
-        </dialog>
-    </main>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required autocomplete="email">
+
+      <label for="phone">Mobile Phone</label>
+      <input type="tel" id="phone" name="phone" required autocomplete="tel">
+    </fieldset>
+
+    <fieldset>
+      <legend>Business/Organization Information</legend>
+
+      <label for="org-name">Business Name</label>
+      <input type="text" id="org-name" name="org-name" required>
+
+      <label for="membership">Membership Level <span aria-hidden="true">*</span></label>
+      <select id="membership" name="membership" required>
+        <option value="" selected disabled>Select Membership Level...</option>
+        <option value="np">NP Membership (Non-Profit - No Fee)</option>
+        <option value="bronze">Bronze Membership</option>
+        <option value="silver">Silver Membership</option>
+        <option value="gold">Gold Membership</option>
+      </select>
+
+      <label for="description">Business Description</label>
+      <textarea id="description" name="description" rows="4"></textarea>
+
+      <input type="hidden" id="timestamp" name="timestamp">
+    </fieldset>
+
+    <button type="submit" class="submit-btn">Submit Application</button>
+  </form>
+
+  <section class="membership-levels-info" aria-labelledby="levels-heading">
+    <h2 id="levels-heading">Membership Levels</h2>
+    <p>Tap a tier to see benefits:</p>
+    <div class="tier-buttons">
+      <button type="button" class="tier-btn" data-modal="modal-np">NP</button>
+      <button type="button" class="tier-btn" data-modal="modal-bronze">Bronze</button>
+      <button type="button" class="tier-btn" data-modal="modal-silver">Silver</button>
+      <button type="button" class="tier-btn" data-modal="modal-gold">Gold</button>
+    </div>
+  </section>
+
+  <dialog id="modal-np" class="tier-modal" aria-labelledby="modal-np-title">
+    <button type="button" class="close-modal" aria-label="Close">×</button>
+    <h2 id="modal-np-title">NP Membership (Non-Profit)</h2>
+    <p>Free membership for registered non-profit organizations. Includes a directory listing, access to member events, and monthly newsletter inclusion.</p>
+  </dialog>
+
+  <dialog id="modal-bronze" class="tier-modal" aria-labelledby="modal-bronze-title">
+    <button type="button" class="close-modal" aria-label="Close">×</button>
+    <h2 id="modal-bronze-title">Bronze Membership</h2>
+    <p>Entry-level membership for small businesses. Includes a directory listing, one networking event per quarter, and access to member resources.</p>
+  </dialog>
+
+  <dialog id="modal-silver" class="tier-modal" aria-labelledby="modal-silver-title">
+    <button type="button" class="close-modal" aria-label="Close">×</button>
+    <h2 id="modal-silver-title">Silver Membership</h2>
+    <p>Mid-tier membership with a featured directory listing, unlimited networking events, one free workshop seat per year, and marketing co-op opportunities.</p>
+  </dialog>
+
+  <dialog id="modal-gold" class="tier-modal" aria-labelledby="modal-gold-title">
+    <button type="button" class="close-modal" aria-label="Close">×</button>
+    <h2 id="modal-gold-title">Gold Membership</h2>
+    <p>Premium membership with a top-tier directory placement, all networking events, unlimited workshop seats, homepage feature rotation, and priority referrals.</p>
+  </dialog>
+</main>
+
 
     <footer>
         <div class="footer-info">
