@@ -5,66 +5,41 @@ document.addEventListener("DOMContentLoaded", () => {
         timestampInput.value = new Date().toISOString();
     }
 
-    // 2. Modal Functionality for Membership Cards
-    const modal = document.getElementById("membership-modal");
-    const modalButtons = document.querySelectorAll(".modal-btn");
-    const closeModalBtn = document.getElementById("closeModal");
-    const modalContent = document.getElementById("modal-content");
+    // 2. Modal Functionality for Membership Tiers
+    const tiers = [
+        { btn: "np-btn", modal: "modal-np" },
+        { btn: "bronze-btn", modal: "modal-bronze" },
+        { btn: "silver-btn", modal: "modal-silver" },
+        { btn: "gold-btn", modal: "modal-gold" }
+    ];
 
-    // Define content for each membership level modal
-    const modalData = {
-        "np-modal": {
-            title: "NP Membership (Non-Profit)",
-            description: "Designed specifically for non-profit organizations. This tier is completely free of charge and provides access to basic community networking events and chamber directory listing."
-        },
-        "bronze-modal": {
-            title: "Bronze Membership",
-            description: "Ideal for small startups. Includes standard directory listing, discounted rates for chamber events, and monthly newsletter highlights."
-        },
-        "silver-modal": {
-            title: "Silver Membership",
-            description: "Great for growing businesses. Includes priority event registration, social media spotlight features, and inclusion in special business training workshops."
-        },
-        "gold-modal": {
-            title: "Gold Membership",
-            description: "Our premium tier for established corporations. Features prime homepage spotlight advertising, free admission to all major chamber events, and direct advisory board participation."
-        }
-    };
-
-    modalButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            const modalKey = button.getAttribute("data-modal");
-            const data = modalData[modalKey];
-            if (data && modalContent) {
-                modalContent.innerHTML = `
-                    <h2>${data.title}</h2>
-                    <p>${data.description}</p>
-                `;
-            }
-            if (modal) {
+    tiers.forEach(item => {
+        const btn = document.getElementById(item.btn);
+        const modal = document.getElementById(item.modal);
+        
+        if (btn && modal) {
+            btn.addEventListener("click", () => {
                 modal.showModal();
+            });
+
+            const closeBtn = modal.querySelector(".close-modal");
+            if (closeBtn) {
+                closeBtn.addEventListener("click", () => {
+                    modal.close();
+                });
             }
-        });
+
+            modal.addEventListener("click", (event) => {
+                const rect = modal.getBoundingClientRect();
+                if (
+                    event.clientX < rect.left ||
+                    event.clientX > rect.right ||
+                    event.clientY < rect.top ||
+                    event.clientY > rect.bottom
+                ) {
+                    modal.close();
+                }
+            });
+        }
     });
-
-    if (closeModalBtn) {
-        closeModalBtn.addEventListener("click", () => {
-            if (modal) modal.close();
-        });
-    }
-
-    // Close modal when clicking outside the dialog box (on backdrop)
-    if (modal) {
-        modal.addEventListener("click", (event) => {
-            const rect = modal.getBoundingClientRect();
-            if (
-                event.clientX < rect.left ||
-                event.clientX > rect.right ||
-                event.clientY < rect.top ||
-                event.clientY > rect.bottom
-            ) {
-                modal.close();
-            }
-        });
-    }
 });
