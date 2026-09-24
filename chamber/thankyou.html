@@ -1,36 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Application Received | Harare Chamber</title>
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/larger.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Harare Regional Chamber of Commerce</title>
+    <meta name="description" content="Thank you for applying for membership with the Harare Regional Chamber of Commerce.">
+    <meta name="author" content="Masango Dewheretsoko">
+    
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Harare Regional Chamber</h1>
-  </header>
-  <main class="thankyou-main">
-    <div class="card thankyou-card">
-      <h2>Application Submitted Successfully!</h2>
-      <p>Thank you for applying to join the Harare Regional Chamber of Commerce. We have recorded your application details:</p>
-      <div id="formDataDisplay"></div>
-      <a href="index.html" class="cta-button">Return to Home</a>
-    </div>
-  </main>
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const display = document.querySelector('#formDataDisplay');
-    display.innerHTML = `
-      <p><strong>Applicant Name:</strong> ${params.get('fname') || ''} ${params.get('lname') || ''}</p>
-      <p><strong>Email:</strong> ${params.get('email') || ''}</p>
-      <p><strong>Mobile:</strong> ${params.get('mobile') || ''}</p>
-      <p><strong>Organization:</strong> ${params.get('business') || ''}</p>
-      <p><strong>Tier Selected:</strong> ${params.get('membership') || ''}</p>
-      <p><strong>Timestamp:</strong> ${params.get('timestamp') || ''}</p>
-    `;
-  </script>
+    <header>
+        <div class="logo-box">
+            <img src="images/logo.svg" alt="Harare Chamber Logo">
+            <h1>Harare Regional Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <button id="menu" aria-label="Toggle navigation menu"></button>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="join-main">
+        <h1>Application Submitted Successfully!</h1>
+        <section class="thankyou-card">
+            <h2>Thank You for Applying</h2>
+            <p>We have received your application details below and will get in touch with you shortly.</p>
+            <div id="results" class="results-container"></div>
+            <p><a href="index.html" class="submit-btn" style="display:inline-block; text-align:center; text-decoration:none; margin-top:20px;">Return to Home</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <img src="images/logo.svg" alt="Harare Chamber Footer Logo">
+            <h4>Harare Regional Chamber of Commerce</h4>
+            <p>123 Jason Moyo Avenue, Harare, Zimbabwe</p>
+            <p>info@hararechamber.co.zw</p>
+            <p>+263 4 123 456</p>
+        </div>
+        <div class="footer-social">
+            <a href="https://facebook.com" target="_blank">f</a>
+            <a href="https://twitter.com" target="_blank">t</a>
+            <a href="https://linkedin.com" target="_blank">in</a>
+            <a href="https://youtube.com" target="_blank">yt</a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Harare Regional Chamber | Masango Dewheretsoko | WDD 231</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
 </body>
 </html>
