@@ -1,18 +1,29 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const ts = document.querySelector('#timestamp');
-  if (ts) ts.value = new Date().toISOString();
+document.addEventListener("DOMContentLoaded", () => {
+    // Populate hidden timestamp field
+    const timestampField = document.getElementById("timestamp");
+    if (timestampField) {
+        timestampField.value = new Date().toISOString();
+    }
 
-  document.querySelectorAll('.tier-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.getElementById(btn.dataset.modal)?.showModal();
+    // Modal dialog handling
+    const modalButtons = document.querySelectorAll(".modal-btn");
+    modalButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const modalId = button.getAttribute("data-modal");
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.showModal();
+            }
+        });
     });
-  });
 
-  document.querySelectorAll('.close-modal').forEach(btn => {
-    btn.addEventListener('click', () => btn.closest('dialog').close());
-  });
-
-  document.querySelectorAll('.tier-modal').forEach(dlg => {
-    dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
-  });
+    const closeButtons = document.querySelectorAll(".close-modal");
+    closeButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const modal = button.closest("dialog");
+            if (modal) {
+                modal.close();
+            }
+        });
+    });
 });
