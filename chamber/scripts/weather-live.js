@@ -53,13 +53,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Filter for approx 12:00 PM each day
                 const dailyForecasts = data.list.filter(item => item.dt_txt.includes("12:00:00")).slice(0, 3);
                 
-                let forecastHTML = "<p style='font-size: 0.85rem; font-weight: bold; margin-bottom: 0.3rem;'>3-Day Forecast:</p><div style='display: flex; justify-content: space-between;'>";
+                let forecastHTML = "<p class='forecast-title'>3-Day Forecast:</p><div class='forecast-row'>";
                 
                 dailyForecasts.forEach(day => {
                     const date = new Date(day.dt * 1000);
                     const dayName = date.toLocaleDateString('en-US', { weekday: 'short' });
                     const temp = Math.round(day.main.temp);
-                    forecastHTML += `<div style='text-align: center; font-size: 0.8rem;'><span>${dayName}</span><br><strong>${temp}°C</strong></div>`;
+                    forecastHTML += `<div class="forecast-day"><span>${dayName}</span><br><strong>${temp}°C</strong></div>`;
                 });
                 forecastHTML += "</div>";
                 forecastContainer.innerHTML = forecastHTML;
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(err => {
             console.log("Forecast fetch error:", err);
             if (forecastContainer) {
-                forecastContainer.innerHTML = "<p style='font-size: 0.85rem;'>Sat: 25°C | Sun: 26°C | Mon: 24°C</p>";
+                forecastContainer.innerHTML = "<p class='forecast-fallback'>Sat: 25°C | Sun: 26°C | Mon: 24°C</p>";
             }
         });
 });
