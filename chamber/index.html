@@ -22,10 +22,6 @@
     <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/weather.js" defer></script>
-    <meta property="og:title" content="Harare Regional Chamber of Commerce">
-    <meta property="og:description" content="Connecting local businesses in Harare with resources, networking, and support to drive economic growth.">
-    <meta property="og:image" content="https://masango763.github.io/wdd231/chamber/images/logo.svg">
-    <meta property="og:url" content="https://masango763.github.io/wdd231/chamber/">
 </head>
 <body>
     <header>
@@ -45,7 +41,7 @@
     </header>
 
     <main>
-        <h1 style="display:none;">Welcome to Harare Regional Chamber</h1>
+        <h1 class="visually-hidden">Welcome to Harare Regional Chamber</h1>
         
         <!-- Hero Section with Overlaid Call to Action -->
         <section class="hero">
@@ -70,7 +66,7 @@
                     <p class="condition" id="weather-desc">Loading weather...</p>
                     <p class="location">Harare, ZW</p>
                 </div>
-                <div id="forecast-container" style="margin-top: 1rem; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 0.5rem;">
+                <div id="forecast-container" class="forecast-box">
                     <!-- 3-day forecast populated by JS -->
                 </div>
             </section>
