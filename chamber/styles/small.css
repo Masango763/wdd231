@@ -787,3 +787,20 @@ nav.open {
     text-align: center;
     font-size: 0.8rem;
 }
+
+/* Weather Forecast Additional Styles */
+.forecast-title {
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.forecast-flex {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+.forecast-item {
+    text-align: center;
+}
