@@ -7,17 +7,25 @@
     <meta name="description" content="Harare Regional Chamber of Commerce home page connecting local enterprises and driving economic growth.">
     <meta name="author" content="Masango Dewheretsoko">
     
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Harare Regional Chamber of Commerce Home">
+    <meta property="og:description" content="Connecting businesses and community resources in Harare, Zimbabwe.">
+    <meta property="og:image" content="https://masango763.github.io/wdd231/chamber/images/hero-large.jpg">
+    <meta property="og:url" content="https://masango763.github.io/wdd231/chamber/index.html">
+    
+    <link rel="icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 768px)">
-    
+    <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/weather-live.js" defer></script>
-    <link rel="icon" href="images/favicon.ico">
+    <meta property="og:title" content="Harare Regional Chamber of Commerce">
+    <meta property="og:description" content="Connecting local businesses in Harare with resources, networking, and support to drive economic growth.">
+    <meta property="og:image" content="https://masango763.github.io/wdd231/chamber/images/logo.svg">
+    <meta property="og:url" content="https://masango763.github.io/wdd231/chamber/">
 </head>
 <body>
     <header>
@@ -36,55 +44,50 @@
         </nav>
     </header>
 
-    <main class="home-main">
+    <main>
+        <h1 style="display:none;">Welcome to Harare Regional Chamber</h1>
+        
+        <!-- Hero Section with Overlaid Call to Action -->
         <section class="hero">
-            <div class="hero-text">
-                <h1>Welcome to Harare Regional Chamber</h1>
-                <h2>Empowering Business Growth in Harare</h2>
-                <p>Connecting entrepreneurs, fostering partnerships, and driving economic development across the region.</p>
-                <a href="join.html" class="hero-cta">Join Our Chamber</a>
+            <picture>
+                <source srcset="images/hero-large.jpg" media="(min-width: 768px)">
+                <img src="images/hero-small.jpg" alt="Harare cityscape and business center" width="1200" height="600">
+            </picture>
+            <div class="hero-cta">
+                <h2>Welcome to Harare Chamber</h2>
+                <p>Empowering businesses and fostering regional economic growth.</p>
+                <a href="join.html" class="cta-btn">Join Our Chamber</a>
             </div>
         </section>
 
+        <!-- Main Home Grid -->
         <div class="home-grid">
-            <section class="card events-card">
-                <h2>Current Events</h2>
-                <ul>
-                    <li><strong>Annual Business Expo:</strong> Coming up next month at the Harare International Conference Centre. Register your company today!</li>
-                    <li><strong>SME Networking Breakfast:</strong> Join us this Friday at 08:00 AM for keynote presentations on digital transformation.</li>
-                    <li><strong>Trade Mission to Bulawayo:</strong> Applications are now open for local manufacturers looking to expand regional distribution.</li>
-                </ul>
+            <section class="card weather-card">
+                <h2>Current Weather</h2>
+                <div class="weather-content">
+                    <p class="weather-date" id="weather-date"></p>
+                    <p class="temperature"><span id="current-temp">--</span>&deg;C</p>
+                    <p class="condition" id="weather-desc">Loading weather...</p>
+                    <p class="location">Harare, ZW</p>
+                </div>
+                <div id="forecast-container" style="margin-top: 1rem; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 0.5rem;">
+                    <!-- 3-day forecast populated by JS -->
+                </div>
             </section>
 
-            <section class="card weather-card">
-                <h2>Live Weather Forecast</h2>
-                <div class="weather-content" id="weather-container">
-                    <p id="weather-date" class="weather-date">Loading date...</p>
-                    <p id="weather-temp" class="temperature">--°C</p>
-                    <p id="weather-desc" class="condition">Loading weather...</p>
-                    <p class="location">Harare, Zimbabwe</p>
+            <section class="card events-card">
+                <h2>Upcoming Events</h2>
+                <p><strong>Annual Business Expo 2026</strong><br>Date: October 15, 2026<br>Location: Harare International Conference Centre</p>
+                <p><strong>SME Networking Breakfast</strong><br>Date: October 22, 2026<br>Location: Meikles Hotel</p>
+            </section>
+
+            <section class="card spotlight-card">
+                <h2>Member Spotlights</h2>
+                <div id="spotlights-container" class="spotlight-container">
+                    <!-- Populated dynamically via script/json -->
                 </div>
             </section>
         </div>
-
-        <section class="spotlight-section">
-            <h2>Spotlight Members</h2>
-            <p class="spotlight-subtitle">Check out our featured local enterprises driving innovation.</p>
-            <div class="spotlight-container">
-                <div class="card spotlight-card">
-                    <h3>Harare Tech Hub</h3>
-                    <p>Gold Member</p>
-                    <p>Leading software engineering incubator and co-working space empowering tech startups.</p>
-                    <a href="directory.html" class="spotlight-link">View Directory</a>
-                </div>
-                <div class="card spotlight-card">
-                    <h3>CBZ Holdings</h3>
-                    <p>Gold Member</p>
-                    <p>Premier financial institution providing comprehensive banking and investment services.</p>
-                    <a href="directory.html" class="spotlight-link">View Directory</a>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer>
@@ -109,7 +112,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>All rights reserved.</p>
+            <p>&copy; <span id="current-year"></span> All rights reserved. Last updated: <span id="last-modified"></span></p>
         </div>
     </footer>
 </body>

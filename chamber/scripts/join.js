@@ -1,22 +1,18 @@
-// Join Form Timestamp & Modal Popups Logic
-document.querySelector('#timestamp').value = new Date().toISOString();
+document.addEventListener('DOMContentLoaded', () => {
+  const ts = document.querySelector('#timestamp');
+  if (ts) ts.value = new Date().toISOString();
 
-function setupModal(btnId, modalId) {
-  const btn = document.querySelector(btnId);
-  const modal = document.querySelector(modalId);
-  if (!btn || !modal) return;
+  document.querySelectorAll('.tier-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.getElementById(btn.dataset.modal)?.showModal();
+    });
+  });
 
-  btn.addEventListener('click', () => modal.showModal());
-  const closeBtn = modal.querySelector('.close-modal');
-  if (closeBtn) {
-    closeBtn.addEventListener('click', () => modal.close());
-  }
-}
+  document.querySelectorAll('.close-modal').forEach(btn => {
+    btn.addEventListener('click', () => btn.closest('dialog').close());
+  });
 
-setupModal('#np-btn', '#modal-np');
-setupModal('#bronze-btn', '#modal-bronze');
-setupModal('#silver-btn', '#modal-silver');
-setupModal('#gold-btn', '#modal-gold');
-
-document.querySelector('#current-year').textContent = new Date().getFullYear();
-document.querySelector('#last-modified').textContent = document.lastModified;
+  document.querySelectorAll('.tier-modal').forEach(dlg => {
+    dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+  });
+});

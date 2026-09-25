@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Application Received | Harare Chamber</title>
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/larger.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Harare Regional Chamber of Commerce</title>
+    <meta name="description" content="Thank you for applying for membership with the Harare Regional Chamber of Commerce.">
+    <meta name="author" content="Masango Dewheretsoko">
+    
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
 </head>
 <body>
   <header>
@@ -25,11 +34,9 @@
     const display = document.querySelector('#formDataDisplay');
     display.innerHTML = `
       <p><strong>Applicant Name:</strong> ${params.get('fname') || ''} ${params.get('lname') || ''}</p>
-      <p><strong>Title:</strong> ${params.get('title') || ''}</p>
       <p><strong>Email:</strong> ${params.get('email') || ''}</p>
       <p><strong>Mobile:</strong> ${params.get('mobile') || ''}</p>
       <p><strong>Organization:</strong> ${params.get('business') || ''}</p>
-      <p><strong>Description:</strong> ${params.get('description') || ''}</p>
       <p><strong>Tier Selected:</strong> ${params.get('membership') || ''}</p>
       <p><strong>Timestamp:</strong> ${params.get('timestamp') || ''}</p>
     `;
