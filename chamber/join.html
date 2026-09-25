@@ -1,22 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join | Harare Regional Chamber of Commerce</title>
     <meta name="description" content="Membership application form for the Harare Regional Chamber of Commerce.">
     <meta name="author" content="Masango Dewheretsoko">
-
-    <meta property="og:title" content="Join the Harare Regional Chamber of Commerce">
-    <meta property="og:description" content="Apply for membership with the Harare Regional Chamber of Commerce and connect with local businesses across the region.">
-    <meta property="og:image" content="https://masango763.github.io/wdd231/chamber/images/logo.svg">
-    <meta property="og:url" content="https://masango763.github.io/wdd231/chamber/join.html">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Join the Harare Regional Chamber of Commerce">
     <meta property="og:description" content="Apply for membership with the Harare Regional Chamber of Commerce and connect with local businesses across the region.">
-    <meta property="og:image" content="https://Masango763.github.io/wdd231/chamber/images/logo.svg">
-    <meta property="og:url" content="https://Masango763.github.io/wdd231/chamber/join.html">
+    <meta property="og:image" content="https://masango763.github.io/wdd231/chamber/images/logo.svg">
+    <meta property="og:url" content="https://masango763.github.io/wdd231/chamber/join.html">
     
     <link rel="icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,16 +21,16 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/navigation.js" defer></script>
-    <link rel="icon" href="images/favicon.ico">
+    <script src="scripts/join.js" defer></script>
 </head>
 <body>
     <header>
-        <div class="logo-box">
+        <div class="header-logo">
             <img src="images/logo.svg" alt="Harare Chamber Logo">
-            <h1>Harare Regional Chamber of Commerce</h1>
+            <span>Harare Regional Chamber</span>
         </div>
+        <button id="menu" aria-label="Open Navigation Menu"></button>
         <nav>
-            <button id="menu" aria-label="Toggle navigation menu"></button>
             <ul class="navigation">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="discover.html">Discover</a></li>
@@ -45,54 +40,141 @@
         </nav>
     </header>
 
-    <main>
+    <main class="join-main">
         <h1>Membership Application</h1>
         
-        <form method="get" action="thankyou.html" class="join-form">
-            <fieldset>
-                <legend>Applicant Personal Information</legend>
-                <label>First Name <input type="text" name="first" required autocomplete="given-name"></label>
-                <label>Last Name <input type="text" name="last" required autocomplete="family-name"></label>
-                <label>Organizational Title <input type="text" name="title" required autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}"></label>
-                <label>Email Address <input type="email" name="email" required autocomplete="email" placeholder="example@domain.com"></label>
-                <label>Mobile Phone <input type="tel" name="phone" required autocomplete="tel"></label>
-            </fieldset>
+        <div class="join-container">
+            <!-- Form Section -->
+            <form method="get" action="thankyou.html" class="join-form">
+                <fieldset>
+                    <legend>Applicant Personal Information</legend>
+                    
+                    <label>First Name *
+                        <input type="text" id="first-name" name="first-name" title="First Name" autocomplete="given-name" required>
+                    </label>
 
-            <fieldset>
-                <legend>Business/Organization Information</legend>
-                <label>Business Name <input type="text" name="organization" required autocomplete="organization"></label>
-                <label>Membership Level 
-                    <select name="level" required>
-                        <option value="" disabled selected>Select Membership Level...</option>
-                        <option value="np">NP Membership (Non-Profit - No Fee)</option>
-                        <option value="bronze">Bronze Membership</option>
-                        <option value="silver">Silver Membership</option>
-                        <option value="gold">Gold Membership</option>
-                    </select>
-                </label>
-                <label>Business Description <textarea name="description" rows="4"></textarea></label>
-            </fieldset>
+                    <label>Last Name *
+                        <input type="text" id="last-name" name="last-name" title="Last Name" autocomplete="family-name" required>
+                    </label>
 
-            <input type="submit" value="Sign Up for Membership">
-        </form>
+                    <label>Organizational Title *
+                        <input type="text" id="title" name="title" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" placeholder="e.g. Director" required>
+                    </label>
+
+                    <label>Email Address *
+                        <input type="email" id="email" name="email" title="Email Address" autocomplete="email" placeholder="example@domain.com" required>
+                    </label>
+
+                    <label>Mobile Phone *
+                        <input type="tel" id="phone" name="phone" title="Mobile Phone Number" autocomplete="tel" placeholder="+263..." required>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Organization Information</legend>
+                    
+                    <label>Business/Organization Name *
+                        <input type="text" id="organization" name="organization" title="Business Name" autocomplete="organization" required>
+                    </label>
+
+                    <label>Membership Level *</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="membership" value="np" required> NP Membership (Non-Profit - Free)</label>
+                        <label><input type="radio" name="membership" value="bronze"> Bronze Membership</label>
+                        <label><input type="radio" name="membership" value="silver"> Silver Membership</label>
+                        <label><input type="radio" name="membership" value="gold"> Gold Membership</label>
+                    </div>
+
+                    <label>Business Description
+                        <textarea id="description" name="description" title="Business Description" rows="4"></textarea>
+                    </label>
+                </fieldset>
+
+                <!-- Hidden timestamp field with name and id -->
+                <input type="hidden" id="timestamp" name="timestamp">
+
+                <button type="submit" class="submit-btn">Join the Chamber</button>
+            </form>
+
+            <!-- Membership Cards Section with Modals & Page Load Animation -->
+            <div class="membership-levels-info">
+                <h2>Membership Levels</h2>
+                
+                <div class="card card-animate">
+                    <h3>NP Membership</h3>
+                    <p>For non-profit organizations.</p>
+                    <button type="button" class="modal-btn" data-modal="modal-np">View Benefits</button>
+                </div>
+
+                <div class="card card-animate">
+                    <h3>Bronze Membership</h3>
+                    <p>Entry-level tier for small businesses.</p>
+                    <button type="button" class="modal-btn" data-modal="modal-bronze">View Benefits</button>
+                </div>
+
+                <div class="card card-animate">
+                    <h3>Silver Membership</h3>
+                    <p>Growth tier with event discounts.</p>
+                    <button type="button" class="modal-btn" data-modal="modal-silver">View Benefits</button>
+                </div>
+
+                <div class="card card-animate">
+                    <h3>Gold Membership</h3>
+                    <p>Premium tier with maximum exposure.</p>
+                    <button type="button" class="modal-btn" data-modal="modal-gold">View Benefits</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modals for each membership level -->
+        <dialog id="modal-np">
+            <h3>NP Membership Benefits</h3>
+            <p>&bull; Free admission to community meetups<br>&bull; Listing in directory<br>&bull; Access to standard newsletters</p>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
+
+        <dialog id="modal-bronze">
+            <h3>Bronze Membership Benefits</h3>
+            <p>&bull; All NP benefits<br>&bull; 5% discount on Chamber events<br>&bull; Standard directory spotlight feature</p>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
+
+        <dialog id="modal-silver">
+            <h3>Silver Membership Benefits</h3>
+            <p>&bull; All Bronze benefits<br>&bull; 15% discount on Chamber events<br>&bull; Quarterly newsletter advertising slot</p>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
+
+        <dialog id="modal-gold">
+            <h3>Gold Membership Benefits</h3>
+            <p>&bull; All Silver benefits<br>&bull; Free admission to all flagship events<br>&bull; Premium homepage spotlight banner</p>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
     </main>
 
     <footer>
-        <div class="footer-info">
-            <img src="images/logo.svg" alt="Harare Chamber Footer Logo">
-            <h3>Harare Regional Chamber of Commerce</h3>
-            <p>123 Jason Moyo Avenue, Harare, Zimbabwe</p>
-            <p>info@hararechamber.co.zw</p>
-            <p>+263 4 123 456</p>
-        </div>
-        <div class="footer-social">
-            <a href="https://facebook.com" target="_blank">f</a>
-            <a href="https://twitter.com" target="_blank">t</a>
-            <a href="https://linkedin.com" target="_blank">in</a>
-            <a href="https://youtube.com" target="_blank">yt</a>
+        <div class="footer-content">
+            <div class="footer-info">
+                <img src="images/logo.svg" alt="Harare Chamber Footer Logo" class="footer-logo">
+                <h3>Harare Regional Chamber of Commerce</h3>
+                <p>10 Samora Machel Ave, Harare, Zimbabwe</p>
+                <p>info@hararechamber.co.zw</p>
+                <p>+263 24 2486120</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook">f</a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter">t</a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">in</a>
+                <a href="https://youtube.com" target="_blank" aria-label="YouTube">yt</a>
+            </div>
+            <div class="footer-info">
+                <h3>WDD 231 Class Project</h3>
+                <p>Masango Dewheretsoko</p>
+                <p>&copy; 2026 Harare Regional Chamber</p>
+            </div>
         </div>
         <div class="footer-bottom">
-            <p>All rights reserved.</p>
+            <p>&copy; <span id="current-year"></span> All rights reserved. Last updated: <span id="last-modified"></span></p>
         </div>
     </footer>
 </body>
