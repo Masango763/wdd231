@@ -1,26 +1,40 @@
-[
-  {
-    "name": "Harare Tech Hub",
-    "address": "12 Jason Moyo Ave, Harare",
-    "phone": "+263 24 2701234",
-    "membershipLevel": "Gold",
-    "website": "https://example.com",
-    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=200&auto=format&fit=crop&q=80"
-  },
-  {
-    "name": "CBZ Holdings",
-    "address": "Union House, 60 Kwame Nkrumah Ave, Harare",
-    "phone": "+263 24 2748050",
-    "membershipLevel": "Gold",
-    "website": "https://example.com",
-    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=200&auto=format&fit=crop&q=80"
-  },
-  {
-    "name": "Delta Corporation",
-    "address": "Sable House, Northridge Park, Harare",
-    "phone": "+263 24 2486120",
-    "membershipLevel": "Silver",
-    "website": "https://example.com",
-    "image": "https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?w=200&auto=format&fit=crop&q=80"
-  }
-]
+{
+  "members": [
+    {
+      "name": "Harare Tech Solutions",
+      "address": "15 Samora Machel Ave, Harare",
+      "phone": "+263 24 2700111",
+      "website": "https://hararetech.co.zw",
+      "image": "logo.svg",
+      "membershipLevel": 3,
+      "description": "Leading IT and software development consultancy driving digital transformation across Zimbabwe."
+    },
+    {
+      "name": "Zambezi Logistics & Transport",
+      "address": "42 Nelson Mandela Way, Harare",
+      "phone": "+263 24 2712233",
+      "website": "https://zambezilogistics.co.zw",
+      "image": "logo.svg",
+      "membershipLevel": 2,
+      "description": "Reliable freight, supply chain, and transport solutions connecting Southern African trade corridors."
+    },
+    {
+      "name": "Savannah Agro Industries",
+      "address": "8 Enterprise Road, Harare",
+      "phone": "+263 24 2498877",
+      "website": "https://savannahagro.co.zw",
+      "image": "logo.svg",
+      "membershipLevel": 3,
+      "description": "Innovative agricultural products, precision farming metrics, and export processing."
+    },
+    {
+      "name": "Highlands Cafe & Bakery",
+      "address": "10 Highlands Park, Harare",
+      "phone": "+263 24 2441122",
+      "website": "https://highlandscafe.co.zw",
+      "image": "logo.svg",
+      "membershipLevel": 1,
+      "description": "Artisan coffee and freshly baked goods in a tranquil community setting."
+    }
+  ]
+}
