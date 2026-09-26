@@ -28,12 +28,92 @@
       "description": "Innovative agricultural products, precision farming metrics, and export processing."
     },
     {
-      "name": "Highlands Cafe & Bakery",
-      "address": "10 Highlands Park, Harare",
-      "phone": "+263 24 2441122",
-      "website": "https://highlandscafe.co.zw",
-      "image": "highlands-cafe.jpg",
-      "membershipLevel": 1,
+      "name": "Highlands Park Cafe & Bakery",
+      "address": "100 Enterprise Road, Harare",
+      "phone": "+263 24 2490999",
+      "website": "https://highlandsparkcafe.co.zw",
+      "image": "highlands-park-cafe.jpg",
+      "membershipLevel": 2,
+      "description": "Artisan coffee and freshly baked goods in a tranquil community setting."
+    }
+  ]
+}
+{
+  "members": [
+    {
+      "name": "Harare Tech Solutions",
+      "address": "15 Samora Machel Ave, Harare",
+      "phone": "+263 24 2700111",
+      "website": "https://hararetech.co.zw",
+      "image": "harare-tech.jpg",
+      "membershipLevel": 3,
+      "description": "Leading IT and software development consultancy driving digital transformation across Zimbabwe."
+    },
+    {
+      "name": "Zambezi Logistics & Transport",
+      "address": "42 Nelson Mandela Way, Harare",
+      "phone": "+263 24 2712233",
+      "website": "https://zambezilogistics.co.zw",
+      "image": "zambezi-logistics.jpg",
+      "membershipLevel": 2,
+      "description": "Reliable freight, supply chain, and transport solutions connecting Southern African trade corridors."
+    },
+    {
+      "name": "Savannah Agro Industries",
+      "address": "8 Enterprise Road, Harare",
+      "phone": "+263 24 2498877",
+      "website": "https://savannahagro.co.zw",
+      "image": "savannah-agro.jpg",
+      "membershipLevel": 3,
+      "description": "Innovative agricultural products, precision farming metrics, and export processing."
+    },
+    {
+      "name": "Highlands Park Cafe & Bakery",
+      "address": "100 Enterprise Road, Harare",
+      "phone": "+263 24 2490999",
+      "website": "https://highlandsparkcafe.co.zw",
+      "image": "highlands-park-cafe.jpg",
+      "membershipLevel": 2,
+      "description": "Artisan coffee and freshly baked goods in a tranquil community setting."
+    }
+  ]
+}
+{
+  "members": [
+    {
+      "name": "Harare Tech Solutions",
+      "address": "15 Samora Machel Ave, Harare",
+      "phone": "+263 24 2700111",
+      "website": "https://hararetech.co.zw",
+      "image": "harare-tech.jpg",
+      "membershipLevel": 3,
+      "description": "Leading IT and software development consultancy driving digital transformation across Zimbabwe."
+    },
+    {
+      "name": "Zambezi Logistics & Transport",
+      "address": "42 Nelson Mandela Way, Harare",
+      "phone": "+263 24 2712233",
+      "website": "https://zambezilogistics.co.zw",
+      "image": "zambezi-logistics.jpg",
+      "membershipLevel": 2,
+      "description": "Reliable freight, supply chain, and transport solutions connecting Southern African trade corridors."
+    },
+    {
+      "name": "Savannah Agro Industries",
+      "address": "8 Enterprise Road, Harare",
+      "phone": "+263 24 2498877",
+      "website": "https://savannahagro.co.zw",
+      "image": "savannah-agro.jpg",
+      "membershipLevel": 3,
+      "description": "Innovative agricultural products, precision farming metrics, and export processing."
+    },
+    {
+      "name": "Highlands Park Cafe & Bakery",
+      "address": "100 Enterprise Road, Harare",
+      "phone": "+263 24 2490999",
+      "website": "https://highlandsparkcafe.co.zw",
+      "image": "highlands-park-cafe.jpg",
+      "membershipLevel": 2,
       "description": "Artisan coffee and freshly baked goods in a tranquil community setting."
     }
   ]
