@@ -1,116 +1,71 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harare Regional Chamber of Commerce | Home</title>
-    <meta name="description" content="Harare Regional Chamber of Commerce home page connecting local enterprises and driving economic growth.">
-    <meta name="author" content="Masango Dewheretsoko">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Harare Regional Chamber of Commerce Home">
-    <meta property="og:description" content="Connecting businesses and community resources in Harare, Zimbabwe.">
-    <meta property="og:image" content="https://masango763.github.io/wdd231/chamber/images/hero-large.jpg">
-    <meta property="og:url" content="https://masango763.github.io/wdd231/chamber/index.html">
-    
-    <link rel="icon" href="images/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/weather-live.js" defer></script>
-    <script src="scripts/spotlights.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Harare Regional Chamber of Commerce</title>
+  <meta name="description" content="Welcome to the Harare Regional Chamber of Commerce. Empowering businesses and fostering regional economic growth.">
+  <meta name="author" content="Masango Dewheretsoko">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/weather.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="header-logo">
-            <img src="images/logo.svg" alt="Harare Chamber Logo">
-            <span>Harare Regional Chamber</span>
+  <header>
+    <div class="logo-box">
+      <img src="images/logo.svg" alt="Harare Chamber Logo">
+      <span>Harare Regional Chamber of Commerce</span>
+    </div>
+    <a id="menu" href="#"></a>
+    <nav>
+      <ul class="navigation">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-msg">
+        <h1>Welcome to Harare Chamber</h1>
+        <p>Empowering businesses and fostering regional economic growth.</p>
+        <a href="join.html" class="hero-btn">Join Our Chamber</a>
+      </div>
+    </section>
+
+    <!-- Dynamic Weather App Section -->
+    <section class="weather-card" style="background-color: #ffffff; border: 2px solid #1b4332; border-radius: 8px; padding: 1.5rem; margin: 1.5rem auto; max-width: 600px;">
+      <h2 style="color: #1b4332; margin-top: 0; border-bottom: 2px solid #d8f3dc; padding-bottom: 0.5rem;">Current Weather</h2>
+      <div id="current-weather-content">
+        <p id="current-date" style="margin: 0.5rem 0; color: #333;"></p>
+        <div style="display: flex; align-items: center; gap: 1rem; margin: 0.5rem 0;">
+          <div>
+            <p style="margin: 0; font-size: 1.5rem; font-weight: bold; color: #1b4332;"><span id="current-temp">--</span>&deg;C</p>
+            <p id="weather-desc" style="margin: 0; color: #555; text-transform: capitalize;">Loading weather...</p>
+          </div>
         </div>
-        <button id="menu" aria-label="Open Navigation Menu"></button>
-        <nav>
-            <ul class="navigation">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="discover.html">Discover</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
-            </ul>
-        </nav>
-    </header>
+        <p style="margin: 0.5rem 0; color: #333;">
+          <strong>High:</strong> <span id="high-temp" style="color: #1b4332; font-weight: bold;">--</span>&deg;C &nbsp;|&nbsp; 
+          <strong>Low:</strong> <span id="low-temp" style="color: #1b4332; font-weight: bold;">--</span>&deg;C
+        </p>
+        <p style="margin: 0.5rem 0; color: #555;">Harare, ZW</p>
+      </div>
+      <h3 style="color: #1b4332; margin-top: 1.5rem; margin-bottom: 0.75rem;">3-Day Forecast</h3>
+      <div id="forecast-container" style="display: flex; gap: 1rem; justify-content: space-between; flex-wrap: wrap;"></div>
+    </section>
+  </main>
 
-    <main>
-        <h1 class="visually-hidden">Welcome to Harare Regional Chamber</h1>
-        
-        <!-- Hero Section with Overlaid Call to Action -->
-        <section class="hero">
-            <picture>
-                <source srcset="images/hero-large.jpg" media="(min-width: 768px)">
-                <img src="images/hero-small.jpg" alt="Harare cityscape and business center" width="1200" height="600">
-            </picture>
-            <div class="hero-cta">
-                <h2>Welcome to Harare Chamber</h2>
-                <p>Empowering businesses and fostering regional economic growth.</p>
-                <a href="join.html" class="cta-btn">Join Our Chamber</a>
-            </div>
-        </section>
-
-        <!-- Main Home Grid -->
-        <div class="home-grid">
-            <section class="card weather-card">
-                <h2>Current Weather</h2>
-                <div class="weather-content">
-                    <p class="weather-date" id="weather-date"></p>
-                    <p class="temperature"><span id="current-temp">--</span>&deg;C</p>
-                    <p class="condition" id="weather-desc">Loading weather...</p>
-                    <p class="location">Harare, ZW</p>
-                </div>
-                <div id="forecast-container" class="forecast-box">
-                    <!-- 3-day forecast populated by JS -->
-                </div>
-            </section>
-
-            <section class="card events-card">
-                <h2>Upcoming Events</h2>
-                <p><strong>Annual Business Expo 2026</strong><br>Date: October 15, 2026<br>Location: Harare International Conference Centre</p>
-                <p><strong>SME Networking Breakfast</strong><br>Date: October 22, 2026<br>Location: Meikles Hotel</p>
-            </section>
-
-            <section class="card spotlight-card">
-                <h2>Member Spotlights</h2>
-                <div id="spotlights-container" class="spotlight-container">
-                    <!-- Populated dynamically via script/json -->
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-info">
-                <img src="images/logo.svg" alt="Harare Chamber Footer Logo" class="footer-logo">
-                <h3>Harare Regional Chamber of Commerce</h3>
-                <p>10 Samora Machel Ave, Harare, Zimbabwe</p>
-                <p>info@hararechamber.co.zw</p>
-                <p>+263 24 2486120</p>
-            </div>
-            <div class="footer-social">
-                <a href="https://facebook.com" target="_blank" aria-label="Facebook">f</a>
-                <a href="https://twitter.com" target="_blank" aria-label="Twitter">t</a>
-                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">in</a>
-                <a href="https://youtube.com" target="_blank" aria-label="YouTube">yt</a>
-            </div>
-            <div class="footer-info">
-                <h3>WDD 231 Class Project</h3>
-                <p>Masango Dewheretsoko</p>
-                <p>&copy; 2026 Harare Regional Chamber</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; <span id="current-year"></span> All rights reserved. Last updated: <span id="last-modified"></span></p>
-        </div>
-    </footer>
+  <footer>
+    <p>&copy; <span id="currentyear">2026</span> Harare Regional Chamber of Commerce | Masango Dewheretsoko | WDD 231</p>
+  </footer>
 </body>
 </html>
