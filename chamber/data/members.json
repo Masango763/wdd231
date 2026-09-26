@@ -5,7 +5,7 @@
       "address": "15 Samora Machel Ave, Harare",
       "phone": "+263 24 2700111",
       "website": "https://hararetech.co.zw",
-      "image": "logo.svg",
+      "image": "harare-tech.jpg",
       "membershipLevel": 3,
       "description": "Leading IT and software development consultancy driving digital transformation across Zimbabwe."
     },
@@ -14,7 +14,7 @@
       "address": "42 Nelson Mandela Way, Harare",
       "phone": "+263 24 2712233",
       "website": "https://zambezilogistics.co.zw",
-      "image": "logo.svg",
+      "image": "zambezi-logistics.jpg",
       "membershipLevel": 2,
       "description": "Reliable freight, supply chain, and transport solutions connecting Southern African trade corridors."
     },
@@ -23,7 +23,7 @@
       "address": "8 Enterprise Road, Harare",
       "phone": "+263 24 2498877",
       "website": "https://savannahagro.co.zw",
-      "image": "logo.svg",
+      "image": "savannah-agro.jpg",
       "membershipLevel": 3,
       "description": "Innovative agricultural products, precision farming metrics, and export processing."
     },
@@ -32,7 +32,7 @@
       "address": "10 Highlands Park, Harare",
       "phone": "+263 24 2441122",
       "website": "https://highlandscafe.co.zw",
-      "image": "logo.svg",
+      "image": "highlands-cafe.jpg",
       "membershipLevel": 1,
       "description": "Artisan coffee and freshly baked goods in a tranquil community setting."
     }
