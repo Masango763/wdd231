@@ -34,17 +34,5 @@ export const places = [
     address: "77 Scrum Street, Harare",
     description: "Flexible desks and meeting rooms for remote workers.",
     image: "images/hub6.webp"
-  },
-  {
-    title: "Innovators Lounge",
-    address: "3rd Floor, CBD Tower, Harare",
-    description: "Exclusive networking lounge for Tech Connect members.",
-    image: "images/hub7.webp"
-  },
-  {
-    title: "MakerSpace ZW",
-    address: "14 Hardware Blvd, Harare",
-    description: "Robotics, IoT, and hardware prototyping facility.",
-    image: "images/hub8.webp"
   }
 ];
