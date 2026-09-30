@@ -1,39 +1,49 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Visitor Storage Message Logic
-  const visitMsg = document.getElementById("visit-message");
-  const lastVisit = localStorage.getItem("lastVisitDate");
-  const now = Date.now();
+import { places } from '../data/discover.mjs';
 
-  if (!lastVisit) {
-    visitMsg.textContent = "Welcome! Let us know if you have any questions.";
-  } else {
-    const daysBetween = Math.floor((now - parseInt(lastVisit, 10)) / (1000 * 60 * 60 * 24));
+// Set footer dates
+document.getElementById('currentyear').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = `Last Modification: ${document.lastModified}`;
+
+// LocalStorage Visit Logic
+const messageElement = document.getElementById('visitor-message');
+const msToDays = 84600000;
+let today = Date.now();
+let lastVisit = localStorage.getItem('lastVisit');
+
+if (!lastVisit) {
+    messageElement.textContent = "Welcome! Let us know if you have any questions.";
+} else {
+    let daysBetween = Math.floor((today - parseInt(lastVisit)) / msToDays);
+    
     if (daysBetween < 1) {
-      visitMsg.textContent = "Back so soon! Great to see you again.";
-    } else if (daysBetween === 1) {
-      visitMsg.textContent = "You last visited 1 day ago.";
+        messageElement.textContent = "Back so soon! Awesome!";
     } else {
-      visitMsg.textContent = `You last visited ${daysBetween} days ago.`;
+        let plural = daysBetween === 1 ? "" : "days";
+        messageElement.textContent = `You last visited ${daysBetween} ${plural} ago.`;
     }
-  }
-  localStorage.setItem("lastVisitDate", now.toString());
+}
+localStorage.setItem('lastVisit', today);
 
-  // Modal Handlers
-  const learnBtns = document.querySelectorAll(".learn-more-btn");
-  const closeBtns = document.querySelectorAll(".close-modal-btn");
-
-  learnBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const modalId = btn.getAttribute("data-modal");
-      const dialog = document.getElementById(modalId);
-      if (dialog) dialog.showModal();
+// Display Places from imported module data
+function displayPlaces(items) {
+    const container = document.getElementById('cards-container');
+    
+    items.forEach(place => {
+        let card = document.createElement('article');
+        card.className = 'discover-card';
+        
+        card.innerHTML = `
+            <h2>${place.title}</h2>
+            <figure>
+                <img src="${place.image}" alt="${place.title}" loading="lazy" width="300" height="200">
+            </figure>
+            <address>${place.address}</address>
+            <p>${place.description}</p>
+            <button class="learn-more">Learn More</button>
+        `;
+        
+        container.appendChild(card);
     });
-  });
+}
 
-  closeBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const dialog = btn.closest("dialog");
-      if (dialog) dialog.close();
-    });
-  });
-});
+displayPlaces(places);

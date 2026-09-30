@@ -1,36 +1,23 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harare Regional Chamber of Commerce | Discover Harare</title>
-    <meta name="description" content="Discover Harare, the commercial engine and innovation capital of Zimbabwe.">
+    <title>Discover Harare Tech | Chamber of Commerce</title>
+    <meta name="description" content="Discover tech hubs, co-working spaces, and networking locations in the Harare Tech Connect network.">
     <meta name="author" content="Masango Dewheretsoko">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 768px)">
-    
-    <script src="scripts/navigation.js" defer></script>
-    <link rel="icon" href="images/favicon.ico">
-    <meta property="og:title" content="Discover Harare Chamber | Local Business Highlights">
-    <meta property="og:description" content="Explore featured businesses, local attractions, and community resources from the Harare Regional Chamber of Commerce.">
-    <meta property="og:image" content="https://masango763.github.io/wdd231/chamber/images/logo.svg">
-    <meta property="og:url" content="https://masango763.github.io/wdd231/chamber/discover.html">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/discover.css">
+    <script src="scripts/discover.js" type="module" defer></script>
 </head>
 <body>
     <header>
-        <div class="header-logo">
-            <img src="images/logo.svg" alt="Harare Chamber Logo">
-            <span>Harare Regional Chamber</span>
+        <div class="header-container">
+            <h1>Harare Tech Connect</h1>
+            <button id="menu-btn" aria-label="Open Menu">&#9776;</button>
         </div>
-        <button id="menu" aria-label="Open Navigation Menu"></button>
-        <nav>
-            <ul class="navigation">
+        <nav id="nav-menu">
+            <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="discover.html" class="active">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
@@ -39,91 +26,24 @@
         </nav>
     </header>
 
-    <main class="discover-main">
-        <h1>Discover Harare</h1>
-        <p class="subtitle">The commercial engine and innovation capital of Zimbabwe.</p>
+    <main class="discover-layout">
+        <aside class="sidebar">
+            <h2>Visitor Info</h2>
+            <div id="visitor-message" class="message-box"></div>
+            <h3>Demographics</h3>
+            <p>Harare is a growing hub for digital innovation, hosting over 50+ active tech startups and developers.</p>
+            <h3>Upcoming Event</h3>
+            <p>Join us for the Annual Hackathon next month!</p>
+        </aside>
 
-        <div class="discover-container">
-            <div class="discover-sidebar">
-                <section class="card">
-                    <h2>Key Statistics</h2>
-                    <ul>
-                        <li><strong>Population:</strong> ~2.1 Million (Metro)</li>
-                        <li><strong>Elevation:</strong> 1,480 meters (4,860 ft)</li>
-                        <li><strong>Primary Sectors:</strong> Finance, Tech, Mining, Agriculture</li>
-                        <li><strong>Established:</strong> 1890 (as Fort Salisbury)</li>
-                    </ul>
-                </section>
-                <section class="card">
-                    <h2>Visitor Information</h2>
-                    <p>Harare features a subtropical highland climate with pleasant warm summers and mild winters. Robert Gabriel Mugabe International Airport links the city globally.</p>
-                </section>
-            </div>
-
-            <div class="discover-grid">
-                <section class="discover-card">
-                    <h2>Samora Machel Avenue</h2>
-                    <figure>
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&auto=format&fit=crop&q=80" alt="Harare CBD Skyline" loading="lazy">
-                        <figcaption>The bustling financial and commercial core of the capital.</figcaption>
-                    </figure>
-                    <p>Home to major corporate headquarters, banking institutions, and the Harare Regional Chamber of Commerce.</p>
-                </section>
-
-                <section class="discover-card">
-                    <h2>Harare Gardens</h2>
-                    <figure>
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&auto=format&fit=crop&q=80" alt="Harare Gardens Park" loading="lazy">
-                        <figcaption>The largest public park in central Harare.</figcaption>
-                    </figure>
-                    <p>A tranquil oasis featuring lush lawns, exotic trees, and regular musical and cultural festivals.</p>
-                </section>
-
-                <section class="discover-card">
-                    <h2>National Gallery of Zimbabwe</h2>
-                    <figure>
-                        <img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?w=400&auto=format&fit=crop&q=80" alt="Art and Culture" loading="lazy">
-                        <figcaption>Showcasing contemporary art and heritage.</figcaption>
-                    </figure>
-                    <p>Exhibiting world-renowned Shona stone sculpture collections and contemporary African art.</p>
-                </section>
-
-                <section class="discover-card">
-                    <h2>Mukuvisi Woodlands</h2>
-                    <figure>
-                        <img src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?w=400&auto=format&fit=crop&q=80" alt="Wildlife Conservation" loading="lazy">
-                        <figcaption>Nature conservation area within the city.</figcaption>
-                    </figure>
-                    <p>An urban wildlife sanctuary offering walking trails, zebras, giraffes, and birdwatching.</p>
-                </section>
-            </div>
-        </div>
+        <section class="gallery">
+            <div id="cards-container" class="cards-grid"></div>
+        </section>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-info">
-                <img src="images/logo.svg" alt="Harare Chamber Footer Logo" class="footer-logo">
-                <h3>Harare Regional Chamber of Commerce</h3>
-                <p>10 Samora Machel Ave, Harare, Zimbabwe</p>
-                <p>info@hararechamber.co.zw</p>
-                <p>+263 24 2486120</p>
-            </div>
-            <div class="footer-social">
-                <a href="https://facebook.com" target="_blank" aria-label="Facebook">f</a>
-                <a href="https://twitter.com" target="_blank" aria-label="Twitter">t</a>
-                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">in</a>
-                <a href="https://youtube.com" target="_blank" aria-label="YouTube">yt</a>
-            </div>
-            <div class="footer-info">
-                <h3>WDD 231 Class Project</h3>
-                <p>Masango Dewheretsoko</p>
-                <p>&copy; 2026 Harare Regional Chamber</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>All rights reserved.</p>
-        </div>
+        <p>&copy; <span id="currentyear"></span> | Harare Tech Connect | WDD 231</p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 </html>
