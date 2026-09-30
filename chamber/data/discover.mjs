@@ -1,38 +1,26 @@
 export const places = [
   {
-    title: "Harare Tech Hub",
-    address: "12 Innovation Way, Harare",
-    description: "A premier co-working space for startups and developers.",
+    title: "Harare CBD Skyline",
+    address: "Central Business District, Harare",
+    description: "The commercial engine and financial heart of Zimbabwe.",
     image: "images/hub1.webp"
   },
   {
-    title: "Code & Coffee Cafe",
-    address: "45 Developer Ave, Harare",
-    description: "Perfect spot to network, grab a latte, and write code.",
+    title: "Harare Gardens Park",
+    address: "Julius Nyerere Way, Harare",
+    description: "A serene green oasis in the middle of the bustling city.",
     image: "images/hub2.webp"
   },
   {
-    title: "ZimTech Incubator",
-    address: "8 Enterprise Rd, Harare",
-    description: "Funding and mentorship for early-stage tech companies.",
+    title: "Art and Culture Center",
+    address: "National Gallery, Harare",
+    description: "Showcasing world-class African contemporary art and heritage.",
     image: "images/hub3.webp"
   },
   {
-    title: "Silicon Valley Park",
-    address: "100 Tech Park, Harare",
-    description: "Modern office spaces tailored for software engineering teams.",
+    title: "Wildlife Conservation",
+    address: "Mukuvisi Woodlands, Harare",
+    description: "Protected nature reserve featuring indigenous flora and fauna.",
     image: "images/hub4.webp"
-  },
-  {
-    title: "The Data Center",
-    address: "2 Server Lane, Harare",
-    description: "State-of-the-art server hosting and cloud infrastructure.",
-    image: "images/hub5.webp"
-  },
-  {
-    title: "Agile Workspace",
-    address: "77 Scrum Street, Harare",
-    description: "Flexible desks and meeting rooms for remote workers.",
-    image: "images/hub6.webp"
   }
 ];
