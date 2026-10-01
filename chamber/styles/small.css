@@ -526,3 +526,19 @@ a[target="_blank"]:hover,
 a[href^="http"]:hover {
   color: #52b788 !important;
 }
+
+/* --- Force External Links to Green --- */
+a[target="_blank"],
+a[href^="http"] {
+  color: #2d6a4f !important;
+}
+
+a[target="_blank"]:visited,
+a[href^="http"]:visited {
+  color: #1b4332 !important;
+}
+
+a[target="_blank"]:hover,
+a[href^="http"]:hover {
+  color: #52b788 !important;
+}
