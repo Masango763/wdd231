@@ -578,3 +578,23 @@ a[href^="http"]:hover {
 .learn-more:hover {
   background-color: #1b4332 !important;
 }
+
+/* --- Match RSVP color to Learn More --- */
+.rsvp-button,
+#rsvp-btn {
+  background-color: #2d6a4f !important;
+  color: #ffffff !important;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rsvp-button:hover,
+#rsvp-btn:hover {
+  background-color: #1b4332 !important;
+}
