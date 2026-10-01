@@ -981,3 +981,85 @@ footer {
   color: #1b4332;
   margin-top: 0.2rem !important;
 }
+
+/* --- Completely Dark Green Weather Card --- */
+.weather-card {
+  background-color: #1b4332 !important;
+  color: #ffffff !important;
+  border: 1px solid #0f281e !important;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  margin: 1.5rem 0;
+}
+
+.weather-card h2 {
+  color: #ffffff !important;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+.weather-dark-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+@media (min-width: 550px) {
+  .weather-dark-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.weather-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dark-weather-icon {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark-temp {
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #ffffff !important;
+  line-height: 1;
+}
+
+.dark-desc {
+  font-size: 1.05rem;
+  color: #b7e4c7 !important;
+  font-weight: 600;
+  margin: 0.25rem 0 0 0;
+}
+
+.weather-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  color: #ffffff !important;
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 0.85rem 1.1rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.weather-right p {
+  margin: 0;
+}
+
+.dark-loc {
+  font-weight: bold;
+  color: #52b788 !important;
+  margin-top: 0.2rem !important;
+}
