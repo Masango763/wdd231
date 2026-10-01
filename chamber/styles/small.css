@@ -266,3 +266,23 @@ footer {
   background-color: #2d6a4f; /* Lighter hover green */
   transform: translateY(-2px);
 }
+
+/* Highlighted Learn More Buttons - Light Blue */
+.discover-card .learn-more {
+  display: inline-block;
+  background-color: #3a86ff; /* Highlighted light blue */
+  color: #ffffff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem;
+}
+
+.discover-card .learn-more:hover {
+  background-color: #2667cc; /* Slightly darker blue on hover */
+  transform: translateY(-2px);
+}
