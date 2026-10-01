@@ -875,3 +875,14 @@ nav.open {
   background-color: #2667cc;
   transform: translateY(-2px);
 }
+
+/* Match External Links / Buttons to Website Green Color Theme */
+.discover-card .learn-more,
+.sidebar .rsvp-button {
+  background-color: #1b4332 !important;
+}
+
+.discover-card .learn-more:hover,
+.sidebar .rsvp-button:hover {
+  background-color: #2d6a4f !important;
+}
