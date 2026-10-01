@@ -44,23 +44,27 @@
         </nav>
     </header>
 
-    <main>
-        <h1>Discover Harare</h1>
-        <p class="subtitle">The commercial engine and innovation capital of Zimbabwe.</p>
+    <main class="discover-main">
+        <div class="page-header">
+            <h1>Discover Harare</h1>
+            <p class="subtitle">The commercial engine and innovation capital of Zimbabwe.</p>
+        </div>
 
-        <section class="stats-section">
-            <h2>Key Statistics</h2>
-            <ul>
-                <li><strong>Population:</strong> ~2.1 Million (Metro)</li>
-                <li><strong>Elevation:</strong> 1,480 meters (4,860 ft)</li>
-                <li><strong>Primary Sectors:</strong> Finance, Tech, Mining, Agriculture</li>
-                <li><strong>Established:</strong> 1890 (as Fort Salisbury)</li>
-            </ul>
-        </section>
+        <section class="info-overview">
+            <div class="stats-section">
+                <h2>Key Statistics</h2>
+                <ul>
+                    <li><strong>Population:</strong> ~2.1 Million (Metro)</li>
+                    <li><strong>Elevation:</strong> 1,480 meters (4,860 ft)</li>
+                    <li><strong>Primary Sectors:</strong> Finance, Tech, Mining, Agriculture</li>
+                    <li><strong>Established:</strong> 1890 (as Fort Salisbury)</li>
+                </ul>
+            </div>
 
-        <section class="visitor-info-section">
-            <h2>Visitor Information</h2>
-            <p>Harare features a subtropical highland climate with pleasant warm summers and mild winters. Robert Gabriel Mugabe International Airport links the city globally.</p>
+            <div class="visitor-info-section">
+                <h2>Visitor Information</h2>
+                <p>Harare features a subtropical highland climate with pleasant warm summers and mild winters. Robert Gabriel Mugabe International Airport links the city globally.</p>
+            </div>
         </section>
 
         <div class="discover-layout">
@@ -69,8 +73,12 @@
                 <div id="visitor-message" class="message-box"></div>
                 <h3>Demographics</h3>
                 <p>Harare is a growing hub for digital innovation, hosting over 50+ active tech startups and developers.</p>
-                <h3>Upcoming Event</h3>
-                <p>Join us for the Annual Chamber Hackathon next month!</p>
+                <div class="event-box">
+                    <h3>Upcoming Event</h3>
+                    <p id="dynamic-event-text">Loading real-time event schedule...</p>
+                    <div id="countdown-timer" class="countdown-box"></div>
+                    <button id="rsvp-btn" class="rsvp-button">RSVP Now</button>
+                </div>
             </aside>
 
             <section class="gallery">
