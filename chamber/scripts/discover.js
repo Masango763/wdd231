@@ -11,22 +11,14 @@ if (container) {
       <h2>${place.title}</h2>
       <img src="${place.image}" alt="${place.title}" loading="lazy" width="300" height="200">
       <address>${place.address}</address>
-      <p class="desc">${place.description}</p>
+      <p>${place.description}</p>
       <button class="learn-more">Learn More</button>
     `;
 
-    // Add click event for the Learn More button
+    // Make Learn More button functional
     const button = card.querySelector(".learn-more");
-    const descP = card.querySelector(".desc");
-
     button.addEventListener("click", () => {
-      if (descP.style.display === "none") {
-        descP.style.display = "block";
-        button.textContent = "Learn More";
-      } else {
-        // Toggle expanded detail or alert/modal style view as desired
-        alert(`Explore more about ${place.title} located at ${place.address}. Enjoy your visit to Harare!`);
-      }
+      alert(`Learn more about ${place.title} at ${place.address}.`);
     });
 
     container.appendChild(card);
