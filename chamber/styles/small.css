@@ -804,3 +804,23 @@ nav.open {
 .forecast-item {
     text-align: center;
 }
+
+/* Highlighted Learn More Buttons */
+.discover-card .learn-more {
+  display: inline-block;
+  background-color: #1b4332; /* Primary chamber dark green */
+  color: #ffffff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem;
+}
+
+.discover-card .learn-more:hover {
+  background-color: #2d6a4f; /* Lighter hover green */
+  transform: translateY(-2px);
+}
