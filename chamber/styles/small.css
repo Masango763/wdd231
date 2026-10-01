@@ -542,3 +542,21 @@ a[target="_blank"]:hover,
 a[href^="http"]:hover {
   color: #52b788 !important;
 }
+
+/* --- Style Learn More Links/Buttons to Green --- */
+.learn-more {
+  background-color: #2d6a4f !important;
+  color: #ffffff !important;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more:hover {
+  background-color: #1b4332 !important;
+}
