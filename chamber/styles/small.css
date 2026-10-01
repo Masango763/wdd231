@@ -1,888 +1,248 @@
+/* --- Core Reset & Variables --- */
 :root {
-    --primary: #1b4332;
-    --secondary: #2d6a4f;
-    --accent: #d8f3dc;
-    --text-dark: #212529;
-    --bg-light: #f8f9fa;
+  --primary: #1b4332;
+  --secondary: #2d6a4f;
+  --accent: #52b788;
+  --light-bg: #f4f6f4;
+  --text-dark: #333333;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--bg-light);
-    color: var(--text-dark);
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--white);
+  line-height: 1.6;
 }
 
-/* Header & Hamburger Navigation */
+/* --- Header & Navigation --- */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: var(--primary);
-    color: #fff;
-    position: relative;
+  background-color: var(--primary);
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
 }
 
-.header-logo {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-}
-
-.header-logo img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
+header img {
+  width: 50px;
+  height: 50px;
 }
 
 #menu {
-    font-size: 1.8rem;
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    padding: 0.5rem;
+  font-size: 1.5rem;
+  border: none;
+  background: none;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 #menu::before {
-    content: "≡";
+  content: "≡";
 }
 
 #menu.open::before {
-    content: "X";
+  content: "X";
 }
 
 nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: var(--secondary);
-    display: none;
-    z-index: 1000;
-}
-
-nav.open {
-    display: block;
-}
-
-.navigation {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.navigation li a {
-    display: block;
-    padding: 1rem;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.navigation li a:hover,
-.navigation li a.active {
-    background-color: var(--accent);
-    color: var(--primary);
-}
-
-/* Main Content Containers */
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1.5rem;
-}
-
-h1 {
-    color: var(--primary);
-    text-align: center;
-}
-
-/* --- Clean Professional Footer Layout --- */
-footer {
-    background-color: var(--primary);
-    color: #ffffff;
-    padding: 2rem 1rem 1.5rem;
-    margin-top: 3rem;
-    font-size: 0.95rem;
-}
-
-.footer-content {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.footer-info h3 {
-    margin: 0.3rem 0;
-    font-size: 1.1rem;
-    color: var(--accent);
-}
-
-.footer-info p {
-    margin: 0.2rem 0;
-    opacity: 0.9;
-    font-size: 0.9rem;
-}
-
-/* Restrict logo and social icon sizes so they don't blow up */
-footer img.footer-logo,
-footer .footer-logo {
-    width: 45px !important;
-    height: 45px !important;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto 0.5rem auto;
-}
-
-.footer-social {
-    display: flex;
-    justify-content: center;
-    gap: 0.8rem;
-    margin: 0.5rem 0;
-}
-
-.footer-social a {
-    width: 32px !important;
-    height: 32px !important;
-    max-width: 32px !important;
-    max-height: 32px !important;
-    object-fit: contain;
-    /* Use solid dark background to pass WCAG color contrast requirements */
-    background-color: #2d6a4f;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 0.85rem;
-}
-
-.footer-bottom {
-    max-width: 1100px;
-    margin: 1rem auto 0;
-    text-align: center;
-    opacity: 0.8;
-    font-size: 0.85rem;
-}
-
-/* Desktop Media Query */
-@media (min-width: 768px) {
-    #menu {
-        display: none;
-    }
-    
-    nav {
-        position: static;
-        display: block !important;
-        background: transparent;
-        width: auto;
-    }
-
-    .navigation {
-        display: flex;
-        gap: 1.5rem;
-    }
-
-    .navigation li a {
-        border-bottom: none;
-        padding: 0.5rem 1rem;
-    }
-
-    .footer-content {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
-        align-items: flex-start;
-    }
-    
-    .footer-social {
-        justify-content: flex-start;
-    }
-    
-    .footer-bottom {
-        display: flex;
-        justify-content: space-between;
-        text-align: left;
-    }
-}
-
-/* --- Directory Grid View --- */
-#members-container.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
-
-#members-container.grid .member-card {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-#members-container.grid .member-card img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    margin-bottom: 1rem;
-}
-
-/* --- Directory List View --- */
-#members-container.list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 1rem;
-}
-
-#members-container.list .member-card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-}
-
-#members-container.list .member-card img {
-    display: none;
-}
-
-#members-container.list .member-card h3 {
-    margin: 0;
-    font-size: 1.1rem;
-}
-
-/* --- View Toggle Buttons --- */
-.view-toggle {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin: 1.5rem 0;
-}
-
-.view-toggle button {
-    padding: 0.6rem 1.2rem;
-    background-color: var(--secondary);
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.view-toggle button.active-view,
-.view-toggle button:hover {
-    background-color: var(--primary);
-}
-
-/* --- Directory Grid View --- */
-#members-container.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
-
-#members-container.grid .member-card {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-#members-container.grid .member-card img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    margin-bottom: 1rem;
-}
-
-/* --- Directory List View --- */
-#members-container.list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 1rem;
-}
-
-#members-container.list .member-card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-}
-
-#members-container.list .member-card img {
-    display: none;
-}
-
-#members-container.list .member-card h3 {
-    margin: 0;
-    font-size: 1.1rem;
-}
-
-/* --- View Toggle Buttons --- */
-.view-toggle {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin: 1.5rem 0;
-}
-
-.view-toggle button {
-    padding: 0.6rem 1.2rem;
-    background-color: var(--secondary);
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.view-toggle button.active-view,
-.view-toggle button:hover {
-    background-color: var(--primary);
-}
-/* --- Professional Join Form Styling --- */
-.join-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2.5rem 1.5rem;
-    background-color: #f8f9fa;
-}
-
-.join-main h1 {
-    text-align: center;
-    color: #1b4332;
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
-    font-weight: 700;
-}
-
-.join-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-}
-
-.join-form {
-    background: #ffffff;
-    padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-}
-
-.join-form fieldset {
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 1.5rem 1.75rem;
-    margin-bottom: 2rem;
-    background: #ffffff;
-}
-
-.join-form legend {
-    font-weight: 700;
-    color: #1b4332;
-    font-size: 1.1rem;
-    padding: 0 0.75rem;
-    background: #ffffff;
-}
-
-.join-form label {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1.25rem;
-    font-weight: 600;
-    color: #333333;
-    font-size: 0.95rem;
-    text-align: left;
-}
-
-.join-form input[type="text"],
-.join-form input[type="email"],
-.join-form input[type="tel"],
-.join-form select,
-.join-form textarea {
-    display: block;
-    width: 100%;
-    padding: 0.85rem 1rem;
-    margin-top: 0.4rem;
-    border: 1px solid #ced4da;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-family: inherit;
-    background-color: #fff;
-    box-sizing: border-box;
-    transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.join-form input:focus,
-.join-form select:focus,
-.join-form textarea:focus {
-    outline: none;
-    border-color: #1b4332;
-    box-shadow: 0 0 0 3px rgba(27, 67, 50, 0.15);
-}
-
-.submit-btn {
-    background-color: #1b4332;
-    color: #ffffff;
-    border: none;
-    padding: 1rem 1.5rem;
-    font-size: 1.1rem;
-    font-weight: 700;
-    border-radius: 6px;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.2s, transform 0.1s;
-    box-shadow: 0 4px 10px rgba(27, 67, 50, 0.2);
-}
-
-.submit-btn:hover {
-    background-color: #2d6a4f;
-}
-
-.submit-btn:active {
-    transform: translateY(1px);
-}
-
-.membership-levels-info {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.membership-levels-info .card {
-    background: #ffffff;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    border-left: 6px solid #2d6a4f;
-    transition: transform 0.2s;
-}
-
-.membership-levels-info .card:hover {
-    transform: translateY(-2px);
-}
-
-.membership-levels-info h3 {
-    color: #1b4332;
-    margin-top: 0;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-}
-
-.membership-levels-info p {
-    margin: 0.4rem 0;
-    color: #555555;
-    font-size: 0.95rem;
-    line-height: 1.4;
-}
-
-/* --- Larger Screens (Desktop View) --- */
-@media (min-width: 768px) {
-    .join-container {
-        display: grid;
-        grid-template-columns: 1.8fr 1.2fr;
-        align-items: start;
-        gap: 2.5rem;
-    }
-}
-
-/* --- Two-Column Form Field Layout on Desktop --- */
-@media (min-width: 768px) {
-    .join-form fieldset:nth-of-type(1) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1.25rem;
-    }
-
-    /* Make legend span across both columns */
-    .join-form fieldset:nth-of-type(1) legend {
-        grid-column: 1 / -1;
-    }
-
-    /* Make Email and Phone span or align nicely */
-    .join-form fieldset:nth-of-type(1) label:nth-of-type(4),
-    .join-form fieldset:nth-of-type(1) label:nth-of-type(5) {
-        grid-column: span 1;
-    }
-}
-
-/* --- Balanced Join Page Sizing & Spacing --- */
-.join-main {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem;
-}
-
-.join-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.join-form {
-    padding: 2rem;
-}
-
-.membership-levels-info {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-}
-
-.membership-levels-info .card {
-    padding: 1.25rem;
-    margin: 0;
-}
-
-/* --- Desktop Layout Balance --- */
-@media (min-width: 768px) {
-    .join-container {
-        display: grid;
-        grid-template-columns: 1.6fr 1fr;
-        gap: 2rem;
-        align-items: start;
-    }
-
-    .membership-levels-info {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* --- Refined Form Sizing & Proportions --- */
-.join-main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-}
-
-.join-form {
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-/* On larger desktop screens, let the grid container balance the form and side cards */
-@media (min-width: 768px) {
-    .join-main {
-        max-width: 1200px;
-    }
-
-    .join-form {
-        max-width: none;
-        margin: 0;
-    }
-}
-
-/* --- Vibrant Blue Weather Widget Styling --- */
-.weather-card {
-    background: linear-gradient(135deg, #0077b6, #00b4d8);
-    color: #ffffff;
-    border-left: 6px solid #03045e !important;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 119, 182, 0.25);
-}
-
-.weather-card h2 {
-    color: #ffffff !important;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 0.5rem;
-}
-
-.weather-content {
-    text-align: center;
-    padding: 0.5rem 0;
-}
-
-.weather-date {
-    font-size: 0.95rem;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-    opacity: 0.95;
-}
-
-.weather-card .temperature {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin: 0.2rem 0;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-}
-
-.weather-card .condition {
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin: 0.2rem 0;
-    text-transform: capitalize;
-}
-
-.weather-card .location {
-    font-size: 0.9rem;
-    opacity: 0.85;
-    margin-top: 0.5rem;
-}
-
-/* --- Guaranteed Mobile Hamburger Menu Styling --- */
-#menu {
-    display: block;
-    font-size: 1.5rem;
-    border: 0;
-    background: none;
-    color: #ffffff;
-    cursor: pointer;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-}
-
-#menu::before {
-    content: "≡";
-}
-
-#menu.open::before {
-    content: "X";
-}
-
-/* Hide navigation by default on mobile unless toggled */
-nav {
-    display: none;
-}
-
-nav.open {
-    display: block;
-}
-
-/* Show navigation normally on desktop screens */
-@media (min-width: 768px) {
-    #menu {
-        display: none;
-    }
-    nav {
-        display: block !important;
-    }
-}
-
-/* --- Ultimate Hamburger Menu & Navigation Override --- */
-@media screen and (max-width: 767px) {
-    header {
-        position: relative;
-    }
-    #menu {
-        display: block !important;
-        position: absolute;
-        top: 1.25rem;
-        right: 1.25rem;
-        font-size: 1.8rem;
-        background: none;
-        border: none;
-        color: #ffffff;
-        cursor: pointer;
-        z-index: 100;
-    }
-    #menu::before {
-        content: "≡";
-    }
-    #menu.open::before {
-        content: "X";
-    }
-    nav {
-        display: none !important;
-        width: 100%;
-        background-color: #1b4332;
-        margin-top: 1rem;
-    }
-    nav.open {
-        display: block !important;
-    }
-    .navigation {
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
-        list-style: none;
-    }
-    .navigation li {
-        width: 100%;
-        text-align: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .navigation li a {
-        display: block;
-        padding: 0.85rem;
-        color: #ffffff;
-        text-decoration: none;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    #menu {
-        display: none !important;
-    }
-    nav {
-        display: block !important;
-    }
-}
-
-/* --- Vibrant Green Weather Widget Styling --- */
-.weather-card {
-    background: linear-gradient(135deg, #2d6a4f, #52b788) !important;
-    color: #ffffff !important;
-    border-left: 6px solid #1b4332 !important;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(45, 106, 79, 0.25);
-}
-
-.weather-card h2 {
-    color: #ffffff !important;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 0.5rem;
-}
-
-/* Accessibility and Forecast Box Styling */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
-
-.forecast-box {
-    margin-top: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    padding-top: 0.5rem;
-}
-
-.forecast-flex {
-    display: flex;
-    justify-content: space-between;
-}
-
-.forecast-item {
-    text-align: center;
-    font-size: 0.8rem;
-}
-
-/* Weather Forecast Additional Styles */
-.forecast-title {
-    font-size: 0.85rem;
-    font-weight: bold;
-    margin-bottom: 0.3rem;
-}
-
-.forecast-flex {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.8rem;
-}
-
-.forecast-item {
-    text-align: center;
-}
-
-/* Highlighted Learn More Buttons */
-.discover-card .learn-more {
-  display: inline-block;
-  background-color: #1b4332; /* Primary chamber dark green */
-  color: #ffffff;
-  padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-  text-align: center;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 1rem;
-}
-
-.discover-card .learn-more:hover {
-  background-color: #2d6a4f; /* Lighter hover green */
-  transform: translateY(-2px);
-}
-
-/* Highlighted Learn More Buttons - Light Blue */
-.discover-card .learn-more {
-  display: inline-block;
-  background-color: #3a86ff; /* Highlighted light blue */
-  color: #ffffff;
-  padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-  text-align: center;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 1rem;
-}
-
-.discover-card .learn-more:hover {
-  background-color: #2667cc; /* Slightly darker blue on hover */
-  transform: translateY(-2px);
-}
-
-/* Upcoming Event & Countdown Styles */
-.sidebar .countdown-box {
-  background-color: #f1f8f5;
-  border-left: 4px solid #3a86ff;
-  padding: 0.5rem 0.75rem;
-  margin: 0.5rem 0;
-  font-size: 0.9rem;
-  color: #1b4332;
-  border-radius: 0 4px 4px 0;
-}
-
-.sidebar .rsvp-button {
-  display: inline-block;
-  background-color: #3a86ff;
-  color: #ffffff;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 0.75rem;
+  display: none;
+  background-color: var(--secondary);
+  position: absolute;
+  top: 70px;
+  right: 0;
   width: 100%;
   text-align: center;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 100;
 }
 
-.sidebar .rsvp-button:hover {
-  background-color: #2667cc;
-  transform: translateY(-2px);
+nav.open {
+  display: block;
 }
 
-/* Match External Links / Buttons to Website Green Color Theme */
+nav ul {
+  list-style: none;
+  padding: 1rem 0;
+}
+
+nav ul li a {
+  display: block;
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.75rem 0;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  background-color: var(--accent);
+}
+
+/* --- Main Containers & Cards --- */
+.join-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.join-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.join-form {
+  padding: 2rem;
+  background-color: var(--light-bg);
+  border-radius: 8px;
+}
+
+.membership-levels-info {
+  display: grid;
+  gap: 1rem;
+}
+
+.membership-levels-info .card {
+  padding: 1.25rem;
+  background-color: var(--white);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* --- Member Directory Views --- */
+.view-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.view-toggle button {
+  padding: 0.6rem 1.2rem;
+  background-color: var(--secondary);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.view-toggle button.active-view,
+.view-toggle button:hover {
+  background-color: var(--primary);
+}
+
+#members-container.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+#members-container.grid .member-card {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#members-container.grid .member-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+#members-container.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+#members-container.list .member-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+#members-container.list .member-card img {
+  display: none;
+}
+
+#members-container.list .member-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* --- Weather Card & Forecast --- */
+.weather-card {
+  background: linear-gradient(135deg, #2d6a4f, #52b788) !important;
+  color: #ffffff !important;
+  border-left: 6px solid #1b4332 !important;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(45, 106, 79, 0.25);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.weather-card h2 {
+  color: #ffffff !important;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+.forecast-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.forecast-item {
+  text-align: center;
+}
+
+/* --- Discover Cards & Buttons --- */
 .discover-card .learn-more,
 .sidebar .rsvp-button {
-  background-color: #1b4332 !important;
+  display: inline-block;
+  background-color: #1b4332;
+  color: #ffffff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem;
 }
 
 .discover-card .learn-more:hover,
 .sidebar .rsvp-button:hover {
-  background-color: #2d6a4f !important;
+  background-color: #2d6a4f;
+  transform: translateY(-2px);
+}
+
+/* --- Footer --- */
+footer {
+  background-color: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
 }
