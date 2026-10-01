@@ -1,12 +1,12 @@
 const weatherCard = document.querySelector("#weather-card, .weather-card");
 
-async function getRealTimeWeather() {
+async function fetchRealTimeWeather() {
   if (!weatherCard) return;
 
   try {
-    // OpenWeatherMap API live fetch for Harare
+    // Real-time weather API call for Harare, Zimbabwe
     const response = await fetch("https://api.openweathermap.org/data/2.5/weather?q=Harare,ZW&units=metric&appid=b6907d289e10d714a6e88b30761fae22");
-    if (!response.ok) throw new Error("Weather service offline");
+    if (!response.ok) throw new Error("Weather fetch failed");
     
     const data = await response.json();
     const temp = Math.round(data.main.temp);
@@ -20,43 +20,43 @@ async function getRealTimeWeather() {
 
     weatherCard.innerHTML = `
       <h2>Current Weather (Live)</h2>
-      <div class="weather-body">
-        <div class="weather-primary">
-          <img src="${iconUrl}" alt="${capitalizedDesc}" width="65" height="65" class="weather-icon-img">
+      <div class="weather-inner-content">
+        <div class="weather-main">
+          <img src="${iconUrl}" alt="${capitalizedDesc}" width="70" height="70" class="weather-icon-badge">
           <div>
-            <span class="weather-temp-val">${temp}&deg;C</span>
-            <p class="weather-desc-val">${capitalizedDesc}</p>
+            <span class="weather-temp-num">${temp}&deg;C</span>
+            <p class="weather-condition">${capitalizedDesc}</p>
           </div>
         </div>
-        <div class="weather-details">
+        <div class="weather-meta-info">
           <p>📅 ${todayStr}</p>
           <p>💧 Humidity: <strong>${humidity}%</strong></p>
           <p>🌬️ Wind: <strong>${windSpeed} m/s</strong></p>
-          <p class="weather-loc">📍 Harare, Zimbabwe</p>
+          <p class="weather-location-tag">📍 Harare, Zimbabwe</p>
         </div>
       </div>
     `;
   } catch (err) {
-    // Live seasonal fallback for Harare if network blocks external API
+    // Fallback if offline
     const todayStr = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' });
     weatherCard.innerHTML = `
       <h2>Current Weather (Live)</h2>
-      <div class="weather-body">
-        <div class="weather-primary">
+      <div class="weather-inner-content">
+        <div class="weather-main">
           <div>
-            <span class="weather-temp-val">24&deg;C</span>
-            <p class="weather-desc-val">Sunny and Pleasant</p>
+            <span class="weather-temp-num">24&deg;C</span>
+            <p class="weather-condition">Sunny and Pleasant</p>
           </div>
         </div>
-        <div class="weather-details">
+        <div class="weather-meta-info">
           <p>📅 ${todayStr}</p>
           <p>💧 Humidity: <strong>42%</strong></p>
           <p>🌬️ Wind: <strong>3.2 m/s</strong></p>
-          <p class="weather-loc">📍 Harare, Zimbabwe</p>
+          <p class="weather-location-tag">📍 Harare, Zimbabwe</p>
         </div>
       </div>
     `;
   }
 }
 
-getRealTimeWeather();
+fetchRealTimeWeather();
