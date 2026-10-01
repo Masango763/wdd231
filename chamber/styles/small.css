@@ -770,3 +770,20 @@ footer {
   margin-bottom: 1rem;
   font-size: 1.25rem;
 }
+
+/* --- Real-Time Weather Card Styling --- */
+.weather-card {
+  background-color: var(--white, #ffffff);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin: 1.5rem 0;
+}
+
+.weather-card h2 {
+  color: var(--primary, #1b4332);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
