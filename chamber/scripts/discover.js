@@ -1,58 +1,38 @@
-import { places } from "../data/discover.mjs";
+document.addEventListener("DOMContentLoaded", () => {
+  // Dynamically compute next month's event in real-time
+  const now = new Date();
+  const nextMonthDate = new Date(now.getFullYear(), now.getMonth() + 1, 1);
+  const monthNames = [
+    "January", "February", "March", "April", "May", "June", 
+    "July", "August", "September", "October", "November", "December"
+  ];
+  const nextMonthName = monthNames[nextMonthDate.getMonth()];
+  const nextMonthYear = nextMonthDate.getFullYear();
 
-const container = document.querySelector("#cards-container");
+  // Update Upcoming Event sidebar content dynamically
+  const eventHeading = document.querySelector(".sidebar h3");
+  const eventDesc = document.querySelector(".sidebar p");
 
-if (container) {
-  places.forEach((place) => {
-    const card = document.createElement("figure");
-    card.classList.add("discover-card");
-
-    card.innerHTML = `
-      <h2>${place.title}</h2>
-      <img src="${place.image}" alt="${place.title}" loading="lazy" width="300" height="200">
-      <address>${place.address}</address>
-      <p>${place.description}</p>
-      <button class="learn-more">Learn More</button>
-    `;
-
-    // Make Learn More button functional
-    const button = card.querySelector(".learn-more");
-    button.addEventListener("click", () => {
-      alert(`Learn more about ${place.title} at ${place.address}.`);
-    });
-
-    container.appendChild(card);
-  });
-}
-
-// Visitor message logic using localStorage
-const visitorMessage = document.querySelector("#visitor-message");
-if (visitorMessage) {
-  const lastVisit = localStorage.getItem("last-visit-date");
-  const now = Date.now();
-
-  if (!lastVisit) {
-    visitorMessage.textContent = "Welcome! Let us know if you have any questions.";
-  } else {
-    const daysBetween = Math.floor((now - Number(lastVisit)) / (1000 * 60 * 60 * 24));
-    if (daysBetween < 1) {
-      visitorMessage.textContent = "Back so soon! Awesome!";
-    } else if (daysBetween === 1) {
-      visitorMessage.textContent = "You last visited 1 day ago.";
-    } else {
-      visitorMessage.textContent = `You last visited ${daysBetween} days ago.`;
-    }
+  if (eventHeading && eventDesc) {
+    eventHeading.textContent = `Upcoming Event: ${nextMonthName} ${nextMonthYear}`;
+    eventDesc.innerHTML = `Join us for the Annual Chamber Hackathon in <strong>${nextMonthName} ${nextMonthYear}</strong>! Connect with local innovators, build solutions, and expand your network.`;
   }
-  localStorage.setItem("last-visit-date", now.toString());
-}
 
-// Footer date logic
-const yearSpan = document.querySelector("#currentyear");
-if (yearSpan) {
-  yearSpan.textContent = new Date().getFullYear();
-}
+  // Lazy loading images if applicable
+  const images = document.querySelectorAll("img[data-src]");
+  const imgOptions = { threshold: 0, rootMargin: "0px 0px 50px 0px" };
 
-const lastModified = document.querySelector("#lastModified");
-if (lastModified) {
-  lastModified.textContent = `Last Modification: ${document.lastModified}`;
-}
+  const imgObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const img = entry.target;
+      img.src = img.dataset.src;
+      img.addEventListener("load", () => {
+        img.classList.add("loaded");
+      });
+      observer.unobserve(img);
+    });
+  }, imgOptions);
+
+  images.forEach(img => imgObserver.observe(img));
+});
