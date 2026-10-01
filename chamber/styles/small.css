@@ -630,3 +630,62 @@ a[href^="http"] {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
+
+/* --- Compact Footer Styling --- */
+footer {
+  background-color: var(--primary, #1b4332);
+  color: var(--white, #ffffff);
+  padding: 1.25rem 1rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-logo {
+  width: 45px;
+  height: 45px;
+}
+
+.footer-info {
+  text-align: left;
+}
+
+.footer-info h3 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.footer-info p {
+  margin: 0.1rem 0;
+  font-size: 0.85rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.footer-social a {
+  color: var(--white, #ffffff);
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 0.75rem;
+  opacity: 0.9;
+}
