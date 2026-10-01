@@ -271,3 +271,32 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.2);
   padding-top: 1rem;
 }
+
+/* --- Targeted Green Styling for Links, Learn More, and RSVP --- */
+a[target="_blank"],
+a[href^="http"] {
+  color: var(--secondary, #2d6a4f);
+  text-decoration: underline;
+}
+
+.learn-more,
+.rsvp-button,
+#rsvp-btn {
+  background-color: var(--secondary, #2d6a4f);
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.learn-more:hover,
+.rsvp-button:hover,
+#rsvp-btn:hover {
+  background-color: var(--primary, #1b4332);
+}
