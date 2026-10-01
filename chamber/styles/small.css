@@ -869,3 +869,32 @@ footer {
   color: var(--primary, #1b4332);
   margin-top: 0.2rem !important;
 }
+
+/* --- Expanded Footer Social Links Styling --- */
+.footer-social {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-social a {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--white, #ffffff);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-social a:hover {
+  background-color: var(--accent, #52b788);
+  color: var(--primary, #1b4332);
+  transform: translateY(-2px);
+}
