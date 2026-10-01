@@ -500,3 +500,13 @@ footer {
   font-size: 0.95rem;
   margin-bottom: 1rem;
 }
+
+/* --- External Links Styling --- */
+a[target="_blank"] {
+  color: #2d6a4f; /* Primary or accent green */
+  text-decoration: underline;
+}
+
+a[target="_blank"]:hover {
+  color: #1b4332; /* Darker green on hover */
+}
