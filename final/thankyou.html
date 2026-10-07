@@ -4,22 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgriPulse Zimbabwe - Submission Summary</title>
+    <meta name="description" content="Submission summary for AgriPulse Zimbabwe contact inquiries.">
+    <meta name="author" content="Masango Dewheretsoko">
     <link rel="stylesheet" href="styles.css">
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const params = new URLSearchParams(window.location.search);
             const container = document.getElementById('form-results');
-            container.innerHTML = `
-                <p><strong>Name:</strong> ${params.get('fname') || 'N/A'}</p>
-                <p><strong>Email:</strong> ${params.get('femail') || 'N/A'}</p>
-                <p><strong>Message:</strong> ${params.get('fmsg') || 'N/A'}</p>
-            `;
+            if (container) {
+                container.innerHTML = `
+                    <p><strong>Name:</strong> ${params.get('fname') || 'N/A'}</p>
+                    <p><strong>Email:</strong> ${params.get('femail') || 'N/A'}</p>
+                    <p><strong>Message:</strong> ${params.get('fmsg') || 'N/A'}</p>
+                `;
+            }
         });
     </script>
 </head>
 <body>
     <header>
         <h1>AgriPulse Zimbabwe</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="crops.html">Crops Directory</a></li>
+                <li><a href="resources.html">Resources & Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section>
@@ -31,7 +42,7 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2026 AgriPulse Zimbabwe.</p>
+        <p>&copy; 2026 AgriPulse Zimbabwe. | <a href="https://youtu.be/YOUR_VIDEO_LINK" target="_blank">Video Demonstration</a> | <a href="attributions.html">Attributions</a></p>
     </footer>
 </body>
 </html>
