@@ -1,35 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attributions - AgriPulse Zimbabwe</title>
-    <meta name="description" content="Source attributions and references for AgriPulse Zimbabwe crop data.">
-    <meta name="author" content="Masango Dewheretsoko">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attributions - AgriPulse Zimbabwe</title>
+  <meta name="description" content="Source attributions and references for AgriPulse Zimbabwe crop data.">
+  <meta name="author" content="Masango Dewheretsoko">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:title" content="Attributions - AgriPulse Zimbabwe Crop Data Sources">
+  <meta property="og:description" content="Sources and references behind AgriPulse Zimbabwe's crop data, including images, datasets, and tools used on this site.">
+  <meta property="og:image" content="https://masango763.github.io/wdd231/final/images/og-image.png">
+  <meta property="og:url" content="https://masango763.github.io/wdd231/final/attributions.html">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/attributions.css">
 </head>
 <body>
-    <header>
-        <h1>AgriPulse Zimbabwe</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="crops.html">Crops Directory</a></li>
-                <li><a href="resources.html">Resources & Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <p class="site-name">AgriPulse Zimbabwe</p>
+    <button id="menu-btn" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="crops.html">Crops Directory</a></li>
+        <li><a href="resources.html">Resources &amp; Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section>
-            <h2>Source Attributions</h2>
-            <p>Crop data and agronomic references adapted from general agricultural extension guidelines in Zimbabwe.</p>
-            <p><a href="index.html">Back to Home</a></p>
-        </section>
-    </main>
+  <main>
+    <h1>Attributions</h1>
 
-    <footer>
-        <p>&copy; 2026 AgriPulse Zimbabwe. | <a href="https://youtu.be/YOUR_VIDEO_LINK" target="_blank">Video Demonstration</a> | <a href="attributions.html">Attributions</a></p>
-    </footer>
+    <section>
+      <img class="attribution-logo" src="images/favicon.svg" alt="AgriPulse Zimbabwe green leaf logo" width="96" height="96">
+      <h2>Sources and References</h2>
+      <ul class="attributions-list">
+        <li>Crop data: replace with your data source (e.g., Ministry of Lands, Agriculture, Fisheries, Water and Rural Development).</li>
+        <li>Images: replace with your image sources and licenses.</li>
+        <li>Fonts: Poppins via Google Fonts.</li>
+      </ul>
+      <p><a href="index.html">Back to Home</a></p>
+      <p><a href="https://youtu.be/YOUR_VIDEO_LINK" target="_blank" rel="noopener">Video Demonstration</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> AgriPulse Zimbabwe | Masango Dewheretsoko</p>
+    <p id="lastModified"></p>
+    <p><a href="attributions.html">Attributions</a></p>
+  </footer>
+
+  <script src="scripts/attributions.js" type="module"></script>
 </body>
 </html>

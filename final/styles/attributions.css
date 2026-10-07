@@ -1,0 +1,11 @@
+.attributions-list {
+  list-style: square;
+  padding-left: 1.5rem;
+  line-height: 1.7;
+}
+
+.attribution-logo {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 1rem;
+}
