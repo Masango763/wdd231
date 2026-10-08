@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgriPulse Zimbabwe - Crops Directory</title>
-    <meta name="description" content="Explore comprehensive listings of Zimbabwean staple, cash, and traditional crops.">
+    <title>Crops Directory - AgriPulse Zimbabwe</title>
+    <meta name="description" content="Browse 15+ agricultural crops, growing seasons, and yields in Zimbabwe.">
     <meta name="author" content="Masango Dewheretsoko">
-    <link rel="stylesheet" href="styles.css">
-    <script type="module" src="scripts/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script type="module" src="scripts/main.js"></script>
 </head>
 <body>
     <header>
-        <h1>AgriPulse Zimbabwe</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -23,17 +25,11 @@
 
     <main>
         <section>
-            <h2>Zimbabwean Crops Database</h2>
-            <p>Dynamically loaded agricultural inventory featuring over 15 distinct crop items with key regional properties.</p>
-            <div id="crops-container" class="grid-layout"></div>
+            <h1>Zimbabawean Crops Directory</h1>
+            <p>Explore our comprehensive list of crops cultivated across various regions in Zimbabwe.</p>
+            <div id="crops-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1.5rem;"></div>
         </section>
     </main>
-
-    <dialog id="info-modal">
-        <h3>Crop Advisory Details</h3>
-        <p id="modal-text"></p>
-        <button id="close-modal">Close</button>
-    </dialog>
 
     <footer>
         <p>&copy; 2026 AgriPulse Zimbabwe. | <a href="https://youtu.be/YOUR_VIDEO_LINK" target="_blank">Video Demonstration</a> | <a href="attributions.html">Attributions</a></p>
