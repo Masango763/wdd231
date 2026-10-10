@@ -114,3 +114,32 @@ header nav {
     width: auto;
     display: block;
 }
+
+/* Explicit Header Logo Fix */
+header nav {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0.75rem 2rem !important;
+}
+
+header nav .logo-container {
+    display: flex !important;
+    align-items: center !important;
+}
+
+header nav .logo-container a {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    text-decoration: none !important;
+}
+
+header nav ul {
+    display: flex !important;
+    list-style: none !important;
+    gap: 1.5rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    align-items: center !important;
+}
