@@ -95,3 +95,9 @@ footer a:hover {
         width: 100%;
     }
 }
+
+/* Fix contrast for active/hover navigation links on dark green header */
+nav a.active, nav a:hover {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
