@@ -1,62 +1,46 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources & Contact - AgriPulse Zimbabwe</title>
     <meta name="description" content="Agricultural extension resources, contact forms, and support for farmers in Zimbabwe.">
     <meta name="author" content="Masango Dewheretsoko">
-    
-    <!-- Open Graph Tags -->
     <meta property="og:title" content="Resources & Contact - AgriPulse Zimbabwe">
     <meta property="og:description" content="Agricultural extension resources, contact forms, and support for farmers in Zimbabwe.">
     <meta property="og:image" content="https://masango763.github.io/wdd231/final/images/og-image.png">
     <meta property="og:url" content="https://masango763.github.io/wdd231/final/resources.html">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-
-    <!-- Google Fonts -->
+    <link rel="icon" href="images/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- External Stylesheets -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/resources.css">
-
-    <!-- JavaScript Module -->
     <script type="module" src="scripts/main.js" defer></script>
 </head>
 <body>
     <header>
+        <div class="logo-container">
+            <img src="images/logo.svg" alt="AgriPulse Zimbabwe logo">
+            <span>AgriPulse Zimbabwe</span>
+        </div>
         <nav>
-<div class="logo-container">
-  <a href="index.html" aria-label="AgriPulse Zimbabwe home">
-    <img src="images/logo.svg" alt="AgriPulse Zimbabwe logo" width="180" height="40">
-  </a>
-</div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="crops.html">Crops Directory</a></li>
-                <li><a href="resources.html" class="active">Resources & Contact</a></li>
-                <li><a href="https://www.loom.com/share/fab137347704400c8065220c97ca5844?t=299" target="_blank">Video Demonstration</a></li>
-                <li><a href="attributions.html">Attributions</a></li>
-            </ul>
+            <a href="index.html">Home</a>
+            <a href="crops.html">Crops Directory</a>
+            <a href="resources.html" class="active">Resources & Contact</a>
+            <a href="attributions.html">Attributions</a>
         </nav>
     </header>
 
     <main>
-        <h1>AgriPulse Zimbabwe - Resources & Contact</h1>
-        
         <section class="resources-intro">
-            <h2>Agricultural Resources & Support</h2>
-            <p>Access extension guides, meteorological telemetry reports, and connect directly with our agronomy support team.</p>
+            <h1>AgriPulse Zimbabwe - Resources & Contact</h1>
+            <p>Access agricultural extension materials, connect with local agronomy experts, and reach out for assistance.</p>
         </section>
 
         <section class="contact-section">
-            <h2>Farmer Inquiry Form</h2>
-            <form action="#" method="get" class="contact-form">
+            <h2>Farmer Support & Inquiry Form</h2>
+            <form action="thanks.html" method="get">
                 <div class="form-group">
                     <label for="fullname">Full Name:</label>
                     <input type="text" id="fullname" name="fullname" required>
@@ -66,11 +50,17 @@
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="region">Farming Region:</label>
-                    <input type="text" id="region" name="region" required>
+                    <label for="region">Agricultural Region:</label>
+                    <select id="region" name="region">
+                        <option value="mashonaland">Mashonaland</option>
+                        <option value="matabeleland">Matabeleland</option>
+                        <option value="manicaland">Manicaland</option>
+                        <option value="midlands">Midlands</option>
+                        <option value="masvingo">Masvingo</option>
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label for="message">Inquiry / Message:</label>
+                    <label for="message">Message / Inquiry:</label>
                     <textarea id="message" name="message" rows="4" required></textarea>
                 </div>
                 <button type="submit" class="btn">Submit Inquiry</button>
@@ -79,8 +69,14 @@
     </main>
 
     <footer>
-        <p>&copy; <span id="currentyear">2026</span> AgriPulse Zimbabwe | Masango Dewheretsoko | <a href="attributions.html">Attributions</a></p>
-        <p><a href="https://www.loom.com/share/fab137347704400c8065220c97ca5844?t=299" target="_blank">Watch Loom Video Demonstration</a></p>
+        <p>&copy; 2026 AgriPulse Zimbabwe. All rights reserved.</p>
+        <p>
+            <a href="index.html">Home</a> | 
+            <a href="crops.html">Crops Directory</a> | 
+            <a href="resources.html">Resources & Contact</a> | 
+            <a href="attributions.html">Attributions</a> | 
+            <a href="https://www.loom.com/share/fab137347704400c8065220c97ca5844?t=299" target="_blank">Watch Loom Video Demonstration</a>
+        </p>
     </footer>
 </body>
 </html>
