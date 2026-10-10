@@ -94,3 +94,23 @@ header nav {
     height: 35px;
     width: auto;
 }
+
+/* Logo Styling Fix */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
