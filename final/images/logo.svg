@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 40" width="180" height="40">
+  <g transform="translate(5, 4)">
+    <path d="M15 2 C 15 15, 2 18, 2 18 C 2 18, 5 8, 15 2 Z" fill="#2e5d34"/>
+    <path d="M15 2 C 15 18, 28 20, 28 20 C 28 20, 22 10, 15 2 Z" fill="#a7c957"/>
+    <path d="M15 32 L 15 18" stroke="#222222" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <text x="38" y="25" font-family="'Poppins', sans-serif" font-weight="600" font-size="16" fill="#222222">AgriPulse</text>
+</svg>
