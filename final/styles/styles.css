@@ -101,3 +101,9 @@ nav a.active, nav a:hover {
     color: #ffffff !important;
     text-decoration: underline;
 }
+
+/* Ensure footer links meet WCAG AA contrast on primary background */
+footer a {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
