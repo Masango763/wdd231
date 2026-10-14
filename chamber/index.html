@@ -3,58 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgriPulse Zimbabwe - Home</title>
+    <title>Home | Harare Regional Chamber of Commerce</title>
+    <meta name="description" content="Harare Regional Chamber of Commerce home page connecting local businesses, community events, and regional growth.">
+    <meta name="author" content="Masango Dewheretsoko">
+    <meta property="og:title" content="Harare Regional Chamber of Commerce">
+    <meta property="og:description" content="Connecting local businesses and supporting regional growth in Harare.">
+    <meta property="og:image" content="https://masango763.github.io/wdd231/chamber/images/logo.svg">
+    <meta property="og:url" content="https://masango763.github.io/wdd231/chamber/index.html">
+    <link rel="icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts/main.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 768px)">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/home.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>AgriPulse Zimbabwe</h1>
+        <div class="logo-container">
+            <img src="images/logo.svg" alt="Harare Chamber Logo">
+            <span>Harare Chamber of Commerce</span>
+        </div>
+        <button id="menu" aria-label="Menu Toggle">☰</button>
         <nav>
-            <ul>
+            <ul class="navigation">
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="crops.html">Crops & Weather</a></li>
-                <li><a href="resources.html">Resources & Contact</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div class="hero">
-            <h2>Agricultural Information for Zimbabwe</h2>
-            <p>Empowering smallholder farmers and agricultural students with timely insights.</p>
-            <a href="crops.html" class="btn">Explore Crops</a>
-        </div>
-
-        <section>
-            <h2>Welcome to AgriPulse Zimbabwe</h2>
-            <p>AgriPulse Zimbabwe serves as a vital portal for modern farming updates, agricultural education, and community resources. Agriculture forms the backbone of Zimbabwe’s economy, supporting livelihoods and food security across communities.</p>
+        <section class="hero-container">
+            <img src="images/hero.webp" alt="Harare Chamber Hero Image" class="hero-image">
+            <div class="hero-cta">
+                <h1>Welcome to Harare Chamber of Commerce</h1>
+                <p>Empowering businesses, fostering community partnerships, and driving economic growth across Harare.</p>
+                <a href="join.html" class="cta-button">Join the Chamber Today</a>
+            </div>
         </section>
 
-        <section>
-            <h2>Featured Farming Topics</h2>
-            <div class="grid-3">
-                <div class="card">
-                    <h3>Crop Information</h3>
-                    <p>Learn about staple crops like maize, sorghum, and cash crops best suited to regional soil types and conditions.</p>
-                </div>
-                <div class="card">
-                    <h3>Weather Insights</h3>
-                    <p>Stay informed on seasonal forecasts, rainfall patterns, and climate management strategies.</p>
-                </div>
-                <div class="card">
-                    <h3>Farming Resources</h3>
-                    <p>Discover expert guides on sustainable soil conservation, pest control, and efficient irrigation practices.</p>
-                </div>
+        <section class="home-grid">
+            <div class="events-card">
+                <h2>Current Events</h2>
+                <p><strong>Annual Business Expo:</strong> Join local entrepreneurs and industry leaders next Friday at the Harare International Conference Centre.</p>
+                <p><strong>Agri-Tech Workshop:</strong> Exploring digital innovations in regional supply chains.</p>
             </div>
+
+            <div class="weather-card" id="weather-section">
+                <h2>Current Weather</h2>
+                <div id="weather-data">Loading weather information...</div>
+            </div>
+        </section>
+
+        <section class="spotlights-section">
+            <h2>Company Spotlights</h2>
+            <div id="spotlights-container">Loading spotlights...</div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 AgriPulse Zimbabwe. All rights reserved.</p>
+        <div class="footer-info">
+            <h3>Harare Regional Chamber of Commerce</h3>
+            <p>123 Samora Machel Avenue, Harare, Zimbabwe</p>
+            <p>info@hararechamber.co.zw | +263 4 555 1234</p>
+        </div>
+        <div class="footer-social">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">f</a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter">t</a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">in</a>
+            <a href="https://youtube.com" target="_blank" aria-label="YouTube">yt</a>
+        </div>
+        <p>&copy; 2026 Harare Regional Chamber of Commerce | Masango Dewheretsoko</p>
     </footer>
 </body>
 </html>
