@@ -105,3 +105,13 @@ nav ul.navigation li a:hover {
 .cta-button:hover {
     background-color: #52b788 !important;
 }
+
+/* Clean CTA button styles for W03 audit compliance (no !important) */
+.hero-cta .cta-button {
+    background-color: #1b4332;
+    color: #ffffff;
+}
+
+.hero-cta .cta-button:hover {
+    background-color: #52b788;
+}
