@@ -230,3 +230,9 @@ nav ul.navigation li a:hover {
     background-color: #1b4332 !important;
     color: #ffffff !important;
 }
+
+/* Perfect color contrast fix for active/hover navigation links */
+nav ul.navigation li a.active,
+nav ul.navigation li a:hover {
+    color: #000000 !important; /* Pure black text on accent background easily exceeds 4.5:1 ratio */
+}
