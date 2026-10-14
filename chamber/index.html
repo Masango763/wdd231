@@ -38,25 +38,26 @@
     </header>
 
     <main>
-        <section class="hero-container">
-            <img src="images/hero.webp" alt="Harare Chamber Hero Image" class="hero-image">
-            <div class="hero-cta">
-                <h1>Welcome to Harare Chamber of Commerce</h1>
-                <p>Empowering businesses, fostering community partnerships, and driving economic growth across Harare.</p>
-                <a href="join.html" class="cta-button">Join the Chamber Today</a>
-            </div>
+        <div class="hero-container" style="position: relative; width: 100%;">
+            <img src="images/hero.webp" alt="Harare Chamber Hero Image" class="hero-image" style="width: 100%; height: auto; display: block;">
+            <a href="join.html" class="join-cta-btn" style="position: absolute; bottom: 25px; left: 25px; background-color: rgba(27, 67, 50, 0.9); color: #ffffff; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">Join Our Chamber</a>
+        </div>
+
+        <section class="welcome-section" style="margin-top: 1.5rem;">
+            <h1>Welcome to Harare Chamber</h1>
+            <p>Empowering businesses and fostering regional economic growth.</p>
         </section>
 
         <section class="home-grid">
-            <div class="events-card">
-                <h2>Current Events</h2>
-                <p><strong>Annual Business Expo:</strong> Join local entrepreneurs and industry leaders next Friday at the Harare International Conference Centre.</p>
-                <p><strong>Agri-Tech Workshop:</strong> Exploring digital innovations in regional supply chains.</p>
-            </div>
-
             <div class="weather-card" id="weather-section">
                 <h2>Current Weather</h2>
                 <div id="weather-data">Loading weather information...</div>
+            </div>
+
+            <div class="events-card">
+                <h2>Upcoming Events</h2>
+                <p><strong>Annual Business Expo 2026</strong><br>Date: October 15, 2026<br>Location: Harare International Conference Centre</p>
+                <p><strong>SME Networking Breakfast</strong><br>Date: October 22, 2026<br>Location: Meikles Hotel</p>
             </div>
         </section>
 

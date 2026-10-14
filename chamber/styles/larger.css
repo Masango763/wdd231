@@ -115,3 +115,34 @@ nav ul.navigation li a:hover {
 .hero-cta .cta-button:hover {
     background-color: #52b788;
 }
+
+/* --- Hero CTA Overlay Positioning --- */
+.hero-container {
+    position: relative;
+    width: 100%;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.join-cta-btn {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    background-color: rgba(27, 67, 50, 0.9);
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+.join-cta-btn:hover {
+    background-color: #1b4332;
+    color: #ffffff;
+}
