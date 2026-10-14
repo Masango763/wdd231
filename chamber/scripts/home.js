@@ -1,5 +1,5 @@
 // OpenWeatherMap API Configuration for Harare, Zimbabwe
-const apiKey = "YOUR_OPENWEATHER_API_KEY"; // Replace with your key if needed, or leave active fetch logic
+const apiKey = "d41d8cd98f00b204e9800998ecf8427e"; // Replace with your active OpenWeatherMap key if needed
 const lat = "-17.8292";
 const lon = "31.0522";
 const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
@@ -14,7 +14,7 @@ async function apiFetch() {
             throw Error(await response.text());
         }
     } catch (error) {
-        console.log(error);
+        console.log("Weather fetch error:", error);
         document.getElementById('weather-data').innerHTML = "<p>Weather data currently unavailable.</p>";
     }
 }
@@ -29,14 +29,13 @@ function displayWeather(data) {
     const desc = data.weather[0].description;
     const locationName = data.name;
     
-    // Format current date and time
     const now = new Date();
     const dateString = now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' });
     const timeString = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
 
     weatherContainer.innerHTML = `
-        <div class="weather-info">
-            <p><strong>Location:</strong> ${locationName}</p>
+        <div class="weather-details-content">
+            <p><strong>Location:</strong> ${locationName}, ZW</p>
             <p><strong>Date & Time:</strong> ${dateString}, ${timeString}</p>
             <p class="weather-temp-num"><strong>Temperature:</strong> ${temp}°C</p>
             <p><strong>High / Low:</strong> ${tempMax}°C / ${tempMin}°C</p>
@@ -53,6 +52,8 @@ async function getSpotlights() {
         if (response.ok) {
             const members = await response.json();
             displaySpotlights(members);
+        } else {
+            throw Error(await response.text());
         }
     } catch (error) {
         console.log("Error loading members data:", error);
@@ -64,7 +65,7 @@ function displaySpotlights(members) {
     const spotlightsContainer = document.getElementById('spotlights-container');
     spotlightsContainer.innerHTML = "";
 
-    // Filter members for Gold (2) or Silver (3) membership levels
+    // Filter members for Gold (level 2) or Silver (level 3) membership levels
     const qualifiedMembers = members.filter(member => member.membershipLevel === 2 || member.membershipLevel === 3);
 
     // Randomly select 2 to 3 members
@@ -75,12 +76,12 @@ function displaySpotlights(members) {
         const card = document.createElement('div');
         card.classList.add('member-spotlight-card');
         
-        const levelName = member.membershipLevel === 2 ? 'Silver Member' : 'Gold Member';
+        const levelName = member.membershipLevel === 2 ? 'Gold Member' : 'Silver Member';
 
         card.innerHTML = `
             <h3>${member.name}</h3>
-            <p><em>"${member.otherInfo || 'Proud Chamber Member'}"</em></p>
-            <img src="images/${member.image}" alt="${member.name} Logo" style="max-width: 100px; height: auto;">
+            <p class="spotlight-tagline"><em>"${member.otherInfo || 'Proud Chamber Member'}"</em></p>
+            <img src="images/${member.image}" alt="${member.name} Logo" loading="lazy">
             <p><strong>Phone:</strong> ${member.phone}</p>
             <p><strong>Address:</strong> ${member.address}</p>
             <p><a href="${member.website}" target="_blank">Visit Website</a></p>
@@ -90,6 +91,6 @@ function displaySpotlights(members) {
     });
 }
 
-// Initialize functions on page load
+// Initialize on page load
 apiFetch();
 getSpotlights();
