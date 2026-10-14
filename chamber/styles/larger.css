@@ -95,3 +95,13 @@ nav ul.navigation li a:hover {
     border-radius: 8px;
     margin-bottom: 2rem;
 }
+
+/* Fix contrast for CTA button on hero image */
+.cta-button {
+    background-color: #1b4332 !important; /* Dark green background gives 11.08:1 contrast with white text */
+    color: #ffffff !important;
+}
+
+.cta-button:hover {
+    background-color: #52b788 !important;
+}
