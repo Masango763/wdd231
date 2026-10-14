@@ -16,3 +16,14 @@
     align-items: start;
   }
 }
+
+/* Final WCAG AA contrast adjustments for active navigation and social icons */
+nav ul.navigation li a.active, 
+nav ul.navigation li a:hover {
+    color: #1b4332 !important;
+}
+
+.footer-social a {
+    background-color: #1b4332 !important;
+    color: #ffffff !important;
+}
