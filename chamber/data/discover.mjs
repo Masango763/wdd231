@@ -1,26 +1,10 @@
 export const places = [
-  {
-    title: "Samora Machel Avenue",
-    address: "Central Business District, Harare",
-    description: "The bustling financial and commercial core of the capital. Home to major corporate headquarters, banking institutions, and the Harare Regional Chamber of Commerce.",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&auto=format&fit=crop&q=80"
-  },
-  {
-    title: "Harare Gardens",
-    address: "Julius Nyerere Way, Harare",
-    description: "The largest public park in central Harare. A tranquil oasis featuring lush lawns, exotic trees, and regular musical and cultural festivals.",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&auto=format&fit=crop&q=80"
-  },
-  {
-    title: "National Gallery of Zimbabwe",
-    address: "Park Lane, Harare",
-    description: "Exhibiting world-renowned Shona stone sculpture collections and contemporary African art.",
-    image: "https://images.unsplash.com/photo-1542744094-24638eff58bb?w=400&auto=format&fit=crop&q=80"
-  },
-  {
-    title: "Mukuvisi Woodlands",
-    address: "Hillside, Harare",
-    description: "Nature conservation area within the city. An urban wildlife sanctuary offering walking trails, zebras, giraffes, and birdwatching.",
-    image: "https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?w=400&auto=format&fit=crop&q=80"
-  }
+  { title: "Samora Machel Avenue", address: "Central Business District, Harare", description: "The bustling financial and commercial core of the capital. Home to major corporate headquarters, banking institutions, and the Harare Regional Chamber of Commerce.", image: "images/samora-machel-avenue.webp" },
+  { title: "Harare Gardens", address: "Julius Nyerere Way, Harare", description: "The largest public park in central Harare. A tranquil oasis featuring lush lawns, exotic trees, and regular musical and cultural festivals.", image: "images/harare-gardens.webp" },
+  { title: "National Gallery of Zimbabwe", address: "Park Lane, Harare", description: "Exhibiting world-renowned Shona stone sculpture collections and contemporary African art.", image: "images/national-gallery.webp" },
+  { title: "Mukuvisi Woodlands", address: "Hillside, Harare", description: "Nature conservation area within the city. An urban wildlife sanctuary offering walking trails, zebras, giraffes, and birdwatching.", image: "images/mukuvisi-woodlands.webp" },
+  { title: "Eastgate Centre", address: "Central Business District, Harare", description: "A landmark shopping and office complex known for its passive cooling design, inspired by termite mounds, which cuts energy use.", image: "images/eastgate-centre.webp" },
+  { title: "Lake Chivero", address: "Southwest of Harare", description: "A large lake that supplies much of the city's water and is popular for boating, fishing, picnics, and birdwatching.", image: "images/lake-chivero.webp" },
+  { title: "National Heroes Acre", address: "Off Bulawayo Road, west of Harare", description: "A national monument and burial ground honouring figures from Zimbabwe's liberation struggle, set on a hill outside the city.", image: "images/national-heroes-acre.webp" },
+  { title: "Mbare Musika Market", address: "Mbare, Harare", description: "One of the busiest markets in the country, known for fresh produce, crafts, and the daily trade that supplies the capital.", image: "images/mbare-musika.webp" }
 ];
