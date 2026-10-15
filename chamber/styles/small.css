@@ -68,6 +68,7 @@ nav ul.navigation li a {
 nav ul.navigation li a:hover,
 nav ul.navigation li a.active {
   background-color: var(--accent);
+  color: #000000;
 }
 
 /* --- Discover Page Layout & Styles --- */
@@ -879,7 +880,7 @@ footer {
 }
 
 .footer-social a {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: var(--secondary);
   color: var(--white, #ffffff);
   width: 32px;
   height: 32px;
