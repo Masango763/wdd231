@@ -193,3 +193,40 @@ header nav.open { display: block; }
     border-radius: 4px;
   }
 }
+
+/* --- Header & Navigation Layout Fix --- */
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+  }
+
+  .header-logo, .logo-container, header > div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  header h1, .header-title {
+    font-size: 1.25rem;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  nav ul.navigation {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul.navigation li a {
+    padding: 0.5rem 1rem;
+    display: block;
+    text-decoration: none;
+  }
+}
