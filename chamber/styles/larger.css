@@ -1,379 +1,50 @@
+/* --- Restored Layout with Named Grid Areas & Rubric Compliance --- */
 @media (min-width: 768px) {
+  #menu {
+    display: none !important;
+  }
+
   nav ul.navigation {
+    display: flex !important;
     flex-direction: row;
-    justify-content: center;
   }
-  
-  .info-overview {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 
-@media (min-width: 900px) {
-  .discover-layout {
+  /* Match your original layout structure with sidebar on the left or structured grid */
+  .discover-container, .discover-grid {
     display: grid;
-    grid-template-columns: 300px 1fr;
-    align-items: start;
-  }
-}
-
-/* Final WCAG AA contrast adjustments for active navigation and social icons */
-nav ul.navigation li a.active, 
-nav ul.navigation li a:hover {
-    color: #1b4332 !important;
-}
-
-.footer-social a {
-    background-color: #1b4332 !important;
-    color: #ffffff !important;
-}
-
-/* Perfect color contrast fix for active/hover navigation links */
-nav ul.navigation li a.active, 
-nav ul.navigation li a:hover {
-    color: #000000 !important; /* Pure black text on accent background easily exceeds 4.5:1 ratio */
-}
-
-/* --- W03 Hero Image & CTA Overlay Styles --- */
-.hero-container {
-    position: relative;
-    width: 100%;
-    max-height: 550px;
-    overflow: hidden;
-    margin-bottom: 2rem;
-}
-
-.hero-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-}
-
-.hero-cta {
-    position: absolute;
-    bottom: 30px;
-    left: 40px;
-    background-color: rgba(27, 67, 50, 0.88);
-    padding: 1.5rem 2rem;
-    color: #ffffff;
-    border-radius: 8px;
-    max-width: 450px;
-}
-
-.hero-cta h1 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.cta-button {
-    display: inline-block;
-    background-color: #52b788;
-    color: #ffffff;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-    margin-top: 1rem;
-    transition: background-color 0.2s;
-}
-
-.cta-button:hover {
-    background-color: #1b4332;
-}
-
-.home-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.spotlights-section {
-    background-color: #f4f6f4;
-    padding: 2rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-}
-
-/* Fix contrast for CTA button on hero image */
-.cta-button {
-    background-color: #1b4332 !important; /* Dark green background gives 11.08:1 contrast with white text */
-    color: #ffffff !important;
-}
-
-.cta-button:hover {
-    background-color: #52b788 !important;
-}
-
-/* Clean CTA button styles for W03 audit compliance (no !important) */
-.hero-cta .cta-button {
-    background-color: #1b4332;
-    color: #ffffff;
-}
-
-.hero-cta .cta-button:hover {
-    background-color: #52b788;
-}
-
-/* --- Hero CTA Overlay Positioning --- */
-.hero-container {
-    position: relative;
-    width: 100%;
-}
-
-.hero-image {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.join-cta-btn {
-    position: absolute;
-    bottom: 25px;
-    left: 25px;
-    background-color: rgba(27, 67, 50, 0.9);
-    color: #ffffff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    z-index: 10;
-}
-
-.join-cta-btn:hover {
-    background-color: #1b4332;
-    color: #ffffff;
-}
-
-/* --- External CSS for Hero Image & CTA Overlay (No Inline Styles) --- */
-.hero-container {
-    position: relative;
-    width: 100%;
-    margin-bottom: 1.5rem;
-}
-
-.hero-image {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.join-cta-btn {
-    position: absolute;
-    bottom: 25px;
-    left: 25px;
-    background-color: rgba(27, 67, 50, 0.9);
-    color: #ffffff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    z-index: 10;
-}
-
-.join-cta-btn:hover {
-    background-color: #1b4332;
-    color: #ffffff;
-}
-
-.welcome-section {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-/* --- Restore Original Layout & Overlay CTA on Hero Image --- */
-.hero-container {
-    position: relative;
-    width: 100%;
-    margin-bottom: 1.5rem;
-}
-
-.hero-image {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.join-cta-btn {
-    position: absolute;
-    bottom: 25px;
-    left: 25px;
-    background-color: rgba(27, 67, 50, 0.9);
-    color: #ffffff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    z-index: 10;
-}
-
-.join-cta-btn:hover {
-    background-color: #1b4332;
-    color: #ffffff;
-}
-
-.welcome-section {
-    margin-bottom: 1.5rem;
-}
-
-/* Final WCAG AA contrast adjustments for active navigation and social icons */
-nav ul.navigation li a.active,
-nav ul.navigation li a:hover {
-    color: #1b4332 !important;
-}
-
-.footer-social a {
-    background-color: #1b4332 !important;
-    color: #ffffff !important;
-}
-
-/* Perfect color contrast fix for active/hover navigation links */
-nav ul.navigation li a.active,
-nav ul.navigation li a:hover {
-    color: #000000 !important; /* Pure black text on accent background easily exceeds 4.5:1 ratio */
-}
-
-/* --- Fix Clickability for Hero CTA Button --- */
-.hero-container {
-    position: relative;
-    width: 100%;
-}
-
-.hero-image {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.join-cta-btn {
-    position: absolute;
-    bottom: 25px;
-    left: 25px;
-    background-color: rgba(27, 67, 50, 0.9);
-    color: #ffffff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    z-index: 20; /* Ensures it sits cleanly on top and captures clicks */
-    pointer-events: auto; /* Guarantees click events register */
-}
-
-.join-cta-btn:hover {
-    background-color: #1b4332;
-    color: #ffffff;
-}
-
-/* Discover cards: named grid areas (small, medium, large) */
-#cards-container {
-    display: grid;
+    grid-template-columns: 280px repeat(3, 1fr);
+    grid-template-areas: 
+      "sidebar card1 card2 card3"
+      "sidebar card4 card5 card6"
+      "sidebar card7 card8 card8";
     gap: 1.5rem;
-    grid-template-columns: 1fr;
-    grid-template-areas: "c1" "c2" "c3" "c4" "c5" "c6" "c7" "c8";
-}
-
-#cards-container > .discover-card:nth-child(1) { grid-area: c1; }
-#cards-container > .discover-card:nth-child(2) { grid-area: c2; }
-#cards-container > .discover-card:nth-child(3) { grid-area: c3; }
-#cards-container > .discover-card:nth-child(4) { grid-area: c4; }
-#cards-container > .discover-card:nth-child(5) { grid-area: c5; }
-#cards-container > .discover-card:nth-child(6) { grid-area: c6; }
-#cards-container > .discover-card:nth-child(7) { grid-area: c7; }
-#cards-container > .discover-card:nth-child(8) { grid-area: c8; }
-
-@media (min-width: 641px) {
-    #cards-container {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas:
-            "c1 c1 c2"
-            "c3 c4 c4"
-            "c5 c5 c6"
-            "c7 c8 c8";
-    }
-}
-
-@media (min-width: 1025px) {
-    #cards-container {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-areas:
-            "c1 c1 c2 c3"
-            "c4 c5 c5 c3"
-            "c6 c7 c8 c8";
-    }
-
-    /* Hover effect on larger screens only */
-    .discover-card img {
-        transition: transform 0.3s ease, filter 0.3s ease;
-    }
-
-    .discover-card:hover img {
-        transform: scale(1.05);
-        filter: brightness(1.1) saturate(1.2);
-    }
-}
-
-/* Hamburger: closed on phones until toggled, hidden on larger screens */
-header nav { display: none; }
-header nav.open { display: block; }
-
-@media (min-width: 768px) {
-    #menu { display: none; }
-    header nav { display: block; }
-}
-
-/* --- Fix Discover Page Grid Layout --- */
-.discover-container, .cards-grid, .discover-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 1rem;
-}
+  }
 
-.discover-card {
-    background: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+  .sidebar {
+    grid-area: sidebar;
+  }
 
-.discover-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 4px;
-}
+  .card-1 { grid-area: card1; }
+  .card-2 { grid-area: card2; }
+  .card-3 { grid-area: card3; }
+  .card-4 { grid-area: card4; }
+  .card-5 { grid-area: card5; }
+  .card-6 { grid-area: card6; }
+  .card-7 { grid-area: card7; }
+  .card-8 { grid-area: card8; }
 
-/* --- Company Spotlights Side-by-Side Layout --- */
-.spotlight-container, .spotlights-grid, #spotlights-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    align-items: stretch;
-}
+  /* Image hover effect in larger views only */
+  .discover-card img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
 
-.spotlight-card, .spotlight {
-    flex: 1 1 300px;
-    max-width: 350px;
-    background: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  .discover-card img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+  }
 }
 
 /* --- W05 Named Grid Areas & Desktop Hover Fixes --- */
