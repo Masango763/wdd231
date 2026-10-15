@@ -113,3 +113,19 @@ header nav.open { display: block; }
     #menu { display: none; }
     header nav { display: block; }
 }
+
+/* --- Fix Hero Image Full-Width Display --- */
+.hero, .hero-section {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+}
