@@ -10,9 +10,7 @@ if (container) {
     card.innerHTML = `
       <h2>${place.title}</h2>
       <figure>
-        <figure>
         <img src="${place.image}" alt="${place.title}" loading="lazy" width="300" height="200">
-      </figure>
       </figure>
       <address>${place.address}</address>
       <p>${place.description}</p>
