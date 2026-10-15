@@ -46,45 +46,70 @@
     filter: brightness(1.05);
   }
 }
-
-/* --- W05 Named Grid Areas & Desktop Hover Fixes --- */
-@media (min-width: 768px) {
-  #menu {
-    display: none !important;
-  }
-
-  nav ul.navigation {
-    display: flex !important;
-    flex-direction: row;
-  }
-
-  .discover-grid {
+/* Discover cards: named grid areas (small, medium, large) */
+#cards-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: 
-      "card1 card2 card3"
-      "card4 card5 card6"
-      "card7 card8 sidebar";
-    gap: 2rem;
-  }
+    gap: 1.5rem;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "c1" "c2" "c3" "c4" "c5" "c6" "c7" "c8";
+}
 
-  .card-1 { grid-area: card1; }
-  .card-2 { grid-area: card2; }
-  .card-3 { grid-area: card3; }
-  .card-4 { grid-area: card4; }
-  .card-5 { grid-area: card5; }
-  .card-6 { grid-area: card6; }
-  .card-7 { grid-area: card7; }
-  .card-8 { grid-area: card8; }
-  .sidebar { grid-area: sidebar; }
+#cards-container > .discover-card {
+    margin: 0;
+    min-width: 0;
+    justify-content: flex-start;
+}
 
-  /* Image hover effect in larger views only */
-  .discover-card img {
-    transition: transform 0.3s ease, filter 0.3s ease;
-  }
+#cards-container .learn-more {
+    margin-top: auto;
+}
 
-  .discover-card img:hover {
-    transform: scale(1.05);
-    filter: brightness(1.05);
-  }
+#cards-container > .discover-card:nth-child(1) { grid-area: c1; }
+#cards-container > .discover-card:nth-child(2) { grid-area: c2; }
+#cards-container > .discover-card:nth-child(3) { grid-area: c3; }
+#cards-container > .discover-card:nth-child(4) { grid-area: c4; }
+#cards-container > .discover-card:nth-child(5) { grid-area: c5; }
+#cards-container > .discover-card:nth-child(6) { grid-area: c6; }
+#cards-container > .discover-card:nth-child(7) { grid-area: c7; }
+#cards-container > .discover-card:nth-child(8) { grid-area: c8; }
+
+@media (min-width: 641px) {
+    #cards-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas:
+            "c1 c1"
+            "c2 c3"
+            "c4 c4"
+            "c5 c6"
+            "c7 c8";
+    }
+}
+
+@media (min-width: 1025px) {
+    #cards-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-areas:
+            "c1 c1 c2"
+            "c3 c4 c4"
+            "c5 c5 c6"
+            "c7 c8 c8";
+    }
+
+    .discover-card img {
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .discover-card:hover img {
+        transform: scale(1.05);
+        filter: brightness(1.1) saturate(1.2);
+    }
+}
+
+/* Hamburger: closed on phones until toggled, hidden on larger screens */
+header nav { display: none; }
+header nav.open { display: block; }
+
+@media (min-width: 768px) {
+    #menu { display: none; }
+    header nav { display: block; }
 }
