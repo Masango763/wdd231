@@ -1,11 +1,11 @@
 /* --- Restored Layout with Named Grid Areas & Rubric Compliance --- */
 @media (min-width: 768px) {
   #menu {
-    display: none !important;
+    display: none;
   }
 
   nav ul.navigation {
-    display: flex !important;
+    display: flex;
     flex-direction: row;
   }
 
