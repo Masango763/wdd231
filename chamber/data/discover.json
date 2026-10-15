@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Samora Machel Avenue",
+    "address": "Central Business District, Harare",
+    "description": "A major arterial thoroughfare framing iconic high-rises, corporate HQs, and bustling urban commerce.",
+    "photo": "images/samora.webp",
+    "button": "Learn More"
+  },
+  {
+    "title": "Harare Gardens",
+    "address": "Julius Nyerere Way, Harare",
+    "description": "The largest public park in central Harare featuring lush lawns, tree-lined walkways, and a bandstand.",
+    "photo": "images/gardens.webp",
+    "button": "Learn More"
+  },
+  {
+    "title": "National Heroes Acre",
+    "address": "Off Bulawayo Road, west of Harare",
+    "description": "A national monument and burial ground honoring heroes of Zimbabwe's liberation struggle set on a scenic hill.",
+    "photo": "images/heroes.webp",
+    "button": "Learn More"
+  },
+  {
+    "title": "Mbare Musika Market",
+    "address": "Mbare, Harare",
+    "description": "One of the busiest traditional markets in the country known for fresh produce, crafts, and daily trade.",
+    "photo": "images/mbare.webp",
+    "button": "Learn More"
+  },
+  {
+    "title": "Epworth Balancing Rocks",
+    "address": "Epworth, southeast of Harare",
+    "description": "Remarkable natural geological formations illustrating balanced granite rocks sculpted by weathering over millennia.",
+    "photo": "images/rocks.webp",
+    "button": "Learn More"
+  },
+  {
+    "title": "Mukuvisi Woodlands",
+    "address": "Hillside, Harare",
+    "description": "A protected urban nature reserve offering tranquil walking trails, wildlife viewing, and environmental education.",
+    "photo": "images/mukuvisi.webp",
+    "button": "Learn More"
+  },
+  {
+    "title": "Eastgate Centre",
+    "address": "Robert Mugabe Road, Harare",
+    "description": "An architectural marvel inspired by termite mounds, utilizing innovative biomimetic passive cooling design.",
+    "photo": "images/eastgate.webp",
+    "button": "Learn More"
+  },
+  {
+    "title": "Lake Chivero",
+    "address": "Southwest of Harare",
+    "description": "A scenic recreational lake supplying the city's water, popular for boating, fishing, and birdwatching.",
+    "photo": "images/chivero.webp",
+    "button": "Learn More"
+  }
+]
