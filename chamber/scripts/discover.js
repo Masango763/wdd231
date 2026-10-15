@@ -4,12 +4,14 @@ const container = document.querySelector("#cards-container");
 
 if (container) {
   places.forEach((place) => {
-    const card = document.createElement("figure");
+    const card = document.createElement("article");
     card.classList.add("discover-card");
 
     card.innerHTML = `
       <h2>${place.title}</h2>
-      <img src="${place.image}" alt="${place.title}" loading="lazy" width="300" height="200">
+      <figure>
+        <img src="${place.image}" alt="${place.title}" loading="lazy" width="300" height="200">
+      </figure>
       <address>${place.address}</address>
       <p>${place.description}</p>
       <button class="learn-more">Learn More</button>

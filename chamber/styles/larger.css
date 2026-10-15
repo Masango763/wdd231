@@ -154,8 +154,8 @@ header nav.open { display: block; }
 /* --- Universal Hero/Main Image Full Width Fix --- */
 @media (min-width: 768px) {
   main img, .hero img, section img {
-    width: 100% !important;
-    max-width: 100% !important;
+    width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
   }
 }
@@ -229,4 +229,9 @@ header nav.open { display: block; }
     display: block;
     text-decoration: none;
   }
+}
+
+/* Discover card figure: remove default browser margin */
+.discover-card figure {
+  margin: 0;
 }

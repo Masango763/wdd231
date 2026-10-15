@@ -150,7 +150,7 @@ nav ul.navigation li a.active {
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* --- Buttons & Links (Green styling without !important) --- */
+/* --- Buttons & Links (Green styling without) --- */
 
 /* External links styling */
 
@@ -678,7 +678,7 @@ footer {
 .weather-loc {
   font-weight: bold;
   color: var(--primary, #1b4332);
-  margin-top: 0.2rem !important;
+  margin-top: 0.2rem;
 }
 
 /* --- Expanded Footer Social Links Styling --- */
@@ -749,7 +749,7 @@ footer {
 
 .weather-condition {
   font-size: 1.05rem;
-  color: #2d6a4f;
+  color: #b7e4c7;
   font-weight: 600;
   margin: 0.25rem 0 0 0;
 }
@@ -773,23 +773,23 @@ footer {
 .weather-location-tag {
   font-weight: bold;
   color: #1b4332;
-  margin-top: 0.2rem !important;
+  margin-top: 0.2rem;
 }
 
 /* --- Completely Dark Green Weather Card --- */
 .weather-card {
-  background-color: #1b4332 !important;
-  border: 1px solid #0f281e !important;
+  background-color: #1b4332;
+  border: 1px solid #0f281e;
   border-radius: 10px;
   padding: 1.5rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   margin: 1.5rem 0;
   border-left: 6px solid #1b4332;
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 .weather-card h2 {
-  color: #ffffff !important;
+  color: #ffffff;
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 1.25rem;
@@ -826,13 +826,13 @@ footer {
 .dark-temp {
   font-size: 2.3rem;
   font-weight: bold;
-  color: #ffffff !important;
+  color: #ffffff;
   line-height: 1;
 }
 
 .dark-desc {
   font-size: 1.05rem;
-  color: #b7e4c7 !important;
+  color: #b7e4c7;
   font-weight: 600;
   margin: 0.25rem 0 0 0;
 }
@@ -842,7 +842,7 @@ footer {
   flex-direction: column;
   gap: 0.35rem;
   font-size: 0.9rem;
-  color: #ffffff !important;
+  color: #ffffff;
   background-color: rgba(0, 0, 0, 0.15);
   padding: 0.85rem 1.1rem;
   border-radius: 6px;
@@ -855,6 +855,6 @@ footer {
 
 .dark-loc {
   font-weight: bold;
-  color: #52b788 !important;
-  margin-top: 0.2rem !important;
+  color: #52b788;
+  margin-top: 0.2rem;
 }
