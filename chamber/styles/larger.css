@@ -150,3 +150,12 @@ header nav.open { display: block; }
     display: block;
   }
 }
+
+/* --- Universal Hero/Main Image Full Width Fix --- */
+@media (min-width: 768px) {
+  main img, .hero img, section img {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+}
