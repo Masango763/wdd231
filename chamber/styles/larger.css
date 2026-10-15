@@ -129,3 +129,24 @@ header nav.open { display: block; }
     object-fit: cover;
     display: block;
 }
+
+/* --- Full-Width Viewport Breakout for Hero Section --- *
+@media (min-width: 768px) {
+  .hero, .hero-section {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: none;
+  }
+
+  .hero img {
+    width: 100%;
+    height: auto;
+    max-height: 550px;
+    object-fit: cover;
+    display: block;
+  }
+}
