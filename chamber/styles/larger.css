@@ -159,3 +159,37 @@ header nav.open { display: block; }
     box-sizing: border-box;
   }
 }
+
+/* --- Company Spotlights Side-by-Side & Image Resizing Fix --- */
+@media (min-width: 768px) {
+  .spotlights-container, .spotlights-grid, #spotlights-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .spotlight-card, .spotlight, .member-card {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* Uniform image resizing for spotlight/member logos or images */
+  .spotlight-card img, .spotlight img, .member-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+    background-color: #f9f9f9;
+    padding: 0.5rem;
+    border-radius: 4px;
+  }
+}
