@@ -235,3 +235,8 @@ header nav.open { display: block; }
 .discover-card figure {
   margin: 0;
 }
+
+/* Discover card figure: remove default browser margin */
+.discover-card figure {
+  margin: 0;
+}
